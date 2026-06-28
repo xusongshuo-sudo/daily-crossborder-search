@@ -34,3 +34,29 @@ jobs:
             git commit -m "bot: daily search $(date +%Y-%m-%d)"
             git push
           )
+      
+      - name: Send email
+        run: |
+          python3 -c "
+          import smtplib, os
+          from email.mime.text import MIMEText
+          from email.mime.multipart import MIMEMultipart
+          from pathlib import Path
+
+          report = Path('reports/latest.md').read_text(encoding='utf-8')
+
+          msg = MIMEMultipart('alternative')
+          msg['Subject'] = 'GitHub 跨境电商+AI 日报'
+          msg['From'] = os.environ['MAIL_USERNAME']
+          msg['To'] = os.environ['MAIL_TO']
+          msg.attach(MIMEText(report, 'html', 'utf-8'))
+
+          with smtplib.SMTP_SSL('smtp.qq.com', 465) as smtp:
+              smtp.login(os.environ['MAIL_USERNAME'], os.environ['MAIL_PASSWORD'])
+              smtp.send_message(msg)
+          print('Email sent')
+          "
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
