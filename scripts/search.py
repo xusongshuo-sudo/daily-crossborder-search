@@ -97,14 +97,67 @@ def is_relevant(repo: dict) -> bool:
     return has_ecom and has_ai
 
 
-# ── 中文简介生成 ───────────────────────────────────────────
-CATEGORY_CN = {
-    "跨境电商+AI Skill": "跨境电商AI技能/模板",
-    "选品/运营 AI": "选品/运营AI工具",
-    "电商+Agent/MCP": "电商Agent/自动化",
+# ── 功能分类 ─────────────────────────────────────────────
+# 每个项目归类到一个主分类
+
+FUNCTION_CATEGORIES = {
+    "Skill/提示词模板": ["AI技能/提示词模板"],
+    "AI Agent/自动化": ["AI Agent自动化"],
+    "选品/市场调研": ["选品调研", "竞品/市场分析"],
+    "Listing/文案优化": ["Listing优化/文案"],
+    "关键词/SEO": ["关键词/SEO"],
+    "图片/视觉设计": ["图片/视觉设计"],
+    "广告投放": ["广告投放"],
+    "供应链/采购": ["供应链/采购"],
+    "社媒/内容营销": ["社媒/内容营销"],
+    "定价/利润分析": ["定价/利润分析"],
+    "订单/库存管理": ["订单/库存管理"],
+    "翻译/本地化": ["翻译/本地化"],
+    "客服/售后": ["客服/售后"],
 }
 
-# 从描述中提取功能关键词生成中文摘要
+def classify_repo(repo_data: dict) -> str:
+    """根据功能标签确定主分类"""
+    summary = repo_data.get("cn_summary", "")
+    # 提取特征标签
+    features_str = summary.split("] ")[-1] if "] " in summary else ""
+    features = [f.strip() for f in features_str.split("，")]
+
+    # 按优先级匹配：更具体的分类优先
+    priority = [
+        "Skill/提示词模板", "选品/市场调研", "Listing/文案优化",
+        "图片/视觉设计", "关键词/SEO", "广告投放",
+        "AI Agent/自动化", "社媒/内容营销",
+        "供应链/采购", "定价/利润分析", "订单/库存管理",
+        "翻译/本地化", "客服/售后",
+    ]
+
+    for cat in priority:
+        cat_features = FUNCTION_CATEGORIES.get(cat, [])
+        for feat in features:
+            if feat in cat_features:
+                return cat
+
+    # 检查原始描述中的补充信号
+    desc = (repo_data.get("description", "")).lower()
+    name = repo_data.get("full_name", "").lower()
+    text = f"{name} {desc}"
+
+    if any(w in text for w in ["skill", "prompt", "提示词"]):
+        return "Skill/提示词模板"
+    if any(w in text for w in ["agent", "自动化"]):
+        return "AI Agent/自动化"
+    if any(w in text for w in ["选品", "research", "市场"]):
+        return "选品/市场调研"
+    if any(w in text for w in ["listing", "文案"]):
+        return "Listing/文案优化"
+    if any(w in text for w in ["image", "图片", "视觉"]):
+        return "图片/视觉设计"
+
+    return "综合电商AI工具"
+
+
+# ── 中文简介生成 ───────────────────────────────────────────
 def make_cn_summary(repo: dict, keyword_group: str) -> str:
     """为项目生成一句话中文简介"""
     desc = (repo.get("description") or "").lower()
@@ -199,12 +252,14 @@ def api_call(query: str, retry: int = 3) -> dict:
 
 def extract_fields(repo: dict, keyword_group: str, layer: str) -> dict:
     cn_summary = make_cn_summary(repo, keyword_group)
+    category = classify_repo({"cn_summary": cn_summary, "description": repo.get("description", ""), "full_name": repo.get("full_name", "")})
     return {
         "id": repo["id"],
         "full_name": repo["full_name"],
         "html_url": repo["html_url"],
         "description": repo["description"] or "",
         "cn_summary": cn_summary,
+        "category": category,
         "stars": repo["stargazers_count"],
         "forks": repo["forks_count"],
         "language": repo["language"] or "",
@@ -275,43 +330,54 @@ def generate_report(all_results: list[dict], seen_count: int) -> str:
         lines.append("今日无新增相关项目。")
         return "\n".join(lines)
 
-    for layer in ["Layer 1: 近2日新创", "Layer 2: 3-14日前", "Layer 3: 长期热门"]:
-        layer_items = [r for r in all_results if r["layer"] == layer]
-        if not layer_items:
-            continue
+    # 按功能分类分组
+    from collections import Counter, defaultdict
+    category_items = defaultdict(list)
+    for r in all_results:
+        category_items[r["category"]].append(r)
 
-        # 同层去重
-        seen_urls = set()
-        unique_items = []
-        for r in layer_items:
-            if r["html_url"] not in seen_urls:
-                seen_urls.add(r["html_url"])
-                unique_items.append(r)
+    # 排序：热门分类优先
+    sorted_cats = sorted(category_items.keys(),
+        key=lambda c: (len(category_items[c]), max(x["stars"] for x in category_items[c])),
+        reverse=True)
 
-        lines.append(f"## {layer}（{len(unique_items)} 个）")
+    # 概览表
+    lines.append("## 概览")
+    lines.append("")
+    lines.append("| 分类 | 数量 | 最高星标 |")
+    lines.append("|------|------|----------|")
+    for cat in sorted_cats:
+        items = category_items[cat]
+        max_stars = max(r["stars"] for r in items)
+        lines.append(f"| {cat} | {len(items)} | {max_stars} |")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+
+    # 按分类展示
+    for cat in sorted_cats:
+        items = category_items[cat]
+        lines.append(f"## {cat}（{len(items)} 个）")
         lines.append("")
 
-        for r in sorted(unique_items, key=lambda x: x["stars"], reverse=True):
+        for r in sorted(items, key=lambda x: x["stars"], reverse=True):
             desc = (r["description"] or "").replace("\n", " ")[:200]
             topics = ", ".join(r["topics"][:5]) if r["topics"] else ""
 
             lines.append(f"### [{r['full_name']}]({r['html_url']})  ⭐ {r['stars']}")
             lines.append("")
-            # 中文简介
             lines.append(f"**📌 {r['cn_summary']}**")
             lines.append("")
-            # 原始描述
             if desc:
                 lines.append(f"> {desc}")
                 lines.append("")
-            # 元信息
+
             meta = []
             if r["language"]:
                 meta.append(f"语言: {r['language']}")
             if topics:
                 meta.append(f"标签: {topics}")
             meta.append(f"创建: {r['created_at'][:10]}")
-            meta.append(f"更新: {r['pushed_at'][:10]}")
             lines.append(" | ".join(meta))
             lines.append("")
             lines.append("---")
