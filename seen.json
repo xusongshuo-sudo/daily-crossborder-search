@@ -1,1 +1,482 @@
-{}
+{
+  "1204321239": {
+    "full_name": "noique/cross-border-ecommerce-skills",
+    "stars": 13,
+    "first_seen": "2026-06-28T16:13:31.563061+00:00"
+  },
+  "1226613826": {
+    "full_name": "coral870921-source/Ozon-Profit-Skills",
+    "stars": 8,
+    "first_seen": "2026-06-28T16:13:31.563085+00:00"
+  },
+  "1269665456": {
+    "full_name": "JuneYaooo/launchfit-ai",
+    "stars": 7,
+    "first_seen": "2026-06-28T16:13:31.563090+00:00"
+  },
+  "1272787302": {
+    "full_name": "wei910622-cell/AMZ-Skill",
+    "stars": 5,
+    "first_seen": "2026-06-28T16:13:31.563093+00:00"
+  },
+  "1271377276": {
+    "full_name": "xiaoyaotsyx-dotcom/aliexpress-auto-listing-skill",
+    "stars": 4,
+    "first_seen": "2026-06-28T16:13:31.563096+00:00"
+  },
+  "1191375208": {
+    "full_name": "AccioWork/agent-skills",
+    "stars": 3,
+    "first_seen": "2026-06-28T16:13:31.563099+00:00"
+  },
+  "1280208155": {
+    "full_name": "Alpha-Park/ecommerce-copilot-skill",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563103+00:00"
+  },
+  "1280175809": {
+    "full_name": "alphaparkinc/ecommerce-copilot-skill",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563105+00:00"
+  },
+  "1230459924": {
+    "full_name": "coolqoo/1click-ecom-detailpage",
+    "stars": 140,
+    "first_seen": "2026-06-28T16:13:31.563109+00:00"
+  },
+  "1242060029": {
+    "full_name": "hikari0511/awesome-amazon-ec-skills",
+    "stars": 30,
+    "first_seen": "2026-06-28T16:13:31.563112+00:00"
+  },
+  "1193376462": {
+    "full_name": "fanchao272-dev/openclaw-ecommerce-tutorial",
+    "stars": 24,
+    "first_seen": "2026-06-28T16:13:31.563116+00:00"
+  },
+  "1076239805": {
+    "full_name": "UnknowTT16/WeaveAI_Agent",
+    "stars": 19,
+    "first_seen": "2026-06-28T16:13:31.563119+00:00"
+  },
+  "1193412757": {
+    "full_name": "0xCaptain888/AgentHub",
+    "stars": 12,
+    "first_seen": "2026-06-28T16:13:31.563122+00:00"
+  },
+  "1248930600": {
+    "full_name": "clawEC/clawec-agents",
+    "stars": 12,
+    "first_seen": "2026-06-28T16:13:31.563125+00:00"
+  },
+  "1243975263": {
+    "full_name": "libowenhemonesy-svg/cross-border-ai",
+    "stars": 8,
+    "first_seen": "2026-06-28T16:13:31.563128+00:00"
+  },
+  "1199599252": {
+    "full_name": "isunswang/tiktok-ecommerce-automation-system",
+    "stars": 5,
+    "first_seen": "2026-06-28T16:13:31.563131+00:00"
+  },
+  "1260970028": {
+    "full_name": "xiaov971023/crossborder-image-agent-New-",
+    "stars": 4,
+    "first_seen": "2026-06-28T16:13:31.563134+00:00"
+  },
+  "1254089460": {
+    "full_name": "libowenhemonesy-svg/amazon-agent-mvp",
+    "stars": 3,
+    "first_seen": "2026-06-28T16:13:31.563137+00:00"
+  },
+  "1239538926": {
+    "full_name": "konighter/hanx-marketing",
+    "stars": 3,
+    "first_seen": "2026-06-28T16:13:31.563140+00:00"
+  },
+  "1180689765": {
+    "full_name": "zengli-jenny/Muti_email_agent",
+    "stars": 2,
+    "first_seen": "2026-06-28T16:13:31.563142+00:00"
+  },
+  "1209165253": {
+    "full_name": "shuai123789/crossborder-ai",
+    "stars": 2,
+    "first_seen": "2026-06-28T16:13:31.563145+00:00"
+  },
+  "1161992669": {
+    "full_name": "YongshengYuan/ai-agent-commerce",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563147+00:00"
+  },
+  "1231758248": {
+    "full_name": "ZQStackOverflow/ai-multi-agent-ad-system",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563151+00:00"
+  },
+  "1180542442": {
+    "full_name": "nexscope-ai/awesome-amazon-seller-tools",
+    "stars": 26,
+    "first_seen": "2026-06-28T16:13:31.563154+00:00"
+  },
+  "1236911090": {
+    "full_name": "superjack2050/1688-cli",
+    "stars": 26,
+    "first_seen": "2026-06-28T16:13:31.563157+00:00"
+  },
+  "1279940806": {
+    "full_name": "nexscope-ai/nexscope-ecommerce-skills",
+    "stars": 7,
+    "first_seen": "2026-06-28T16:13:31.563159+00:00"
+  },
+  "1197739220": {
+    "full_name": "alicelabs-llc/Scraper",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563162+00:00"
+  },
+  "1136590548": {
+    "full_name": "affaan-m/ECC",
+    "stars": 222907,
+    "first_seen": "2026-06-28T16:13:31.563166+00:00"
+  },
+  "1142983825": {
+    "full_name": "multica-ai/andrej-karpathy-skills",
+    "stars": 183808,
+    "first_seen": "2026-06-28T16:13:31.563169+00:00"
+  },
+  "1201173969": {
+    "full_name": "JuliusBrussee/caveman",
+    "stars": 77565,
+    "first_seen": "2026-06-28T16:13:31.563172+00:00"
+  },
+  "1200597263": {
+    "full_name": "safishamsi/graphify",
+    "stars": 73199,
+    "first_seen": "2026-06-28T16:13:31.563175+00:00"
+  },
+  "1223170290": {
+    "full_name": "nexu-io/open-design",
+    "stars": 72313,
+    "first_seen": "2026-06-28T16:13:31.563177+00:00"
+  },
+  "1201476594": {
+    "full_name": "santifer/career-ops",
+    "stars": 56304,
+    "first_seen": "2026-06-28T16:13:31.563180+00:00"
+  },
+  "969302809": {
+    "full_name": "hesreallyhim/awesome-claude-code",
+    "stars": 47513,
+    "first_seen": "2026-06-28T16:13:31.563183+00:00"
+  },
+  "1134426800": {
+    "full_name": "sickn33/antigravity-awesome-skills",
+    "stars": 41924,
+    "first_seen": "2026-06-28T16:13:31.563186+00:00"
+  },
+  "600596928": {
+    "full_name": "danny-avila/LibreChat",
+    "stars": 39937,
+    "first_seen": "2026-06-28T16:13:31.563188+00:00"
+  },
+  "1135212071": {
+    "full_name": "coreyhaines31/marketingskills",
+    "stars": 35281,
+    "first_seen": "2026-06-28T16:13:31.563191+00:00"
+  },
+  "1167300963": {
+    "full_name": "Imbad0202/academic-research-skills",
+    "stars": 35011,
+    "first_seen": "2026-06-28T16:13:31.563193+00:00"
+  },
+  "1079456184": {
+    "full_name": "K-Dense-AI/scientific-agent-skills",
+    "stars": 29510,
+    "first_seen": "2026-06-28T16:13:31.563196+00:00"
+  },
+  "1084853233": {
+    "full_name": "VoltAgent/awesome-agent-skills",
+    "stars": 26731,
+    "first_seen": "2026-06-28T16:13:31.563199+00:00"
+  },
+  "1136666433": {
+    "full_name": "blader/humanizer",
+    "stars": 26551,
+    "first_seen": "2026-06-28T16:13:31.563202+00:00"
+  },
+  "1195360525": {
+    "full_name": "calesthio/OpenMontage",
+    "stars": 26523,
+    "first_seen": "2026-06-28T16:13:31.563204+00:00"
+  },
+  "1155383451": {
+    "full_name": "AgriciDaniel/claude-ads",
+    "stars": 6560,
+    "first_seen": "2026-06-28T16:13:31.563207+00:00"
+  },
+  "1131107802": {
+    "full_name": "FlorianBruniaux/claude-code-ultimate-guide",
+    "stars": 5238,
+    "first_seen": "2026-06-28T16:13:31.563210+00:00"
+  },
+  "1150071903": {
+    "full_name": "rohitg00/awesome-claude-code-toolkit",
+    "stars": 2197,
+    "first_seen": "2026-06-28T16:13:31.563212+00:00"
+  },
+  "1080588167": {
+    "full_name": "alirezarezvani/claude-code-skill-factory",
+    "stars": 816,
+    "first_seen": "2026-06-28T16:13:31.563215+00:00"
+  },
+  "1169462190": {
+    "full_name": "freddy-schuetz/n8n-claw",
+    "stars": 536,
+    "first_seen": "2026-06-28T16:13:31.563218+00:00"
+  },
+  "1130952330": {
+    "full_name": "product-on-purpose/pm-skills",
+    "stars": 427,
+    "first_seen": "2026-06-28T16:13:31.563221+00:00"
+  },
+  "1133906703": {
+    "full_name": "waynesutton/convexskills",
+    "stars": 401,
+    "first_seen": "2026-06-28T16:13:31.563223+00:00"
+  },
+  "1223142852": {
+    "full_name": "pcliangx/AppGenesisForge",
+    "stars": 364,
+    "first_seen": "2026-06-28T16:13:31.563226+00:00"
+  },
+  "1133715921": {
+    "full_name": "microsoft/skills-for-copilot-studio",
+    "stars": 335,
+    "first_seen": "2026-06-28T16:13:31.563229+00:00"
+  },
+  "1201037376": {
+    "full_name": "LingyiChen-AI/comfyui-workflow-skill",
+    "stars": 322,
+    "first_seen": "2026-06-28T16:13:31.563231+00:00"
+  },
+  "946062586": {
+    "full_name": "jlevy/simple-modern-uv",
+    "stars": 284,
+    "first_seen": "2026-06-28T16:13:31.563247+00:00"
+  },
+  "1260198724": {
+    "full_name": "CWS6206/ai-coding-starter-kit",
+    "stars": 262,
+    "first_seen": "2026-06-28T16:13:31.563250+00:00"
+  },
+  "1260255382": {
+    "full_name": "ferdinandobons/brand-docs",
+    "stars": 198,
+    "first_seen": "2026-06-28T16:13:31.563253+00:00"
+  },
+  "1166760417": {
+    "full_name": "marketcalls/vectorbt-backtesting-skills",
+    "stars": 162,
+    "first_seen": "2026-06-28T16:13:31.563256+00:00"
+  },
+  "1151742228": {
+    "full_name": "ai-driven-dev/framework",
+    "stars": 123,
+    "first_seen": "2026-06-28T16:13:31.563259+00:00"
+  },
+  "132464395": {
+    "full_name": "Snailclimb/JavaGuide",
+    "stars": 156660,
+    "first_seen": "2026-06-28T16:13:31.563261+00:00"
+  },
+  "626805178": {
+    "full_name": "langgenius/dify",
+    "stars": 146844,
+    "first_seen": "2026-06-28T16:13:31.563264+00:00"
+  },
+  "643445235": {
+    "full_name": "lobehub/lobehub",
+    "stars": 79187,
+    "first_seen": "2026-06-28T16:13:31.563267+00:00"
+  },
+  "1129940957": {
+    "full_name": "headroomlabs-ai/headroom",
+    "stars": 52925,
+    "first_seen": "2026-06-28T16:13:31.563269+00:00"
+  },
+  "846698999": {
+    "full_name": "aaif-goose/goose",
+    "stars": 50341,
+    "first_seen": "2026-06-28T16:13:31.563272+00:00"
+  },
+  "159152904": {
+    "full_name": "jeecgboot/JeecgBoot",
+    "stars": 46905,
+    "first_seen": "2026-06-28T16:13:31.563275+00:00"
+  },
+  "522158088": {
+    "full_name": "zhayujie/CowAgent",
+    "stars": 45651,
+    "first_seen": "2026-06-28T16:13:31.563277+00:00"
+  },
+  "1165277268": {
+    "full_name": "Panniantong/Agent-Reach",
+    "stars": 44206,
+    "first_seen": "2026-06-28T16:13:31.563280+00:00"
+  },
+  "918932603": {
+    "full_name": "bytedance/UI-TARS-desktop",
+    "stars": 37363,
+    "first_seen": "2026-06-28T16:13:31.563283+00:00"
+  },
+  "876064934": {
+    "full_name": "patchy631/ai-engineering-hub",
+    "stars": 36149,
+    "first_seen": "2026-06-28T16:13:31.563285+00:00"
+  },
+  "575865240": {
+    "full_name": "AstrBotDevs/AstrBot",
+    "stars": 35501,
+    "first_seen": "2026-06-28T16:13:31.563288+00:00"
+  },
+  "137451403": {
+    "full_name": "alibaba/nacos",
+    "stars": 33093,
+    "first_seen": "2026-06-28T16:13:31.563290+00:00"
+  },
+  "1177402105": {
+    "full_name": "heygen-com/hyperframes",
+    "stars": 31922,
+    "first_seen": "2026-06-28T16:13:31.563293+00:00"
+  },
+  "762304524": {
+    "full_name": "ComposioHQ/composio",
+    "stars": 28995,
+    "first_seen": "2026-06-28T16:13:31.563296+00:00"
+  },
+  "1185016972": {
+    "full_name": "nexscope-ai/eCommerce-Skills",
+    "stars": 295,
+    "first_seen": "2026-06-28T16:13:31.563298+00:00"
+  },
+  "1180426897": {
+    "full_name": "SerendipityOneInc/ZooData-Skills",
+    "stars": 55,
+    "first_seen": "2026-06-28T16:13:31.563301+00:00"
+  },
+  "477623489": {
+    "full_name": "Kasyfil97/Fraud-Transaction-Detection-by-Balancing-Distribution",
+    "stars": 18,
+    "first_seen": "2026-06-28T16:13:31.563304+00:00"
+  },
+  "1191741986": {
+    "full_name": "yoligehude14753/ecom-agent",
+    "stars": 9,
+    "first_seen": "2026-06-28T16:13:31.563307+00:00"
+  },
+  "1182053769": {
+    "full_name": "Umair706/amazon-omniscient",
+    "stars": 8,
+    "first_seen": "2026-06-28T16:13:31.563309+00:00"
+  },
+  "1266890078": {
+    "full_name": "nexscope-ai/awesome-ai-ecommerce-tools",
+    "stars": 5,
+    "first_seen": "2026-06-28T16:13:31.563313+00:00"
+  },
+  "1236014721": {
+    "full_name": "caoyuan094-dotcom/ai-product-intelligence-system",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563316+00:00"
+  },
+  "1198425457": {
+    "full_name": "logeshkannan19/DropShipping-AI-Agent",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563319+00:00"
+  },
+  "1239310146": {
+    "full_name": "alfredang/scannova",
+    "stars": 1,
+    "first_seen": "2026-06-28T16:13:31.563321+00:00"
+  },
+  "637453835": {
+    "full_name": "pseudo-r/Public-ESPN-API",
+    "stars": 593,
+    "first_seen": "2026-06-28T16:13:31.563325+00:00"
+  },
+  "157322050": {
+    "full_name": "tule2236/Airbnb-Dynamic-Pricing-Optimization",
+    "stars": 238,
+    "first_seen": "2026-06-28T16:13:31.563327+00:00"
+  },
+  "1112427380": {
+    "full_name": "luka2chat/awesome-geo",
+    "stars": 137,
+    "first_seen": "2026-06-28T16:13:31.563330+00:00"
+  },
+  "695589867": {
+    "full_name": "shrutisaxena51/Artificial-Intelligence-in-Compiler-Optimization",
+    "stars": 125,
+    "first_seen": "2026-06-28T16:13:31.563332+00:00"
+  },
+  "498673936": {
+    "full_name": "nebuly-ai/exploring-AI-optimization",
+    "stars": 121,
+    "first_seen": "2026-06-28T16:13:31.563335+00:00"
+  },
+  "896665333": {
+    "full_name": "win4r/Awesome-Claude-MCP-Servers",
+    "stars": 84,
+    "first_seen": "2026-06-28T16:13:31.563338+00:00"
+  },
+  "481239618": {
+    "full_name": "vohidjon123/google",
+    "stars": 40,
+    "first_seen": "2026-06-28T16:13:31.563342+00:00"
+  },
+  "484751748": {
+    "full_name": "hiteshsuthar01/OK-",
+    "stars": 39,
+    "first_seen": "2026-06-28T16:13:31.563345+00:00"
+  },
+  "892410902": {
+    "full_name": "Varsha-1605/SocioSell",
+    "stars": 23,
+    "first_seen": "2026-06-28T16:13:31.563348+00:00"
+  },
+  "92045416": {
+    "full_name": "sruti-jain/Airbnb-Data-Analysis-Project",
+    "stars": 19,
+    "first_seen": "2026-06-28T16:13:31.563351+00:00"
+  },
+  "1027435259": {
+    "full_name": "enginterzi/amazon-seller-mcp",
+    "stars": 18,
+    "first_seen": "2026-06-28T16:13:31.563353+00:00"
+  },
+  "1069010620": {
+    "full_name": "csharp-pdf-libraries/awesome-dotnet-pdf-libraries-2025",
+    "stars": 15,
+    "first_seen": "2026-06-28T16:13:31.563356+00:00"
+  },
+  "1211661982": {
+    "full_name": "pleasedodisturb/awesome-llm-token-optimization",
+    "stars": 14,
+    "first_seen": "2026-06-28T16:13:31.563359+00:00"
+  },
+  "968284829": {
+    "full_name": "YourPalZack/awesome-ai-seo-tools",
+    "stars": 9,
+    "first_seen": "2026-06-28T16:13:31.563362+00:00"
+  },
+  "1177556025": {
+    "full_name": "nexscope-ai/Amazon-Skills",
+    "stars": 319,
+    "first_seen": "2026-06-28T16:13:31.563365+00:00"
+  },
+  "1192547116": {
+    "full_name": "roger52027/ecommerce-website-data",
+    "stars": 8,
+    "first_seen": "2026-06-28T16:13:31.563371+00:00"
+  }
+}
