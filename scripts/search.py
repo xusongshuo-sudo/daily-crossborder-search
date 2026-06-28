@@ -79,8 +79,71 @@ BLACKLIST = [
 ]
 
 
+def is_garbage(repo: dict) -> bool:
+    """检测垃圾项目：minified代码、无意义描述等"""
+    desc = (repo.get("description") or "").strip()
+    name = repo.get("name", "").lower()
+
+    # 描述太短
+    if len(desc) < 15:
+        return True
+    # minified JS / 压缩代码
+    if any(p in desc for p in ["(function(", "var n;function", "/*  Copyright", "SPDX-License"]):
+        return True
+    # 纯数字/符号占大多数
+    alpha = sum(1 for c in desc if c.isalpha() or c.isspace())
+    if len(desc) > 0 and alpha / len(desc) < 0.4:
+        return True
+    # 名称特征可疑
+    if any(w in name for w in ["dictatorship", "china-dictat", "propaganda"]):
+        return True
+    return False
+
+
+def repo_score(repo: dict) -> float:
+    """综合评分：星标 + 时效 + 内容质量"""
+    from datetime import timedelta
+
+    stars = repo.get("stargazers_count") or repo.get("stars", 0) or 0
+    desc = (repo.get("description") or "").strip()
+    pushed = repo.get("pushed_at", "")
+    topics = repo.get("topics", []) or []
+
+    s = 0
+    # 星标分（对数压缩，避免高星完全碾压新项目）
+    s += min(stars, 500) * 0.6
+    s += max(0, stars - 500) * 0.1  # 超过 500 星标权重降低
+
+    # 时效分：最近半年内有更新 + 最高 200
+    if pushed:
+        try:
+            dt = datetime.fromisoformat(pushed.replace("Z", "+00:00"))
+            age_days = (datetime.now(timezone.utc) - dt).days
+            if age_days < 180:
+                s += max(0, 200 - age_days)  # 越新越加分
+        except:
+            pass
+
+    # 描述质量分
+    if 50 <= len(desc) <= 500:
+        s += 50
+    elif len(desc) > 500:
+        s += 30
+
+    # 标签分
+    if len(topics) >= 3:
+        s += 40
+    elif len(topics) >= 1:
+        s += 20
+
+    return s
+
+
 def is_relevant(repo: dict) -> bool:
-    """判断项目是否同时涉及电商和AI"""
+    """判断项目是否同时涉及电商和AI，且不是垃圾"""
+    if is_garbage(repo):
+        return False
+
     text = " ".join([
         repo.get("description") or "",
         repo.get("name", ""),
@@ -322,7 +385,7 @@ def generate_report(all_results: list[dict], seen: dict) -> str:
 
     # 取 Top 10（新增优先，无新增时取历史高星）
     if all_results:
-        top10 = sorted(all_results, key=lambda x: x["stars"], reverse=True)[:10]
+        top10 = sorted(all_results, key=repo_score, reverse=True)[:10]
         label = "## 今日精选 Top 10"
     else:
         label = "## 今日无新增 · 历史 Top 10"
