@@ -349,6 +349,17 @@ def generate_report(all_results: list[dict], seen_count: int) -> str:
         max_stars = max(r["stars"] for r in items)
         lines.append(f"| {cat} | {len(items)} | {max_stars} |")
     lines.append("")
+
+    # 可点击目录（GitHub Markdown 自动生成锚点）
+    lines.append("**目录：**")
+    toc_links = []
+    for cat in sorted_cats:
+        items = category_items[cat]
+        # 生成 GitHub 锚点：去除特殊符号，空格转 -，小写
+        anchor = cat.replace("/", "").replace("（", "").replace("）", "").replace(" ", "-").lower()
+        toc_links.append(f"[{cat}（{len(items)}）](#{anchor})")
+    lines.append(" · ".join(toc_links))
+    lines.append("")
     lines.append("---")
     lines.append("")
 
