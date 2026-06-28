@@ -1,9 +1,5 @@
 # GitHub 跨境电商+AI 日报 - 2026-06-28
 
-**累计追踪项目：88** | **本次新增：88 个**
-
----
-
 ## 今日精选 Top 10
 
 ### 1. [PennyJoly/linktre-tools](https://github.com/PennyJoly/linktre-tools)  ⭐ 602
