@@ -39,7 +39,6 @@ def md2html(text: str) -> str:
 def main():
     report_path = Path(__file__).resolve().parent.parent / "reports" / "latest.md"
     md = report_path.read_text(encoding="utf-8")
-
     title = md.split("\n")[0].replace("# ", "")
 
     html_body = f"""<!DOCTYPE html>
@@ -48,21 +47,21 @@ def main():
 <style>
 body{{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    max-width: 680px; margin: 0 auto; padding: 24px;
-    background: #0d1117; color: #c9d1d9;
+    max-width: 640px; margin: 0 auto; padding: 16px;
+    background: #fff; color: #222;
 }}
-h1{{ color: #58a6ff; font-size: 22px; border-bottom: 1px solid #21262d; padding-bottom: 12px; }}
-h2{{ color: #f0883e; font-size: 17px; margin-top: 28px; }}
-h3{{ font-size: 15px; color: #e6edf3; margin: 16px 0 4px; }}
-h3 a{{ color: #58a6ff; text-decoration: none; }}
-a{{ color: #58a6ff; }}
+h1{{ font-size: 18px; font-weight: 600; margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid #eee; }}
+h2{{ font-size: 13px; font-weight: 600; color: #999; margin: 24px 0 12px; letter-spacing: 0.5px; }}
+h3{{ font-size: 15px; font-weight: 600; margin: 16px 0 2px; }}
+h3 a{{ color: #0366d6; text-decoration: none; }}
+a{{ color: #0366d6; }}
 blockquote{{
-    border-left: 3px solid #30363d; padding: 6px 12px; margin: 6px 0;
-    color: #8b949e; font-size: 13px;
+    font-size: 13px; color: #666; margin: 2px 0 8px; padding: 0;
+    border: none; line-height: 1.5;
 }}
-hr{{ border: 0; border-top: 1px solid #21262d; margin: 20px 0; }}
-p{{ margin: 4px 0; font-size: 14px; line-height: 1.6; }}
-strong{{ color: #f78166; }}
+hr{{ border: 0; border-top: 1px solid #f0f0f0; margin: 14px 0; }}
+p{{ margin: 1px 0; font-size: 12px; color: #999; }}
+strong{{ color: #333; font-weight: 500; }}
 </style>
 </head>
 <body>
