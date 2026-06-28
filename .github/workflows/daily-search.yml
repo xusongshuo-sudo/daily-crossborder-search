@@ -36,27 +36,68 @@ jobs:
           )
       
       - name: Send email
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
         run: |
           python3 -c "
-          import smtplib, os
+          import smtplib, os, re
           from email.mime.text import MIMEText
-          from email.mime.multipart import MIMEMultipart
           from pathlib import Path
 
-          report = Path('reports/latest.md').read_text(encoding='utf-8')
+          md = Path('reports/latest.md').read_text(encoding='utf-8')
 
-          msg = MIMEMultipart('alternative')
-          msg['Subject'] = 'GitHub 跨境电商+AI 日报'
+          # Markdown -> HTML
+          def md2html(text):
+              lines = text.split('\n')
+              out = []
+              for line in lines:
+                  if line.startswith('# '):
+                      out.append(f'<h1>{line[2:]}</h1>')
+                  elif line.startswith('## '):
+                      out.append(f'<h2>{line[3:]}</h2>')
+                  elif line.startswith('### '):
+                      line = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href=\"\2\">\1</a>', line[4:])
+                      out.append(f'<h3>{line}</h3>')
+                  elif line.startswith('> '):
+                      out.append(f'<blockquote>{line[2:]}</blockquote>')
+                  elif line.startswith('---'):
+                      out.append('<hr>')
+                  elif line.startswith('**') and line.endswith('**'):
+                      out.append(f'<p><strong>{line[2:-2]}</strong></p>')
+                  elif line.strip():
+                      line = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href=\"\2\">\1</a>', line)
+                      line = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', line)
+                      out.append(f'<p>{line}</p>')
+                  else:
+                      out.append('<br>')
+              return '\n'.join(out)
+
+          html = f'''<!DOCTYPE html><html><head><meta charset=\"utf-8\">
+          <style>
+          body{{font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:680px;margin:0auto;padding:24px;background:#0d1117;color:#c9d1d9}}
+          h1{{color:#58a6ff;font-size:22px;border-bottom:1px solid #21262d;padding-bottom:12px}}
+          h2{{color:#f0883e;font-size:17px;margin-top:28px}}
+          h3{{font-size:15px;color:#e6edf3;margin:16px 0 4px}}
+          h3 a{{color:#58a6ff;text-decoration:none}}
+          a{{color:#58a6ff}}
+          blockquote{{border-left:3px solid #30363d;padding:6px 12px;margin:6px 0;color:#8b949e;font-size:13px}}
+          hr{{border:0;border-top:1px solid #21262d;margin:20px 0}}
+          p{{margin:4px 0;font-size:14px;line-height:1.5}}
+          strong{{color:#f78166}}
+          </style></head><body>
+          {md2html(md)}
+          </body></html>'''
+
+          msg = MIMEText(html, 'html', 'utf-8')
+          title = md.split('\n')[0].replace('# ','')
+          msg['Subject'] = title
           msg['From'] = os.environ['MAIL_USERNAME']
           msg['To'] = os.environ['MAIL_TO']
-          msg.attach(MIMEText(report, 'html', 'utf-8'))
 
           with smtplib.SMTP_SSL('smtp.qq.com', 465) as smtp:
               smtp.login(os.environ['MAIL_USERNAME'], os.environ['MAIL_PASSWORD'])
               smtp.send_message(msg)
           print('Email sent')
           "
-        env:
-          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
-          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
