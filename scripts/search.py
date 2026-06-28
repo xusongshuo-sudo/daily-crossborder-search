@@ -339,58 +339,35 @@ def generate_report(all_results: list[dict], seen_count: int) -> str:
         key=lambda c: (len(category_items[c]), max(x["stars"] for x in category_items[c])),
         reverse=True)
 
-    # 概览表
-    lines.append("## 概览")
-    lines.append("")
-    lines.append("| 分类 | 数量 | 最高星标 |")
-    lines.append("|------|------|----------|")
-    for cat in sorted_cats:
-        items = category_items[cat]
-        max_stars = max(r["stars"] for r in items)
-        lines.append(f"| {cat} | {len(items)} | {max_stars} |")
+    # 取 Top 10（按星标排序）
+    top10 = sorted(all_results, key=lambda x: x["stars"], reverse=True)[:10]
+
+    lines.append("## 今日精选 Top 10")
     lines.append("")
 
-    # 可点击目录（GitHub Markdown 自动生成锚点）
-    lines.append("**目录：**")
-    toc_links = []
-    for cat in sorted_cats:
-        items = category_items[cat]
-        # 生成 GitHub 锚点：去除特殊符号，空格转 -，小写
-        anchor = cat.replace("/", "").replace("（", "").replace("）", "").replace(" ", "-").lower()
-        toc_links.append(f"[{cat}（{len(items)}）](#{anchor})")
-    lines.append(" · ".join(toc_links))
-    lines.append("")
-    lines.append("---")
-    lines.append("")
+    for i, r in enumerate(top10, 1):
+        desc = (r["description"] or "").replace("\n", " ")[:200]
+        topics = ", ".join(r["topics"][:5]) if r["topics"] else ""
 
-    # 按分类展示
-    for cat in sorted_cats:
-        items = category_items[cat]
-        lines.append(f"## {cat}（{len(items)} 个）")
+        lines.append(f"### {i}. [{r['full_name']}]({r['html_url']})  ⭐ {r['stars']}")
         lines.append("")
+        lines.append(f"**📌 {r['cn_summary']}**")
+        lines.append(f"**🏷️ {r['category']}**")
+        lines.append("")
+        if desc:
+            lines.append(f"> {desc}")
+            lines.append("")
 
-        for r in sorted(items, key=lambda x: x["stars"], reverse=True):
-            desc = (r["description"] or "").replace("\n", " ")[:200]
-            topics = ", ".join(r["topics"][:5]) if r["topics"] else ""
-
-            lines.append(f"### [{r['full_name']}]({r['html_url']})  ⭐ {r['stars']}")
-            lines.append("")
-            lines.append(f"**📌 {r['cn_summary']}**")
-            lines.append("")
-            if desc:
-                lines.append(f"> {desc}")
-                lines.append("")
-
-            meta = []
-            if r["language"]:
-                meta.append(f"语言: {r['language']}")
-            if topics:
-                meta.append(f"标签: {topics}")
-            meta.append(f"创建: {r['created_at'][:10]}")
-            lines.append(" | ".join(meta))
-            lines.append("")
-            lines.append("---")
-            lines.append("")
+        meta = []
+        if r["language"]:
+            meta.append(f"语言: {r['language']}")
+        if topics:
+            meta.append(f"标签: {topics}")
+        meta.append(f"创建: {r['created_at'][:10]}")
+        lines.append(" | ".join(meta))
+        lines.append("")
+        lines.append("---")
+        lines.append("")
 
     return "\n".join(lines)
 
