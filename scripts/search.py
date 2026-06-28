@@ -119,9 +119,8 @@ FUNCTION_CATEGORIES = {
 def classify_repo(repo_data: dict) -> str:
     """根据功能标签确定主分类"""
     summary = repo_data.get("cn_summary", "")
-    # 提取特征标签
-    features_str = summary.split("] ")[-1] if "] " in summary else ""
-    features = [f.strip() for f in features_str.split("，")]
+    # cn_summary 现在是逗号分隔的功能标签
+    features = [f.strip() for f in summary.split("，")]
 
     # 按优先级匹配：更具体的分类优先
     priority = [
@@ -159,11 +158,10 @@ def classify_repo(repo_data: dict) -> str:
 
 # ── 中文简介生成 ───────────────────────────────────────────
 def make_cn_summary(repo: dict, keyword_group: str) -> str:
-    """为项目生成一句话中文简介"""
+    """为项目生成一句话中文简介：返回功能标签列表"""
     desc = (repo.get("description") or "").lower()
     name = repo.get("name", "").lower()
     text = f"{name} {desc}"
-    category = CATEGORY_CN.get(keyword_group, "跨境电商AI")
 
     # 识别具体功能
     features = []
@@ -199,7 +197,7 @@ def make_cn_summary(repo: dict, keyword_group: str) -> str:
     if not features:
         features.append("跨境电商AI工具")
 
-    return f"[{category}] {'，'.join(features[:4])}"
+    return "，".join(features[:4])
 
 
 # ── API 工具函数 ──────────────────────────────────────────
