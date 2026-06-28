@@ -318,10 +318,6 @@ def generate_report(all_results: list[dict], seen: dict) -> str:
     lines = [
         f"# GitHub 跨境电商+AI 日报 - {today}",
         "",
-        f"**累计追踪项目：{len(seen)}** | **本次新增：{len(all_results)} 个**",
-        "",
-        "---",
-        "",
     ]
 
     # 取 Top 10（新增优先，无新增时取历史高星）
