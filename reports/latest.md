@@ -46,18 +46,7 @@
 
 ---
 
-### 5. [coolqoo/1click-ecom-detailpage](https://github.com/coolqoo/1click-ecom-detailpage)  ⭐ 140
-
-**📌 AI Agent自动化，AI技能/提示词模板**
-**🏷️ Skill/提示词模板**
-
-> 一键生成高转化跨境电商主图与商品详情页的 AI Agent Skill
-
-语言: Python | 创建: 2026-05-06
-
----
-
-### 6. [aws-samples/sample-getting-started-with-strands-agents-course](https://github.com/aws-samples/sample-getting-started-with-strands-agents-course)  ⭐ 93
+### 5. [aws-samples/sample-getting-started-with-strands-agents-course](https://github.com/aws-samples/sample-getting-started-with-strands-agents-course)  ⭐ 93
 
 **📌 AI Agent自动化，AI技能/提示词模板**
 **🏷️ Skill/提示词模板**
@@ -68,7 +57,7 @@
 
 ---
 
-### 7. [SerendipityOneInc/ZooData-Skills](https://github.com/SerendipityOneInc/ZooData-Skills)  ⭐ 55
+### 6. [SerendipityOneInc/ZooData-Skills](https://github.com/SerendipityOneInc/ZooData-Skills)  ⭐ 55
 
 **📌 选品调研，AI Agent自动化，AI技能/提示词模板**
 **🏷️ Skill/提示词模板**
@@ -79,35 +68,46 @@
 
 ---
 
-### 8. [awslabs/generative-ai-toolkit](https://github.com/awslabs/generative-ai-toolkit)  ⭐ 50
+### 7. [superjack2050/1688-cli](https://github.com/superjack2050/1688-cli)  ⭐ 26
 
-**📌 AI Agent自动化**
-**🏷️ AI Agent/自动化**
+**📌 选品调研，供应链/采购，AI Agent自动化，订单/库存管理**
+**🏷️ 选品/市场调研**
 
-> The Generative AI Toolkit is a lightweight library for building, testing and evaluating AI agents in Python, using any of the LLMs supported by the Amazon Bedrock Converse API.
+> 1688 CLI is an AI-agent-friendly command-line tool for 1688 sourcing, product research, supplier evaluation, procurement Inquire, and order management.helping dropshippers and Amazon sellers automate 
 
-语言: Python | 创建: 2024-10-24
-
----
-
-### 9. [aws-samples/sample-agentic-ai-web](https://github.com/aws-samples/sample-agentic-ai-web)  ⭐ 50
-
-**📌 AI Agent自动化**
-**🏷️ AI Agent/自动化**
-
-> This project demonstrates how to use AWS Bedrock with Anthropic Claude and Amazon Nova models to create a web automation assistant with tool use, human-in-the-loop interaction, and vision capabilities
-
-语言: Python | 标签: agentic-ai, ai, aws, checkbot, genai | 创建: 2025-03-31
+语言: TypeScript | 标签: 1688, agent, alibaba, amzon, automation | 创建: 2026-05-12
 
 ---
 
-### 10. [vohidjon123/google](https://github.com/vohidjon123/google)  ⭐ 40
+### 8. [lien0219/trademind-ai](https://github.com/lien0219/trademind-ai)  ⭐ 6
 
-**📌 关键词/SEO，图片/视觉设计，广告投放，AI Agent自动化**
-**🏷️ 图片/视觉设计**
+**📌 订单/库存管理**
+**🏷️ 订单/库存管理**
 
-> (function(sttc){/*     Copyright The Closure Library Authors.   SPDX-License-Identifier: Apache-2.0  */  var n;function aa(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!
+> Open-source AI operations platform for cross-border commerce: product collection, drafts, AI content optimization, publishing, and order/inventory workflows.
 
-创建: 2022-04-13
+语言: Go | 标签: ai, ai-agent, antd, cross-border-ecommerce, docker | 创建: 2026-05-15
+
+---
+
+### 9. [haoyiyin/instant-site](https://github.com/haoyiyin/instant-site)  ⭐ 6
+
+**📌 关键词/SEO，AI Agent自动化，AI技能/提示词模板**
+**🏷️ Skill/提示词模板**
+
+> Agent skill for building, deploying, and operating foreign trade independent sites — from-zero generation, Cloudflare Pages, content ops, SEO, multi-language. Compatible with any AI agent.
+
+语言: JavaScript | 标签: agent-skill, ai-agent-skill, ai-agents, automation, claude-code | 创建: 2026-05-19
+
+---
+
+### 10. [nexscope-ai/nexscope-ecommerce-skills](https://github.com/nexscope-ai/nexscope-ecommerce-skills)  ⭐ 7
+
+**📌 选品调研，关键词/SEO，竞品/市场分析，AI Agent自动化**
+**🏷️ 选品/市场调研**
+
+> Ready-to-use AI agent skills for e-commerce intelligence. Product research, keyword optimization, competitor analysis, pricing monitoring, patent risk assessment, market trends, and platform-specific 
+
+语言: Python | 标签: ai, ai-agent, ai-agent-skills, amazon, competitor-analysis | 创建: 2026-06-25
 
 ---
