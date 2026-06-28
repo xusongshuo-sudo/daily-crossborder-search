@@ -313,36 +313,40 @@ def deduplicate(items: list[dict], seen: dict) -> list[dict]:
     return fresh
 
 
-def generate_report(all_results: list[dict], seen_count: int) -> str:
+def generate_report(all_results: list[dict], seen: dict) -> str:
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     lines = [
         f"# GitHub 跨境电商+AI 日报 - {today}",
         "",
-        f"**累计追踪项目：{seen_count}** | **本次新增：{len(all_results)} 个**",
+        f"**累计追踪项目：{len(seen)}** | **本次新增：{len(all_results)} 个**",
         "",
         "---",
         "",
     ]
 
-    if not all_results:
-        lines.append("今日无新增相关项目。")
-        return "\n".join(lines)
+    # 取 Top 10（新增优先，无新增时取历史高星）
+    if all_results:
+        top10 = sorted(all_results, key=lambda x: x["stars"], reverse=True)[:10]
+        label = "## 今日精选 Top 10"
+    else:
+        label = "## 今日无新增 · 历史 Top 10"
+        top10 = []
+        for rid, info in seen.items():
+            top10.append({
+                "full_name": info.get("full_name", ""),
+                "html_url": f"https://github.com/{info.get('full_name', '')}",
+                "stars": info.get("stars", 0),
+                "cn_summary": "已追踪项目",
+                "category": "历史记录",
+                "description": "",
+                "language": "",
+                "topics": [],
+                "created_at": info.get("first_seen", "")[:10],
+                "pushed_at": "",
+            })
+        top10 = sorted(top10, key=lambda x: x["stars"], reverse=True)[:10]
 
-    # 按功能分类分组
-    from collections import Counter, defaultdict
-    category_items = defaultdict(list)
-    for r in all_results:
-        category_items[r["category"]].append(r)
-
-    # 排序：热门分类优先
-    sorted_cats = sorted(category_items.keys(),
-        key=lambda c: (len(category_items[c]), max(x["stars"] for x in category_items[c])),
-        reverse=True)
-
-    # 取 Top 10（按星标排序）
-    top10 = sorted(all_results, key=lambda x: x["stars"], reverse=True)[:10]
-
-    lines.append("## 今日精选 Top 10")
+    lines.append(label)
     lines.append("")
 
     for i, r in enumerate(top10, 1):
@@ -403,7 +407,7 @@ def main():
 
     save_seen(seen)
 
-    report = generate_report(fresh, len(seen))
+    report = generate_report(fresh, seen)
     today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     report_path = REPORT_DIR / f"{today_str}.md"
     with open(report_path, "w", encoding="utf-8") as f:
