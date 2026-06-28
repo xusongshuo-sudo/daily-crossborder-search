@@ -33,20 +33,24 @@ if GITHUB_TOKEN:
 # 间隔 4s，约 11 次/分钟，远低于 30 次/分钟的限额
 
 KEYWORD_GROUPS = {
-    "跨境电商+AI": [
-        "cross-border ecommerce AI skill",
-        "跨境电商 AI agent",
-        "Amazon AI tool ecommerce",
+    # 每个关键词都结合了电商场景 + AI，避免泛AI项目淹没结果
+    "跨境电商+AI Skill": [
+        "cross-border ecommerce AI",
+        "跨境电商 Claude Code skill",
+        "Amazon AI agent tool",
+        "跨境电商 agent 自动化",
     ],
-    "Claude Code Agent": [
-        "Claude Code skill",
-        "agent skill template",
-        "MCP AI agent",
+    "选品/运营 AI": [
+        "ecommerce product research AI agent",
+        "Amazon listing AI optimization",
+        "ecommerce keyword research AI",
+        "跨境电商 选品 AI",
     ],
-    "选品运营AI": [
-        "product research AI ecommerce",
-        "listing optimization AI",
-        "ecommerce competitor AI agent",
+    "电商+Agent/MCP": [
+        "ecommerce AI agent automation",
+        "ecommerce MCP skill tool",
+        "跨境电商 AI 工具",
+        "Amazon seller AI assistant",
     ],
 }
 
