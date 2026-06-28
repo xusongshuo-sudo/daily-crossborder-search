@@ -1,0 +1,37 @@
+name: Daily GitHub Search — 跨境电商+AI
+
+on:
+  schedule:
+    # 每天 UTC 0:00 = 北京时间 8:00
+    - cron: "0 0 * * *"
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 运行搜索
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: python scripts/search.py
+
+      - name: 提交结果
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seen.json reports/
+          git diff --staged --quiet || (
+            git commit -m "[bot] 每日搜索更新 - $(date +%Y-%m-%d)"
+            git push
+          )
