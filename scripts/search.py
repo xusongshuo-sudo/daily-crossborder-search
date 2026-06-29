@@ -141,6 +141,135 @@ def repo_score(repo: dict) -> float:
     return s
 
 
+def text_blob(repo: dict) -> str:
+    return " ".join([
+        repo.get("full_name", ""),
+        repo.get("name", ""),
+        repo.get("description") or "",
+        " ".join(repo.get("topics", [])),
+        repo.get("language") or "",
+    ]).lower()
+
+
+def quality_profile(repo: dict) -> dict:
+    """Score repository quality while keeping search keywords broad."""
+    text = text_blob(repo)
+    score = 0
+    strengths = []
+    concerns = []
+
+    stars = repo.get("stars", repo.get("stargazers_count", 0)) or 0
+    topics = repo.get("topics", []) or []
+    desc = (repo.get("description") or "").strip()
+    language = repo.get("language") or ""
+
+    if stars >= 100:
+        score += 16
+        strengths.append("已有较高关注度")
+    elif stars >= 20:
+        score += 10
+        strengths.append("已有一定早期关注")
+    elif stars >= 5:
+        score += 5
+        strengths.append("有少量早期关注")
+    else:
+        concerns.append("关注度较低")
+
+    if is_recently_active(repo, 30):
+        score += 16
+        strengths.append("最近 30 天有更新")
+    elif is_recently_active(repo, 90):
+        score += 10
+        strengths.append("最近 90 天有更新")
+    elif is_recently_active(repo, 180):
+        score += 5
+        strengths.append("半年内有更新")
+    else:
+        concerns.append("近期维护信号弱")
+
+    if desc and len(desc) >= 40:
+        score += 10
+        strengths.append("描述信息较完整")
+    elif desc:
+        score += 4
+        concerns.append("描述偏短")
+    else:
+        concerns.append("缺少项目描述")
+
+    if len(topics) >= 4:
+        score += 8
+        strengths.append("topics 较完整")
+    elif topics:
+        score += 4
+
+    platform_terms = [
+        "amazon", "shopify", "tiktok shop", "tiktok", "shopee", "etsy", "ebay",
+        "1688", "alibaba", "aliexpress", "ozon", "listing", "product research",
+        "supplier", "keyword", "ppc", "cross-border", "cross border", "跨境",
+        "选品", "供应链", "关键词", "竞品",
+    ]
+    platform_hits = [term for term in platform_terms if term in text]
+    if len(platform_hits) >= 2:
+        score += 18
+        strengths.append("跨境业务场景明确")
+    elif platform_hits:
+        score += 9
+        strengths.append("有跨境业务关键词")
+    else:
+        concerns.append("跨境业务场景不够明确")
+
+    agent_terms = [
+        "agent", "skill", "mcp", "claude", "codex", "openclaw", "cursor",
+        "automation", "llm", "prompt", "ai-agent", "ai agent",
+    ]
+    agent_hits = [term for term in agent_terms if term in text]
+    if len(agent_hits) >= 2:
+        score += 16
+        strengths.append("AI Agent/Skill 信号明确")
+    elif agent_hits:
+        score += 8
+        strengths.append("有 AI 工具信号")
+    else:
+        concerns.append("AI 工具属性不够明确")
+
+    runnable_terms = [
+        "python", "typescript", "javascript", "go", "java", "docker", "fastapi",
+        "nextjs", "react", "cli", "sdk", "api", "server", "app",
+    ]
+    if language and language.lower() not in ["html", "css"]:
+        score += 10
+        strengths.append(f"有主要代码语言：{language}")
+    elif any(term in text for term in runnable_terms):
+        score += 6
+        strengths.append("有可运行工具信号")
+    else:
+        concerns.append("可运行代码信号不足")
+
+    negative_terms = [
+        "awesome", "curated list", "collection of", "directory", "navigation",
+        "tutorial", "course", "sample", "demo only", "template only",
+        "导航", "收录", "资源合集", "工具合集", "课程", "教程", "示例项目",
+    ]
+    negative_hits = [term for term in negative_terms if term in text]
+    if negative_hits:
+        score -= 30
+        concerns.append("偏合集/教程/导航，落地价值需谨慎")
+
+    if language.lower() == "html" and stars < 20:
+        score -= 10
+        concerns.append("低星 HTML 项目可能偏展示页")
+
+    score = max(0, min(100, score))
+    return {
+        "quality_score": score,
+        "strengths": strengths[:5],
+        "concerns": concerns[:5],
+        "platform_hits": platform_hits[:6],
+        "agent_hits": agent_hits[:6],
+        "is_deep_dive_candidate": score >= 58 and not negative_hits,
+    }
+
+
 def is_relevant(repo: dict) -> bool:
     """判断项目是否同时涉及电商和AI，且不是垃圾"""
     if is_garbage(repo):
@@ -476,11 +605,10 @@ def active_label(repo: dict) -> str:
 
 
 def recommendation_level(repo: dict) -> str:
-    score = repo_score(repo)
-    stars = repo.get("stars", 0)
-    if score >= 260 or stars >= 100:
+    score = quality_profile(repo)["quality_score"]
+    if score >= 76:
         return "高优先级"
-    if score >= 120 or stars >= 20:
+    if score >= 58:
         return "值得跟进"
     return "观察"
 
@@ -545,13 +673,8 @@ def is_recently_active(repo: dict, max_days: int = 180) -> bool:
 
 
 def is_quality_candidate(repo: dict) -> bool:
-    return (
-        repo.get("stars", 0) >= 5
-        and bool(repo.get("description"))
-        and is_recently_active(repo)
-        and repo_score(repo) >= 120
-        and not is_directory_like_repo(repo)
-    )
+    profile = quality_profile(repo)
+    return bool(profile["is_deep_dive_candidate"])
 
 
 def is_directory_like_repo(repo: dict) -> bool:
@@ -574,23 +697,74 @@ def select_daily_project(fresh: list[dict], all_candidates: list[dict], analyzed
         if str(item["id"]) not in analyzed_ids and is_quality_candidate(item)
     ]
     if fresh_pool:
-        return sorted(fresh_pool, key=repo_score, reverse=True)[0], "今日新增"
+        return sorted(fresh_pool, key=lambda x: (quality_profile(x)["quality_score"], repo_score(x)), reverse=True)[0], "今日新增"
 
     history_pool = [
         item for item in unique_by_repo(all_candidates)
         if str(item["id"]) not in analyzed_ids and is_quality_candidate(item)
     ]
     if history_pool:
-        return sorted(history_pool, key=repo_score, reverse=True)[0], "历史未分析补位"
+        return sorted(history_pool, key=lambda x: (quality_profile(x)["quality_score"], repo_score(x)), reverse=True)[0], "历史未分析补位"
 
     fallback_pool = [
         item for item in unique_by_repo(all_candidates)
         if str(item["id"]) not in analyzed_ids and item.get("stars", 0) > 0
     ]
     if fallback_pool:
-        return sorted(fallback_pool, key=repo_score, reverse=True)[0], "低门槛补位"
+        return sorted(fallback_pool, key=lambda x: (quality_profile(x)["quality_score"], repo_score(x)), reverse=True)[0], "低门槛补位"
 
     return None, "无候选"
+
+
+def candidate_record(repo: dict, analyzed: dict, fresh_ids: set[str]) -> dict:
+    profile = quality_profile(repo)
+    rid = str(repo["id"])
+    return {
+        "id": rid,
+        "full_name": repo["full_name"],
+        "html_url": repo["html_url"],
+        "description": repo.get("description", ""),
+        "stars": repo.get("stars", 0),
+        "forks": repo.get("forks", 0),
+        "language": repo.get("language", ""),
+        "topics": repo.get("topics", []),
+        "category": repo.get("category", ""),
+        "cn_summary": repo.get("cn_summary", ""),
+        "keyword_group": repo.get("keyword_group", ""),
+        "layer": repo.get("layer", ""),
+        "repo_score": round(repo_score(repo), 2),
+        "quality_score": profile["quality_score"],
+        "strengths": profile["strengths"],
+        "concerns": profile["concerns"],
+        "platform_hits": profile["platform_hits"],
+        "agent_hits": profile["agent_hits"],
+        "is_new_today": rid in fresh_ids,
+        "already_analyzed": rid in analyzed,
+        "is_deep_dive_candidate": profile["is_deep_dive_candidate"],
+        "created_at": repo.get("created_at", ""),
+        "pushed_at": repo.get("pushed_at", ""),
+    }
+
+
+def save_candidates_report(candidates: list[dict], fresh: list[dict], analyzed: dict):
+    fresh_ids = {str(item["id"]) for item in fresh}
+    records = [candidate_record(item, analyzed, fresh_ids) for item in unique_by_repo(candidates)]
+    records.sort(key=lambda x: (x["is_deep_dive_candidate"], x["quality_score"], x["repo_score"]), reverse=True)
+    payload = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total": len(records),
+        "fresh_count": len(fresh_ids),
+        "deep_dive_candidate_count": sum(1 for item in records if item["is_deep_dive_candidate"]),
+        "items": records,
+    }
+    today = report_date()
+    paths = [
+        REPORT_DIR / f"candidates-{today}.json",
+        REPORT_DIR / "candidates-latest.json",
+    ]
+    for path in paths:
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
 def readme_flags(readme: str) -> dict[str, bool]:
@@ -618,6 +792,17 @@ def maturity_judgement(repo: dict, readme: str) -> str:
     if points >= 2:
         return "成熟度中等：有明确方向，但仍需要检查 README、示例和实际代码完整度。"
     return "成熟度偏早期：适合先收藏观察，不建议直接投入生产流程。"
+
+
+def quality_summary(repo: dict, readme: str) -> str:
+    profile = quality_profile(repo)
+    strengths = "、".join(profile["strengths"]) if profile["strengths"] else "暂无明显加分项"
+    concerns = "、".join(profile["concerns"]) if profile["concerns"] else "暂无明显扣分项"
+    readme_note = "README 已读取，可辅助判断实际能力。" if readme else "README 未读取到，主要依赖仓库元信息判断。"
+    return (
+        f"质量分 {profile['quality_score']}/100。主要加分项：{strengths}。"
+        f"主要疑点：{concerns}。{readme_note}"
+    )
 
 
 def problem_statement(repo: dict, readme: str) -> str:
@@ -670,28 +855,165 @@ def risk_notes(repo: dict, readme: str) -> list[str]:
     return risks or ["暂无明显结构性风险，主要风险在于实际接入成本和数据源可用性。"]
 
 
-def readme_excerpt(readme: str) -> str:
+def clean_readme_line(line: str) -> str:
+    line = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", line)
+    line = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", line)
+    line = re.sub(r"<[^>]+>", "", line)
+    return re.sub(r"\s+", " ", line.strip(" #*-`\t|")).strip()
+
+
+def readme_candidate_lines(readme: str) -> list[str]:
     if not readme:
-        return "未读取到 README 内容。"
+        return []
+
     lines = []
-    for line in readme.splitlines():
-        line = line.strip(" #\t")
-        lower = line.lower()
-        if not line:
+    for raw in readme.splitlines():
+        lower = raw.lower()
+        if not raw.strip():
             continue
-        if line.startswith("![") or "<img" in lower:
+        if raw.lstrip().startswith("![") or "shields.io" in lower or "badge" in lower:
             continue
-        if "shields.io" in lower or "badge" in lower:
+        if raw.lstrip().startswith(("http://", "https://", "```")):
             continue
-        if re.fullmatch(r"\[?[^\]]+\]?\([^)]+\)", line):
+        if set(raw.strip()) <= {"-", "|", ":", " "}:
             continue
-        if line.startswith(("http://", "https://", "```", "|", "<p", "</p", "<div", "</div")):
-            continue
-        if 20 <= len(line) <= 180 and not line.startswith(("http://", "https://", "```", "|")):
+
+        if raw.count("|") >= 2:
+            cells = [clean_readme_line(cell) for cell in raw.split("|")]
+            line = " / ".join(cell for cell in cells if cell)
+        else:
+            line = clean_readme_line(raw)
+
+        if 18 <= len(line) <= 220:
             lines.append(line)
-        if len(lines) >= 2:
+    return lines
+
+
+def content_signals(text: str) -> list[str]:
+    lower = text.lower()
+    mapping = [
+        ("product research", "产品调研/选品判断"),
+        ("market research", "市场调研"),
+        ("competitor", "竞品分析"),
+        ("keyword", "关键词研究"),
+        ("listing", "Listing 优化/审核"),
+        ("seo", "SEO 优化"),
+        ("review", "评论/评价分析"),
+        ("pricing", "定价分析"),
+        ("ppc", "广告投放/PPC"),
+        ("ads", "广告投放"),
+        ("marketing automation", "营销自动化"),
+        ("supply chain", "供应链优化"),
+        ("supplier", "供应商筛选"),
+        ("inventory", "库存运营"),
+        ("analytics", "业务数据分析"),
+        ("business analytics", "业务数据分析"),
+        ("image", "商品图片/视觉素材"),
+        ("agent", "AI Agent 自动化"),
+        ("skill", "可复用 Skill 模块"),
+        ("prompt", "提示词资产"),
+        ("api", "API/数据接入"),
+        ("amazon", "Amazon"),
+        ("shopify", "Shopify"),
+        ("tiktok shop", "TikTok Shop"),
+        ("etsy", "Etsy"),
+        ("ebay", "eBay"),
+        ("walmart", "Walmart"),
+    ]
+    signals = []
+    for term, label in mapping:
+        if term in lower and label not in signals:
+            signals.append(label)
+    return signals
+
+
+def content_example_sentence(signals: list[str]) -> str:
+    parts = []
+    if "产品调研/选品判断" in signals or "市场调研" in signals:
+        parts.append("用于新品机会筛选和市场判断")
+    if "竞品分析" in signals:
+        parts.append("用于拆解竞品卖点、价格和市场位置")
+    if "关键词研究" in signals or "SEO 优化" in signals:
+        parts.append("用于检查关键词覆盖和搜索流量机会")
+    if "Listing 优化/审核" in signals:
+        parts.append("用于优化商品标题、五点描述或页面信息")
+    if "广告投放/PPC" in signals:
+        parts.append("用于辅助广告词、投放结构或 PPC 分析")
+    if "供应链优化" in signals or "供应商筛选" in signals:
+        parts.append("用于供应商筛选、采购判断或供应链流程优化")
+    if "业务数据分析" in signals:
+        parts.append("用于把销售、运营或市场数据整理成决策依据")
+    if "定价分析" in signals:
+        parts.append("用于价格带、利润空间或竞品定价判断")
+    if "AI Agent 自动化" in signals or "可复用 Skill 模块" in signals or "提示词资产" in signals:
+        parts.append("适合沉淀成可复用的 AI 运营 Skill")
+
+    if not parts:
+        return "可作为判断项目是否值得打开验证的具体内容依据。"
+    return "；".join(parts[:3]) + "。"
+
+
+def readme_content_examples(readme: str) -> list[str]:
+    if not readme:
+        return ["未读取到 README，暂时无法摘选具体内容。"]
+
+    scored = []
+    for line in readme_candidate_lines(readme):
+        signals = content_signals(line)
+        if not signals:
+            continue
+        score = len(signals)
+        if any(item in signals for item in ["产品调研/选品判断", "竞品分析", "关键词研究", "Listing 优化/审核", "供应链优化", "业务数据分析"]):
+            score += 3
+        if any(item in signals for item in ["Amazon", "Shopify", "TikTok Shop", "Etsy", "eBay", "Walmart"]):
+            score += 2
+        if any(item in signals for item in ["AI Agent 自动化", "可复用 Skill 模块", "提示词资产"]):
+            score += 1
+        scored.append((score, signals, line))
+
+    scored.sort(key=lambda item: item[0], reverse=True)
+    examples = []
+    seen = set()
+    for _, signals, line in scored:
+        key = "、".join(signals[:4])
+        if key in seen:
+            continue
+        seen.add(key)
+        examples.append(f"包含「{key}」：{content_example_sentence(signals)}")
+        if len(examples) >= 4:
             break
-    return " / ".join(lines) if lines else short_desc(readme, 240)
+
+    if examples:
+        return examples
+    return ["README 已读取，但没有自动识别出足够具体的业务内容，建议人工查看目录结构和示例文件。"]
+
+
+def readme_observation(repo: dict, readme: str) -> list[str]:
+    if not readme:
+        return ["未读取到 README，暂时只能依赖仓库描述、topics、语言和更新时间判断。"]
+
+    flags = readme_flags(readme)
+    profile = quality_profile(repo)
+    notes = []
+
+    if flags["has_skill"]:
+        notes.append("README 明确出现 Agent、Skill、Prompt、MCP、Claude 或 Codex 等信号，项目更像可复用的 AI 运营能力模块。")
+    if profile["platform_hits"]:
+        platforms = "、".join(profile["platform_hits"][:4])
+        notes.append(f"README 或仓库元信息覆盖 {platforms} 等跨境业务关键词，场景不是泛 AI 工具。")
+    if flags["has_usage"]:
+        notes.append("README 中有示例、使用方式或 quick start 信号，后续验证成本相对低。")
+    if flags["has_install"]:
+        notes.append("README 中能看到安装或部署信号，适合进一步检查是否能本地跑通。")
+    if flags["has_api"]:
+        notes.append("README 提到 API、token 或 credential，落地时需要重点确认数据源和账号权限。")
+
+    if not flags["has_usage"]:
+        notes.append("使用示例信号不明显，需要打开仓库目录确认是否只是说明性资产。")
+    if not flags["has_install"]:
+        notes.append("安装说明不够明显，建议先确认是否能直接接入现有工作流。")
+
+    return notes[:5] if notes else ["README 已读取，但可落地信息不够集中，建议人工打开目录和示例进一步确认。"]
 
 
 def generate_report(selected: dict | None, source: str, fresh_count: int, candidate_count: int, seen: dict, analyzed: dict, readme: str) -> str:
@@ -713,8 +1035,8 @@ def generate_report(selected: dict | None, source: str, fresh_count: int, candid
         return "\n".join(lines)
 
     topics = ", ".join(selected.get("topics", [])[:6]) if selected.get("topics") else "无"
-    scenarios = landing_scenarios(selected)
     risks = risk_notes(selected, readme)
+    profile = quality_profile(selected)
 
     lines.extend([
         f"今天选择 **{source}** 项目：[{selected['full_name']}]({selected['html_url']})。",
@@ -725,13 +1047,13 @@ def generate_report(selected: dict | None, source: str, fresh_count: int, candid
         "",
         f"**推荐级别:** {recommendation_level(selected)}",
         "",
-        f"**综合评分:** {repo_score(selected):.1f}",
+        f"**质量评分:** {profile['quality_score']}/100",
         "",
         f"**项目定位:** {selected.get('cn_summary', '未识别')}",
         "",
         f"**主分类:** {selected.get('category', '未分类')}",
         "",
-        f"**选择原因:** {why_watch(selected)}来源为「{source}」，且尚未做过深度分析。",
+        f"**选择原因:** {quality_summary(selected, readme)}来源为「{source}」，且尚未做过深度分析。",
         "",
         "## 基本信息",
         "",
@@ -739,18 +1061,17 @@ def generate_report(selected: dict | None, source: str, fresh_count: int, candid
         "",
         f"created: {selected.get('created_at', '')[:10]} | pushed: {selected.get('pushed_at', '')[:10]} | found: {selected.get('layer', '未知层级')}",
         "",
-        "## 它解决什么跨境问题",
+        "## 内容摘选",
         "",
-        problem_statement(selected, readme),
+    ])
+    for item in readme_content_examples(readme):
+        lines.append(f"- {item}")
+    lines.extend([
         "",
         "## README 观察",
         "",
-        readme_excerpt(readme),
-        "",
-        "## 可落地场景",
-        "",
     ])
-    for item in scenarios:
+    for item in readme_observation(selected, readme):
         lines.append(f"- {item}")
 
     lines.extend([
@@ -808,6 +1129,7 @@ def main():
     print(f"\n去重前: {len(all_raw)}")
     fresh = deduplicate(all_raw, seen)
     print(f"新增: {len(fresh)}")
+    save_candidates_report(all_raw, fresh, analyzed)
 
     selected, source = select_daily_project(fresh, all_raw, analyzed)
     readme = ""
@@ -815,7 +1137,7 @@ def main():
         print(f"今日深挖: {selected['full_name']} ({source})")
         readme = fetch_readme(selected["full_name"])
         analyzed_at = datetime.now(timezone.utc).isoformat()
-        score = round(repo_score(selected), 2)
+        score = quality_profile(selected)["quality_score"]
         analyzed[str(selected["id"])] = {
             "full_name": selected["full_name"],
             "html_url": selected["html_url"],

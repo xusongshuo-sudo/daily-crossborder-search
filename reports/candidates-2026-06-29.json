@@ -1,0 +1,4451 @@
+{
+  "generated_at": "2026-06-29T08:30:10.873659+00:00",
+  "total": 104,
+  "fresh_count": 0,
+  "deep_dive_candidate_count": 41,
+  "items": [
+    {
+      "id": "1177556025",
+      "full_name": "nexscope-ai/Amazon-Skills",
+      "html_url": "https://github.com/nexscope-ai/Amazon-Skills",
+      "description": "Free AI agent skills for Amazon sellers—  keyword research, competitor analysis, listing audit & more. Works with OpenClaw, Claude Code, Cursor, Windsurf, Codex and any agent that supports the Skills format.",
+      "stars": 322,
+      "forks": 58,
+      "language": "Python",
+      "topics": [
+        "ai-agents",
+        "amazon",
+        "amazon-seller-automation",
+        "amazon-seller-tools",
+        "claude-code",
+        "claude-skills",
+        "ecommerce",
+        "openclaw",
+        "openclaw-skills",
+        "skills"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "Listing优化/文案，关键词/SEO，竞品/市场分析，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 470.2,
+      "quality_score": 94,
+      "strengths": [
+        "已有较高关注度",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "listing",
+        "keyword"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "claude",
+        "codex",
+        "openclaw",
+        "cursor"
+      ],
+      "is_new_today": false,
+      "already_analyzed": true,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-10T06:17:05Z",
+      "pushed_at": "2026-06-16T06:34:17Z"
+    },
+    {
+      "id": "1185016972",
+      "full_name": "nexscope-ai/eCommerce-Skills",
+      "html_url": "https://github.com/nexscope-ai/eCommerce-Skills",
+      "description": "E-commerce skills for AI agents — product research, marketing automation, supply chain optimization, and business analytics for online sellers across Amazon, Shopify, Etsy, TikTok Shop, and all platforms.",
+      "stars": 296,
+      "forks": 52,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "ai",
+        "ai-agent-skills",
+        "ai-agents",
+        "amazon-seller-tools",
+        "claude-code-skills",
+        "claude-skills",
+        "ecommerce",
+        "openclaw-skills",
+        "shopify-tools",
+        "tiktok-shop-automation"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "选品调研，AI Agent自动化，AI技能/提示词模板，社媒/内容营销",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 448.6,
+      "quality_score": 94,
+      "strengths": [
+        "已有较高关注度",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "shopify",
+        "tiktok shop",
+        "tiktok",
+        "etsy",
+        "product research"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "claude",
+        "openclaw",
+        "automation",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-18T06:42:32Z",
+      "pushed_at": "2026-06-10T07:57:04Z"
+    },
+    {
+      "id": "1180426897",
+      "full_name": "SerendipityOneInc/ZooData-Skills",
+      "html_url": "https://github.com/SerendipityOneInc/ZooData-Skills",
+      "description": "APIClaw Skills - AI Agent capabilities for Amazon Product Research",
+      "stars": 55,
+      "forks": 9,
+      "language": "Python",
+      "topics": [
+        "ai-agent",
+        "ai-agents",
+        "amazon",
+        "amazon-api",
+        "amazon-seller",
+        "api",
+        "clawhub",
+        "commerce-data",
+        "ecommerce",
+        "mcp",
+        "mcp-server",
+        "product-research",
+        "python",
+        "skills"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "选品调研，AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 321.0,
+      "quality_score": 88,
+      "strengths": [
+        "已有一定早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "product research"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "mcp",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-13T03:04:49Z",
+      "pushed_at": "2026-06-27T07:12:03Z"
+    },
+    {
+      "id": "1236911090",
+      "full_name": "superjack2050/1688-cli",
+      "html_url": "https://github.com/superjack2050/1688-cli",
+      "description": "1688 CLI is an AI-agent-friendly command-line tool for 1688 sourcing, product research, supplier evaluation, procurement Inquire, and order management.helping dropshippers and Amazon sellers automate and streamline their sourcing workflow from 1688.",
+      "stars": 26,
+      "forks": 6,
+      "language": "TypeScript",
+      "topics": [
+        "1688",
+        "agent",
+        "alibaba",
+        "amzon",
+        "automation",
+        "china",
+        "claude-code",
+        "cli",
+        "codex",
+        "codex-skill",
+        "dropshipping",
+        "ecommerce",
+        "fba",
+        "seller"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，供应链/采购，AI Agent自动化，订单/库存管理",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 304.6,
+      "quality_score": 88,
+      "strengths": [
+        "已有一定早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "1688",
+        "alibaba",
+        "product research",
+        "supplier"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "claude",
+        "codex",
+        "automation",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-12T17:34:21Z",
+      "pushed_at": "2026-06-27T15:14:06Z"
+    },
+    {
+      "id": "1239487602",
+      "full_name": "lien0219/trademind-ai",
+      "html_url": "https://github.com/lien0219/trademind-ai",
+      "description": "Open-source AI operations platform for cross-border commerce: product collection, drafts, AI content optimization, publishing, and order/inventory workflows.",
+      "stars": 6,
+      "forks": 1,
+      "language": "Go",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "antd",
+        "cross-border-ecommerce",
+        "docker",
+        "ecommerce",
+        "erp",
+        "gin",
+        "go",
+        "open-source",
+        "playwright",
+        "postgresql",
+        "product-listing",
+        "product-operations",
+        "react",
+        "redis",
+        "self-hosted",
+        "seller-tools",
+        "typescript"
+      ],
+      "category": "订单/库存管理",
+      "cn_summary": "订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 293.6,
+      "quality_score": 83,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "listing",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-15T06:23:30Z",
+      "pushed_at": "2026-06-29T08:25:06Z"
+    },
+    {
+      "id": "1279940806",
+      "full_name": "nexscope-ai/nexscope-ecommerce-skills",
+      "html_url": "https://github.com/nexscope-ai/nexscope-ecommerce-skills",
+      "description": "Ready-to-use AI agent skills for e-commerce intelligence. Product research, keyword optimization, competitor analysis, pricing monitoring, patent risk assessment, market trends, and platform-specific tools for Amazon, TikTok Shop, Shopify, Temu and more.",
+      "stars": 7,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agent-skills",
+        "amazon",
+        "competitor-analysis",
+        "ecommerce",
+        "keyword-research",
+        "market-intelligence",
+        "patent-analysis",
+        "pricing-monitoring",
+        "product-research",
+        "shopify",
+        "skills",
+        "temu",
+        "tiktok-shop-automation"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，关键词/SEO，竞品/市场分析，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 291.2,
+      "quality_score": 83,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "shopify",
+        "tiktok shop",
+        "tiktok",
+        "product research",
+        "keyword"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "automation",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-25T06:17:16Z",
+      "pushed_at": "2026-06-25T10:37:03Z"
+    },
+    {
+      "id": "1266871771",
+      "full_name": "4379711/amz-ad-pilot",
+      "html_url": "https://github.com/4379711/amz-ad-pilot",
+      "description": "AI-powered Amazon SP ads platform: campaign automation, analytics, and an LLM autopilot agent. Go + Vue 3, self-hosted.",
+      "stars": 4,
+      "forks": 1,
+      "language": "Go",
+      "topics": [
+        "ad-optimization",
+        "adtech",
+        "advertising",
+        "ai",
+        "ai-agents",
+        "amazon",
+        "amazon-ads",
+        "amazon-advertising",
+        "amazon-ppc",
+        "amazon-sp-api",
+        "automation",
+        "autonomous-agents",
+        "ecommerce",
+        "llm",
+        "marketing-automation",
+        "ppc",
+        "ppc-optimization",
+        "self-host"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 292.4,
+      "quality_score": 78,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "ppc"
+      ],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "llm",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-12T03:00:46Z",
+      "pushed_at": "2026-06-29T06:18:29Z"
+    },
+    {
+      "id": "1276791982",
+      "full_name": "Vanszs/tiktok-viral-factory",
+      "html_url": "https://github.com/Vanszs/tiktok-viral-factory",
+      "description": "Multi-Agent AI System that generates, produces & publishes TikTok Shop Affiliate videos — fully automated. 7 AI Agents powered by LangGraph, Kling AI, ElevenLabs & MCP Protocol. Beauty & Personal Care niche, 100 videos/month, ~0/mo.",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "affiliate-marketing",
+        "ai-agents",
+        "ai-video",
+        "automation",
+        "beauty",
+        "content-creation",
+        "ecommerce",
+        "elevenlabs",
+        "ffmpeg",
+        "kling-ai",
+        "langchain",
+        "langgraph",
+        "mcp",
+        "multi-agent-system",
+        "python",
+        "social-media",
+        "tiktok",
+        "tiktok-automation",
+        "tiktok-shop",
+        "video-generation"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI Agent自动化，AI技能/提示词模板，社媒/内容营销",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 285.8,
+      "quality_score": 78,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "tiktok shop",
+        "tiktok"
+      ],
+      "agent_hits": [
+        "agent",
+        "mcp",
+        "automation",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-22T09:46:11Z",
+      "pushed_at": "2026-06-22T09:46:31Z"
+    },
+    {
+      "id": "1271377276",
+      "full_name": "xiaoyaotsyx-dotcom/aliexpress-auto-listing-skill",
+      "html_url": "https://github.com/xiaoyaotsyx-dotcom/aliexpress-auto-listing-skill",
+      "description": "Automate AliExpress product listing — 1688 sourcing → Dianxiaomi ERP → AliExpress publish. AI browser automation for cross-border e-commerce. 速卖通自动上架工作流：1688采集→店小秘→速卖通发布。",
+      "stars": 4,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "1688",
+        "agent-skill",
+        "ai-agent",
+        "aliexpress",
+        "auto-listing",
+        "automation",
+        "browser-automation",
+        "chinese-ecommerce",
+        "cross-border-ecommerce",
+        "dianxiaomi",
+        "dropshipping",
+        "ecommerce",
+        "ecommerce-automation",
+        "erp-automation",
+        "kuajing-dianshang",
+        "listing-optimization",
+        "listing-tool",
+        "product-management",
+        "seller-tools",
+        "supplier-sourcing"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，供应链/采购，AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 280.4,
+      "quality_score": 78,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "1688",
+        "aliexpress",
+        "listing",
+        "supplier",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "automation",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-16T15:49:03Z",
+      "pushed_at": "2026-06-17T00:20:26Z"
+    },
+    {
+      "id": "1269665456",
+      "full_name": "JuneYaooo/launchfit-ai",
+      "html_url": "https://github.com/JuneYaooo/launchfit-ai",
+      "description": "Agent Skill for cross-border product launch readiness: admission checks, target-market benchmarks, localization, documents, labels, pricing, logistics, and remediation.",
+      "stars": 7,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "codex",
+        "cross-border-ecommerce",
+        "ecommerce",
+        "global-commerce",
+        "market-research",
+        "qualification-review",
+        "seller-tools",
+        "trade-compliance"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI Agent自动化，AI技能/提示词模板，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 284.2,
+      "quality_score": 74,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "codex",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-15T01:32:47Z",
+      "pushed_at": "2026-06-18T09:11:29Z"
+    },
+    {
+      "id": "1254089460",
+      "full_name": "libowenhemonesy-svg/amazon-agent-mvp",
+      "html_url": "https://github.com/libowenhemonesy-svg/amazon-agent-mvp",
+      "description": "Amazon 跨境电商运营助手 - AI 驱动的运营分析平台",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "ai-agent",
+        "amazon",
+        "ecommerce",
+        "fastapi",
+        "langgraph",
+        "python"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 231.8,
+      "quality_score": 72,
+      "strengths": [
+        "最近 30 天有更新",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短"
+      ],
+      "platform_hits": [
+        "amazon",
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-30T06:08:37Z",
+      "pushed_at": "2026-06-19T05:04:53Z"
+    },
+    {
+      "id": "1191741986",
+      "full_name": "yoligehude14753/ecom-agent",
+      "html_url": "https://github.com/yoligehude14753/ecom-agent",
+      "description": "AI-powered e-commerce automation platform. Open-source, self-hosted, BYOK. Product research · Listing generator · Review analyzer · Competitor monitor · Ad optimizer",
+      "stars": 9,
+      "forks": 3,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "amazon",
+        "automation",
+        "ecommerce",
+        "fastapi",
+        "fba",
+        "llm",
+        "python",
+        "react",
+        "self-hosted"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，Listing优化/文案，竞品/市场分析，广告投放",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 201.4,
+      "quality_score": 72,
+      "strengths": [
+        "有少量早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "listing",
+        "product research"
+      ],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "llm"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-25T14:43:23Z",
+      "pushed_at": "2026-03-26T08:30:44Z"
+    },
+    {
+      "id": "1231403659",
+      "full_name": "liangdabiao/ecom-details-image",
+      "html_url": "https://github.com/liangdabiao/ecom-details-image",
+      "description": "一个面向 claude code / Codex / OpenClaw 的跨境电商和国内电商通用视觉创作 Skill。我精选25个高质量案例，涵盖纯色底产品主图、场景化生活图、平铺图、电商详情图、真实场景等等，全部配完整提示词，都可以利用 GPT-Image-2 API生成最终效果。一键生成电商相关图片！输入产品图片和需求描述，自动生成完整的电商主图、详情页图片、社媒推广图、直播间场景图等全套视觉素材。 与众不同之处是：**Campaign Style Lock** 机制 和 **强推广** 和 **重视转化效果**。",
+      "stars": 520,
+      "forks": 105,
+      "language": "Python",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "图片/视觉设计，AI技能/提示词模板，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 507.0,
+      "quality_score": 71,
+      "strengths": [
+        "已有较高关注度",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [
+        "skill",
+        "claude",
+        "codex",
+        "openclaw"
+      ],
+      "is_new_today": false,
+      "already_analyzed": true,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-06T23:43:15Z",
+      "pushed_at": "2026-05-15T00:41:13Z"
+    },
+    {
+      "id": "1256750836",
+      "full_name": "SugarEgg902/amazon_data_analysis_agent",
+      "html_url": "https://github.com/SugarEgg902/amazon_data_analysis_agent",
+      "description": "本平台为Amazon 跨境电商业务提供竞品数据采集、聚合与可视化分析能力。以 OUKITEL 为核心视角，持续监控 Blackview、Ulefone、CUBOT、DOOGEE、FOSSiBOT 五个主要竞品品牌在全球 8 个 Amazon 站点的表现，辅助产品、运营与管理层进行定价策略、选品决策和市场趋势研判。影刀结合卖家精灵获取数据，随后通过前端展示数据，结合llm做分析",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，竞品/市场分析，AI Agent自动化，定价/利润分析",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 251.8,
+      "quality_score": 70,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "跨境",
+        "选品",
+        "竞品"
+      ],
+      "agent_hits": [
+        "agent",
+        "llm"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-02T04:01:51Z",
+      "pushed_at": "2026-06-29T03:13:28Z"
+    },
+    {
+      "id": "1281049365",
+      "full_name": "markwaveio/cross-border-selection-kit",
+      "html_url": "https://github.com/markwaveio/cross-border-selection-kit",
+      "description": "跨境电商选品自动化 skill 套件:Amazon 信号 → Ad Library/Trends/1688 三源交叉验证(自带关键词污染自检)→ 六维打分 → 可视化报告。支持 Claude Code / Codex / OpenCLAW,内置安装引导。",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，关键词/SEO，广告投放，供应链/采购",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 248.0,
+      "quality_score": 70,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "1688",
+        "cross-border",
+        "跨境",
+        "选品",
+        "关键词"
+      ],
+      "agent_hits": [
+        "skill",
+        "claude",
+        "codex",
+        "openclaw"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-26T07:20:12Z",
+      "pushed_at": "2026-06-26T22:32:07Z"
+    },
+    {
+      "id": "1280208155",
+      "full_name": "Alpha-Park/ecommerce-copilot-skill",
+      "html_url": "https://github.com/Alpha-Park/ecommerce-copilot-skill",
+      "description": "AI-powered catalog enrichment agent designed for cross-border e-commerce visual assets generation and listing optimization.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，AI Agent自动化，AI技能/提示词模板，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 247.6,
+      "quality_score": 70,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "listing",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-25T11:17:14Z",
+      "pushed_at": "2026-06-25T11:17:19Z"
+    },
+    {
+      "id": "1280175809",
+      "full_name": "alphaparkinc/ecommerce-copilot-skill",
+      "html_url": "https://github.com/alphaparkinc/ecommerce-copilot-skill",
+      "description": "AI-powered catalog enrichment agent designed for cross-border e-commerce visual assets generation and listing optimization.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，AI Agent自动化，AI技能/提示词模板，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 247.6,
+      "quality_score": 70,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "listing",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-25T10:39:17Z",
+      "pushed_at": "2026-06-25T10:39:36Z"
+    },
+    {
+      "id": "1122558391",
+      "full_name": "takashilouis/sift-ai-agent-fe",
+      "html_url": "https://github.com/takashilouis/sift-ai-agent-fe",
+      "description": "Sift - An AI e-commerce agent to research market, product, user sentiment on eCommerce platform (Amazon, eBay, ...)",
+      "stars": 0,
+      "forks": 1,
+      "language": "TypeScript",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 242.0,
+      "quality_score": 70,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "ebay"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2025-12-25T02:28:29Z",
+      "pushed_at": "2026-06-21T00:57:53Z"
+    },
+    {
+      "id": "1123494613",
+      "full_name": "takashilouis/sift-ai-agent-be",
+      "html_url": "https://github.com/takashilouis/sift-ai-agent-be",
+      "description": "Sift BE - An AI e-commerce agent to research market, product, user sentiment on eCommerce platform (Amazon, eBay, ...)",
+      "stars": 0,
+      "forks": 1,
+      "language": "Python",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 242.0,
+      "quality_score": 70,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "ebay"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2025-12-27T01:59:10Z",
+      "pushed_at": "2026-06-20T22:58:18Z"
+    },
+    {
+      "id": "1204321239",
+      "full_name": "noique/cross-border-ecommerce-skills",
+      "html_url": "https://github.com/noique/cross-border-ecommerce-skills",
+      "description": "AI-powered skill templates for cross-border e-commerce: product selection, market research, IP risk, keywords, listing copy. Compatible with Claude Code & Antigravity.",
+      "stars": 13,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，Listing优化/文案，关键词/SEO，竞品/市场分析",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 224.8,
+      "quality_score": 69,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "listing",
+        "keyword",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "skill",
+        "claude"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-04-07T22:46:15Z",
+      "pushed_at": "2026-05-26T16:30:32Z"
+    },
+    {
+      "id": "1248930600",
+      "full_name": "clawEC/clawec-agents",
+      "html_url": "https://github.com/clawEC/clawec-agents",
+      "description": "clawEC 跨境电商 AI Agent 开源仓库：多平台选品/搜品 Agent（亚马逊、TikTok、Shopee、Temu、Ozon 等）与 Clawec API Skills，支持安装到 Cursor、Claude Code、Codex 等工具。官网 https://www.clawec.com/?source=q-github-agent",
+      "stars": 12,
+      "forks": 0,
+      "language": "Shell",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "选品调研，AI Agent自动化，AI技能/提示词模板，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 223.2,
+      "quality_score": 69,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "tiktok",
+        "shopee",
+        "ozon",
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "claude",
+        "codex",
+        "cursor",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-25T07:24:05Z",
+      "pushed_at": "2026-05-25T08:44:17Z"
+    },
+    {
+      "id": "1230537073",
+      "full_name": "zhupeixu/reddit-scout",
+      "html_url": "https://github.com/zhupeixu/reddit-scout",
+      "description": "Claude Code skill：从 Reddit 真实讨论中挖掘跨境电商选品机会，生成深度分析报告",
+      "stars": 8,
+      "forks": 1,
+      "language": "Python",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "选品调研，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 203.8,
+      "quality_score": 69,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [
+        "skill",
+        "claude"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-06T05:03:12Z",
+      "pushed_at": "2026-05-08T13:21:58Z"
+    },
+    {
+      "id": "1187460717",
+      "full_name": "xiaolu7586/ecommerce-product-scout-agent",
+      "html_url": "https://github.com/xiaolu7586/ecommerce-product-scout-agent",
+      "description": "海购选品助手 — OpenClaw Agent，支持 Amazon/TikTok Shop/eBay/Shopee 多平台跨境电商选品研究",
+      "stars": 31,
+      "forks": 9,
+      "language": "TypeScript",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，AI Agent自动化，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 168.6,
+      "quality_score": 69,
+      "strengths": [
+        "已有一定早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "tiktok shop",
+        "tiktok",
+        "shopee",
+        "ebay",
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "openclaw"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-20T18:49:19Z",
+      "pushed_at": "2026-03-20T18:49:22Z"
+    },
+    {
+      "id": "1199599252",
+      "full_name": "isunswang/tiktok-ecommerce-automation-system",
+      "html_url": "https://github.com/isunswang/tiktok-ecommerce-automation-system",
+      "description": "TikTok跨境电商全自动运营系统 - 基于多AI Agent协同的全链路智能运营",
+      "stars": 5,
+      "forks": 3,
+      "language": "Python",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 137.0,
+      "quality_score": 69,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "tiktok",
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-04-02T14:08:09Z",
+      "pushed_at": "2026-04-24T06:57:53Z"
+    },
+    {
+      "id": "1232820476",
+      "full_name": "RyanCoreAI/spring-ai-crossborder-customer-service",
+      "html_url": "https://github.com/RyanCoreAI/spring-ai-crossborder-customer-service",
+      "description": "Spring AI multilingual customer-service Agent platform for cross-border ecommerce, with RAG, order tools, escalation, and Vue admin UI.",
+      "stars": 5,
+      "forks": 0,
+      "language": "Java",
+      "topics": [
+        "ai-agent",
+        "customer-service",
+        "docker",
+        "ecommerce",
+        "java",
+        "llm",
+        "multilingual",
+        "rag",
+        "redis",
+        "spring-ai",
+        "spring-boot",
+        "vue3"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 257.0,
+      "quality_score": 68,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "llm",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-08T09:58:46Z",
+      "pushed_at": "2026-05-23T12:35:24Z"
+    },
+    {
+      "id": "1209763885",
+      "full_name": "Ismail-2001/Ecommerce-Auto-Agent",
+      "html_url": "https://github.com/Ismail-2001/Ecommerce-Auto-Agent",
+      "description": "MultiAgent is a next-generation e-commerce intelligence platform that deploys a fleet of specialized AI agents — pricing, supplier, marketing, recovery, inventory, and order intelligence — to autonomously optimize your store's revenue, inventory health, and customer relationships. ",
+      "stars": 5,
+      "forks": 0,
+      "language": "TypeScript",
+      "topics": [
+        "agentic-ai",
+        "aiagents",
+        "automation",
+        "ecommerce-application",
+        "ecommerce-platform"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "供应链/采购，AI Agent自动化，订单/库存管理",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 240.0,
+      "quality_score": 68,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "supplier"
+      ],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-04-13T18:56:53Z",
+      "pushed_at": "2026-05-06T11:39:41Z"
+    },
+    {
+      "id": "1226613826",
+      "full_name": "coral870921-source/Ozon-Profit-Skills",
+      "html_url": "https://github.com/coral870921-source/Ozon-Profit-Skills",
+      "description": "🛒 Claude Code skills for cross-border e-commerce automation. Auto-translate listings into any language, generate SEO tags & image prompts, track profit per order. Works with Ozon / TikTok Shop / Amazon / AliExpress. 🛒 跨境电商AI自动化工具——Listing翻译、SEO标签、图片Prompt、利润核算，适配多平台。",
+      "stars": 8,
+      "forks": 2,
+      "language": "",
+      "topics": [
+        "ai-automation",
+        "amazon",
+        "claude-code",
+        "cross-border",
+        "ecommerce",
+        "listing",
+        "ozon",
+        "profit-tracking",
+        "tiktok-shop"
+      ],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，关键词/SEO，图片/视觉设计，AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 236.8,
+      "quality_score": 67,
+      "strengths": [
+        "有少量早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "amazon",
+        "tiktok shop",
+        "tiktok",
+        "aliexpress",
+        "ozon",
+        "listing"
+      ],
+      "agent_hits": [
+        "skill",
+        "claude",
+        "automation",
+        "prompt"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-01T16:12:20Z",
+      "pushed_at": "2026-05-01T16:42:57Z"
+    },
+    {
+      "id": "1243975263",
+      "full_name": "libowenhemonesy-svg/cross-border-ai",
+      "html_url": "https://github.com/libowenhemonesy-svg/cross-border-ai",
+      "description": "跨境电商 AI 智能助手 — 基于 n8n + Agent + RAG 的知识库问答系统，涵盖亚马逊运营SOP、选品方法论、广告优化等16个专业领域",
+      "stars": 8,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，广告投放，AI Agent自动化，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 231.8,
+      "quality_score": 67,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "cross-border",
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-19T21:07:21Z",
+      "pushed_at": "2026-06-05T19:52:28Z"
+    },
+    {
+      "id": "1177019470",
+      "full_name": "victorjzq/global-arbitrage-api",
+      "html_url": "https://github.com/victorjzq/global-arbitrage-api",
+      "description": "AI-powered system that finds 3x+ price gaps across global markets. 26 categories, 9 trade routes, runs 24/7. Built with Python + Claude AI.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "arbitrage",
+        "automation",
+        "china",
+        "cross-border",
+        "ecommerce",
+        "price-comparison",
+        "python",
+        "shopee",
+        "southeast-asia",
+        "telegram-bot",
+        "web-scraping"
+      ],
+      "category": "定价/利润分析",
+      "cn_summary": "定价/利润分析",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 179.6,
+      "quality_score": 67,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "shopee",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "claude",
+        "automation"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-09T16:01:23Z",
+      "pushed_at": "2026-03-09T16:43:12Z"
+    },
+    {
+      "id": "1243720757",
+      "full_name": "haoyiyin/instant-site",
+      "html_url": "https://github.com/haoyiyin/instant-site",
+      "description": "Agent skill for building, deploying, and operating foreign trade independent sites — from-zero generation, Cloudflare Pages, content ops, SEO, multi-language. Compatible with any AI agent.",
+      "stars": 6,
+      "forks": 2,
+      "language": "JavaScript",
+      "topics": [
+        "agent-skill",
+        "ai-agent-skill",
+        "ai-agents",
+        "automation",
+        "claude-code",
+        "cloudflare-workers",
+        "content-ops",
+        "deploy",
+        "ecommerce",
+        "foreign-trade",
+        "multilingual",
+        "seo",
+        "static-site",
+        "website-builder"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "关键词/SEO，AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 292.6,
+      "quality_score": 65,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "claude",
+        "automation",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-19T15:46:24Z",
+      "pushed_at": "2026-06-27T14:28:11Z"
+    },
+    {
+      "id": "1074922159",
+      "full_name": "wontonee/cartxis",
+      "html_url": "https://github.com/wontonee/cartxis",
+      "description": "Cartxis is an open-source, AI-powered eCommerce platform built with Laravel, Inertia.js, and Flutter. It features modular architecture, web + mobile apps, and built-in AI Commerce agents for product content, pricing insights, and automation.",
+      "stars": 7,
+      "forks": 2,
+      "language": "Vue",
+      "topics": [
+        "ai-commerce",
+        "ecommerce",
+        "ecommerce-platform",
+        "ecommerce-shopping-solution",
+        "ecommerce-website",
+        "headless-commerce",
+        "laravel",
+        "laravel-framework",
+        "saas"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 268.2,
+      "quality_score": 65,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "automation"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2025-10-12T18:19:09Z",
+      "pushed_at": "2026-06-02T10:27:39Z"
+    },
+    {
+      "id": "1191375208",
+      "full_name": "AccioWork/agent-skills",
+      "html_url": "https://github.com/AccioWork/agent-skills",
+      "description": "Free AI agent skills for cross-border ecommerce. Tariff calculator, supplier finder, product research & more. Powered by accio.com",
+      "stars": 5,
+      "forks": 1,
+      "language": "",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "选品调研，供应链/采购，AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 250.0,
+      "quality_score": 65,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "product research",
+        "supplier",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-25T07:16:54Z",
+      "pushed_at": "2026-06-25T11:56:36Z"
+    },
+    {
+      "id": "1230459924",
+      "full_name": "coolqoo/1click-ecom-detailpage",
+      "html_url": "https://github.com/coolqoo/1click-ecom-detailpage",
+      "description": "一键生成高转化跨境电商主图与商品详情页的 AI Agent Skill",
+      "stars": 140,
+      "forks": 23,
+      "language": "Python",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 241.0,
+      "quality_score": 65,
+      "strengths": [
+        "已有较高关注度",
+        "最近 90 天有更新",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "描述偏短"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-06T02:43:27Z",
+      "pushed_at": "2026-05-16T16:55:25Z"
+    },
+    {
+      "id": "878156661",
+      "full_name": "awslabs/generative-ai-toolkit",
+      "html_url": "https://github.com/awslabs/generative-ai-toolkit",
+      "description": "The Generative AI Toolkit is a lightweight library for building, testing and evaluating AI agents in Python, using any of the LLMs supported by the Amazon Bedrock Converse API.",
+      "stars": 50,
+      "forks": 14,
+      "language": "Python",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 204.0,
+      "quality_score": 65,
+      "strengths": [
+        "已有一定早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [
+        "agent",
+        "llm",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2024-10-24T21:26:47Z",
+      "pushed_at": "2026-04-14T00:44:21Z"
+    },
+    {
+      "id": "1193412757",
+      "full_name": "0xCaptain888/AgentHub",
+      "html_url": "https://github.com/0xCaptain888/AgentHub",
+      "description": "跨境电商AI智能平台 — 5个AI Agent协同运营Amazon+TikTok Shop",
+      "stars": 12,
+      "forks": 2,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 114.2,
+      "quality_score": 64,
+      "strengths": [
+        "有少量早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [],
+      "platform_hits": [
+        "amazon",
+        "tiktok shop",
+        "tiktok",
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-03-27T07:37:31Z",
+      "pushed_at": "2026-03-28T00:50:58Z"
+    },
+    {
+      "id": "1198425457",
+      "full_name": "logeshkannan19/DropShipping-AI-Agent",
+      "html_url": "https://github.com/logeshkannan19/DropShipping-AI-Agent",
+      "description": "AI-powered Dropshipping Agent that automates product research, competitor analysis, and profitability prediction using Python, web scraping, and LLMs.",
+      "stars": 1,
+      "forks": 1,
+      "language": "Python",
+      "topics": [
+        "ai-agents",
+        "automation",
+        "data-analysis",
+        "dropshipping",
+        "ecommerce",
+        "llm",
+        "machine-learning",
+        "python",
+        "web-scraping"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，竞品/市场分析，AI Agent自动化，定价/利润分析",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 202.6,
+      "quality_score": 63,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "product research"
+      ],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "llm",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-04-01T12:15:22Z",
+      "pushed_at": "2026-04-01T12:41:14Z"
+    },
+    {
+      "id": "1239538926",
+      "full_name": "konighter/hanx-marketing",
+      "html_url": "https://github.com/konighter/hanx-marketing",
+      "description": "HanX Marketing之HanX 跨境电商Erp系统 是一套面向全球化电商卖家的智能化、全链路跨境电商运营与管理系统。基于现代化的微服务/模块化单体架构设计，集成卓越的 AI 多智能体（Multi-Agent System）运营决策流，打通从“选品-商品-广告-仓储-订单-组织”的跨境电商全周期业务闭环。",
+      "stars": 3,
+      "forks": 2,
+      "language": "Java",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，广告投放，AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 235.8,
+      "quality_score": 62,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有主要代码语言：Java"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-05-15T07:29:39Z",
+      "pushed_at": "2026-06-13T07:07:48Z"
+    },
+    {
+      "id": "1260970028",
+      "full_name": "xiaov971023/crossborder-image-agent-New-",
+      "html_url": "https://github.com/xiaov971023/crossborder-image-agent-New-",
+      "description": "一个面向跨境电商卖家的 AI 商品图片生成与审核工作台，支持上传产品主图、参考图和商品信息，结合 Temu、Amazon、Ozon、Noon 等平台图片规则，生成主图、轮播图和 SKU 图，并提供单张重新生成、局部修改、版本回退、图片审核与下载等功能，用于提升商品图片制作效率和上架素材质量。",
+      "stars": 4,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "图片/视觉设计",
+      "cn_summary": "图片/视觉设计，AI Agent自动化，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 229.4,
+      "quality_score": 62,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "ozon",
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-06T04:45:02Z",
+      "pushed_at": "2026-06-06T06:42:07Z"
+    },
+    {
+      "id": "1269831475",
+      "full_name": "StarrHuang/proma-skills",
+      "html_url": "https://github.com/StarrHuang/proma-skills",
+      "description": "224 个 Claude Code / Proma Agent Skills — 跨境电商、飞书办公、数据分析、科学计算、内容创作、开发效率，生产环境实战沉淀",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 236.0,
+      "quality_score": 61,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "claude"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-15T06:21:32Z",
+      "pushed_at": "2026-06-15T06:34:08Z"
+    },
+    {
+      "id": "1272436499",
+      "full_name": "codewithshahan/sikki-agent",
+      "html_url": "https://github.com/codewithshahan/sikki-agent",
+      "description": "fully functional web browser automation ecommerce AI agent called SIKKI using JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [
+        "agent",
+        "ai",
+        "automation",
+        "javascript",
+        "nodejs",
+        "playwright"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 279.6,
+      "quality_score": 60,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-06-17T15:55:25Z",
+      "pushed_at": "2026-06-17T16:15:14Z"
+    },
+    {
+      "id": "1132272141",
+      "full_name": "Aqsa-Naeem/amazon-agentic-skills",
+      "html_url": "https://github.com/Aqsa-Naeem/amazon-agentic-skills",
+      "description": "Amazon Private Label Assistant - AI skills for product research, validation, competitor analysis, and listing optimization",
+      "stars": 2,
+      "forks": 1,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，Listing优化/文案，竞品/市场分析，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 83.2,
+      "quality_score": 59,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing",
+        "product research"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": true,
+      "created_at": "2026-01-11T16:48:38Z",
+      "pushed_at": "2026-01-11T16:54:46Z"
+    },
+    {
+      "id": "1272787302",
+      "full_name": "wei910622-cell/AMZ-Skill",
+      "html_url": "https://github.com/wei910622-cell/AMZ-Skill",
+      "description": "Amazon cross-border ecommerce AI skills for keyword research, competitor analysis, review insights, and listing optimization.",
+      "stars": 5,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，关键词/SEO，竞品/市场分析，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 242.0,
+      "quality_score": 57,
+      "strengths": [
+        "有少量早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing",
+        "keyword",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "skill"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-06-17T23:56:10Z",
+      "pushed_at": "2026-06-18T06:17:45Z"
+    },
+    {
+      "id": "1222874544",
+      "full_name": "Yushan9293/ecommerce-ai-support-system",
+      "html_url": "https://github.com/Yushan9293/ecommerce-ai-support-system",
+      "description": "Multilingual AI support system for cross-border ecommerce — LangGraph multi-agent, LangChain RAG, FastAPI, Pinecone. Covers Amazon/Shopee/TikTok Shop.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化，订单/库存管理，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 188.6,
+      "quality_score": 56,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon",
+        "tiktok shop",
+        "tiktok",
+        "shopee",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-27T19:46:15Z",
+      "pushed_at": "2026-04-27T19:46:19Z"
+    },
+    {
+      "id": "892410902",
+      "full_name": "Varsha-1605/SocioSell",
+      "html_url": "https://github.com/Varsha-1605/SocioSell",
+      "description": "The Social Media to Product Listings Generator is an open-source AI tool that transforms social media product showcases into structured, detailed listings optimized for e-commerce platforms like Amazon. https://devfolio.co/projects/sociosell-63b7",
+      "stars": 23,
+      "forks": 23,
+      "language": "Python",
+      "topics": [
+        "css",
+        "fastapi",
+        "generative-ai",
+        "html5",
+        "javascript",
+        "mongodb-atlas",
+        "open-source",
+        "opensourcecontributions",
+        "python",
+        "swoc2025",
+        "talwindcss"
+      ],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，社媒/内容营销",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 103.8,
+      "quality_score": 56,
+      "strengths": [
+        "已有一定早期关注",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2024-11-22T03:59:58Z",
+      "pushed_at": "2025-02-21T13:51:26Z"
+    },
+    {
+      "id": "231937822",
+      "full_name": "Yogapriya2512/A-Simple-Chatbot-",
+      "html_url": "https://github.com/Yogapriya2512/A-Simple-Chatbot-",
+      "description": "A chatbot (also known as a talkbot, chatterbot, Bot, IM bot, interactive agent, or Artificial Conversational Entity)The classic historic early chatbots are ELIZA (1966) and PARRY (1972).More recent notable programs include A.L.I.C.E., Jabberwacky and D.U.D.E (Agence Nationale de la Recherche and CNRS 2006). While ELIZA and PARRY were used exclusively to simulate typed conversation, many chatbots now include functional features such as games and web searching abilities. In 1984, a book called The Policeman's Beard is Half Constructed was published, allegedly written by the chatbot Racter (though the program as released would not have been capable of doing so).  One pertinent field of AI research is natural language processing. Usually, weak AI fields employ specialized software or programming languages created specifically for the narrow function required. For example, A.L.I.C.E. uses a markup language called AIML, which is specific to its function as a conversational agent, and has since been adopted by various other developers of, so called, Alicebots. Nevertheless, A.L.I.C.E. is still purely based on pattern matching techniques without any reasoning capabilities, the same technique ELIZA was using back in 1966. This is not strong AI, which would require sapience and logical reasoning abilities.  Jabberwacky learns new responses and context based on real-time user interactions, rather than being driven from a static database. Some more recent chatbots also combine real-time learning with evolutionary algorithms that optimise their ability to communicate based on each conversation held. Still, there is currently no general purpose conversational artificial intelligence, and some software developers focus on the practical aspect, information retrieval.  Chatbot competitions focus on the Turing test or more specific goals. Two such annual contests are the Loebner Prize and The Chatterbox Challenge (offline since 2015, materials can still be found from web archives).  According to Forrester (2015), AI will replace 16 percent of American jobs by the end of the decade.Chatbots have been used in applications such as customer service, sales and product education. However, a study conducted by Narrative Science in 2015 found that 80 percent of their respondents believe AI improves worker performance and creates jobs.[citation needed] is a computer program or an artificial intelligence which conducts a conversation via auditory or textual methods. Such programs are often designed to convincingly simulate how a human would behave as a conversational partner, thereby passing the Turing test. Chatbots are typically used in dialog systems for various practical purposes including customer service or information acquisition. Some chatterbots use sophisticated natural language processing systems, but many simpler systems scan for keywords within the input, then pull a reply with the most matching keywords, or the most similar wording pattern, from a database.  The term \"ChatterBot\" was originally coined by Michael Mauldin (creator of the first Verbot, Julia) in 1994 to describe these conversational programs.Today, most chatbots are either accessed via virtual assistants such as Google Assistant and Amazon Alexa, via messaging apps such as Facebook Messenger or WeChat, or via individual organizations' apps and websites. Chatbots can be classified into usage categories such as conversational commerce (e-commerce via chat), analytics, communication, customer support, design, developer tools, education, entertainment, finance, food, games, health, HR, marketing, news, personal, productivity, shopping, social, sports, travel and utilities. Background",
+      "stars": 28,
+      "forks": 7,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "category": "关键词/SEO",
+      "cn_summary": "关键词/SEO，客服/售后，AI Agent自动化，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 46.8,
+      "quality_score": 56,
+      "strengths": [
+        "已有一定早期关注",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有主要代码语言：Jupyter Notebook"
+      ],
+      "concerns": [
+        "近期维护信号弱"
+      ],
+      "platform_hits": [
+        "amazon",
+        "keyword"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2020-01-05T15:32:27Z",
+      "pushed_at": "2020-01-05T15:34:47Z"
+    },
+    {
+      "id": "1071054548",
+      "full_name": "AndreZ1971/ki",
+      "html_url": "https://github.com/AndreZ1971/ki",
+      "description": "Autonomous AI system for WooCommerce shops — analyses, optimises and grows your shop 24/7. 4 agentic loops, 50+ tools, 12 industry specialisations. Self-hostable.",
+      "stars": 2,
+      "forks": 0,
+      "language": "TypeScript",
+      "topics": [
+        "agentic-ai",
+        "ai-agent",
+        "artificial-intelligence",
+        "automation",
+        "docker",
+        "ecommerce",
+        "fastify",
+        "openai",
+        "react",
+        "self-hosted",
+        "shop-automation",
+        "typescript",
+        "woocommerce",
+        "woocommerce-plugin"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 256.2,
+      "quality_score": 54,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-10-06T19:58:30Z",
+      "pushed_at": "2026-05-24T15:45:38Z"
+    },
+    {
+      "id": "1256842823",
+      "full_name": "Fluxwang/TikTranslate",
+      "html_url": "https://github.com/Fluxwang/TikTranslate",
+      "description": "为跨境电商团队打造的 TikTok 视频翻译工具，实时西语→中文字幕 + AI 话术分析",
+      "stars": 1,
+      "forks": 0,
+      "language": "TypeScript",
+      "topics": [],
+      "category": "社媒/内容营销",
+      "cn_summary": "翻译/本地化，社媒/内容营销",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 196.6,
+      "quality_score": 54,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "tiktok",
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-06-02T06:16:44Z",
+      "pushed_at": "2026-06-25T06:10:25Z"
+    },
+    {
+      "id": "1253460427",
+      "full_name": "qingyiwss/trade-knowledge-flywheel",
+      "html_url": "https://github.com/qingyiwss/trade-knowledge-flywheel",
+      "description": "外贸全链路知识飞轮 — 市场情报→选品→运营→获客→转化→履约，AI驱动的跨境电商决策引擎",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，竞品/市场分析",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 191.2,
+      "quality_score": 54,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-29T13:38:35Z",
+      "pushed_at": "2026-06-19T04:43:00Z"
+    },
+    {
+      "id": "1195195021",
+      "full_name": "fengziliang43-cmyk/tiktok-ecommerce-suite",
+      "html_url": "https://github.com/fengziliang43-cmyk/tiktok-ecommerce-suite",
+      "description": "TikTok Shop跨境电商自动化套件 - 7个AI智能体帮你从选品到上架全自动",
+      "stars": 21,
+      "forks": 8,
+      "language": "PowerShell",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，AI Agent自动化，社媒/内容营销",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 121.6,
+      "quality_score": 53,
+      "strengths": [
+        "已有一定早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：PowerShell"
+      ],
+      "concerns": [
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "tiktok shop",
+        "tiktok",
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-29T11:06:43Z",
+      "pushed_at": "2026-03-29T11:10:23Z"
+    },
+    {
+      "id": "1269680218",
+      "full_name": "zhibeizhiyue/fab-review-copywriter-toolkit",
+      "html_url": "https://github.com/zhibeizhiyue/fab-review-copywriter-toolkit",
+      "description": "Codex Skill and MCP for FAB-based Chinese ecommerce review-style copy drafts",
+      "stars": 0,
+      "forks": 0,
+      "language": "TypeScript",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，AI技能/提示词模板",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 236.0,
+      "quality_score": 52,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "skill",
+        "mcp",
+        "codex"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-06-15T02:00:47Z",
+      "pushed_at": "2026-06-15T02:01:05Z"
+    },
+    {
+      "id": "1076239805",
+      "full_name": "UnknowTT16/WeaveAI_Agent",
+      "html_url": "https://github.com/UnknowTT16/WeaveAI_Agent",
+      "description": "针对于各平台跨境电商不同市场选品和数据分析的AI助理",
+      "stars": 20,
+      "forks": 3,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，竞品/市场分析，AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 12.0,
+      "quality_score": 50,
+      "strengths": [
+        "已有一定早期关注",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "描述偏短"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-10-14T15:31:55Z",
+      "pushed_at": "2025-11-01T06:55:51Z"
+    },
+    {
+      "id": "1032753726",
+      "full_name": "aws-samples/sample-getting-started-with-strands-agents-course",
+      "html_url": "https://github.com/aws-samples/sample-getting-started-with-strands-agents-course",
+      "description": "Learn to build AI agents with Strands framework. Covers LLM integration via Amazon Bedrock/Anthropic, AWS service connections, tool implementation with MCP/A2A protocols, and agent evaluation using LangFuse/RAGAS.",
+      "stars": 93,
+      "forks": 38,
+      "language": "Jupyter Notebook",
+      "topics": [
+        "a2a",
+        "anthropic",
+        "aws",
+        "bedrock",
+        "litellm",
+        "mcp",
+        "python",
+        "strands-agents"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 322.8,
+      "quality_score": 49,
+      "strengths": [
+        "已有一定早期关注",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [
+        "agent",
+        "mcp",
+        "llm",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-08-05T19:18:08Z",
+      "pushed_at": "2026-06-05T21:55:57Z"
+    },
+    {
+      "id": "1191253103",
+      "full_name": "KelleyHuntPLLC/returnclaw",
+      "html_url": "https://github.com/KelleyHuntPLLC/returnclaw",
+      "description": "Voice-first AI agent for retail returns. One command. 🦞 Live demo — click the green orb: https://kelleyhuntpllc.github.io/returnclaw",
+      "stars": 2,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "automation",
+        "docker",
+        "ecommerce",
+        "gpt-4",
+        "llm",
+        "multi-agent",
+        "nextjs",
+        "openai",
+        "react",
+        "realtime-api",
+        "returns",
+        "saas",
+        "typescript",
+        "voice-ai",
+        "voice-assistant",
+        "webrtc"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 196.2,
+      "quality_score": 49,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "llm",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-25T04:05:54Z",
+      "pushed_at": "2026-03-26T07:28:47Z"
+    },
+    {
+      "id": "1242060029",
+      "full_name": "hikari0511/awesome-amazon-ec-skills",
+      "html_url": "https://github.com/hikari0511/awesome-amazon-ec-skills",
+      "description": "亚马逊跨境电商场景下的 Claude / AI Agent Skills 合集（中文优先，聚焦 Amazon 出海 + 1688 供货上游）",
+      "stars": 31,
+      "forks": 3,
+      "language": "",
+      "topics": [
+        "ai-agent",
+        "alibaba-1688",
+        "amazon",
+        "amazon-mcp",
+        "amazon-seller",
+        "awesome",
+        "awesome-list",
+        "chinese",
+        "claude-code",
+        "claude-skill",
+        "claude-skills",
+        "cross-border-ecommerce",
+        "ecommerce",
+        "mcp-server",
+        "sp-api"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "供应链/采购，AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 267.6,
+      "quality_score": 48,
+      "strengths": [
+        "已有一定早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "amazon",
+        "1688",
+        "alibaba",
+        "cross-border",
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "mcp",
+        "claude",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-18T05:09:46Z",
+      "pushed_at": "2026-05-19T02:39:54Z"
+    },
+    {
+      "id": "1228887069",
+      "full_name": "Bhuvaneshwari1826/AEO_Answer-Engine-Optimization_Scout",
+      "html_url": "https://github.com/Bhuvaneshwari1826/AEO_Answer-Engine-Optimization_Scout",
+      "description": "AEO Scout tells Amazon sellers whether AI shopping assistants mention their product — and exactly what listing copy to rewrite to fix it",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 196.0,
+      "quality_score": 48,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-04T13:34:26Z",
+      "pushed_at": "2026-05-05T16:42:55Z"
+    },
+    {
+      "id": "1220808427",
+      "full_name": "TayyabAliDogar/apex-ppc-app",
+      "html_url": "https://github.com/TayyabAliDogar/apex-ppc-app",
+      "description": "AI-powered Amazon PPC analytics platform with bleeding keyword detection and listing optimization",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，关键词/SEO，广告投放",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 191.6,
+      "quality_score": 48,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing",
+        "keyword",
+        "ppc"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-25T11:08:44Z",
+      "pushed_at": "2026-04-30T20:54:06Z"
+    },
+    {
+      "id": "1183816902",
+      "full_name": "zphsswl/ecom-product-decision-copilot",
+      "html_url": "https://github.com/zphsswl/ecom-product-decision-copilot",
+      "description": "一个面向跨境电商选品的 AI 决策 Copilot，把 FastMoss 导出的数据转化为机会评分、风险分析和市场切入建议。",
+      "stars": 2,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，竞品/市场分析",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 169.2,
+      "quality_score": 48,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-17T01:22:54Z",
+      "pushed_at": "2026-04-07T12:13:51Z"
+    },
+    {
+      "id": "1232698235",
+      "full_name": "boby4/ai-cross-border",
+      "html_url": "https://github.com/boby4/ai-cross-border",
+      "description": "面向跨境电商运营人员的 AI 文案生成工具，支持多平台、多语言、批量生成和 Excel 导入导出。",
+      "stars": 1,
+      "forks": 0,
+      "language": "Vue",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，订单/库存管理",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 149.6,
+      "quality_score": 48,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Vue"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "cross-border",
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-08T07:17:26Z",
+      "pushed_at": "2026-05-08T08:42:07Z"
+    },
+    {
+      "id": "1263837404",
+      "full_name": "banjunjun2/market-research-report",
+      "html_url": "https://github.com/banjunjun2/market-research-report",
+      "description": "跨境电商品类市场调研报告 Claude Code Skill:问题驱动逐维度确认 + 固定风格 Apple 工业风 HTML 报告 + 可选实时抓数",
+      "stars": 3,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "竞品/市场分析，AI技能/提示词模板",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 232.8,
+      "quality_score": 47,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确",
+        "有可运行工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [
+        "skill",
+        "claude"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-06-09T10:05:27Z",
+      "pushed_at": "2026-06-09T10:05:31Z"
+    },
+    {
+      "id": "1206408416",
+      "full_name": "rayane-rhsn/ecommerce-research-agent",
+      "html_url": "https://github.com/rayane-rhsn/ecommerce-research-agent",
+      "description": "A 5-agent AI pipeline for e-commerce product research using LangGraph, LangChain, Groq, and Serper API — with a Streamlit UI",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 170.0,
+      "quality_score": 47,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "有 AI 工具信号",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "product research"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-09T22:14:37Z",
+      "pushed_at": "2026-04-09T22:25:57Z"
+    },
+    {
+      "id": "1239310146",
+      "full_name": "alfredang/scannova",
+      "html_url": "https://github.com/alfredang/scannova",
+      "description": "AI market research agent for Singapore e-commerce — discover trending products, analyze pricing, and find import opportunities using Gemini 2.0 + Google Search grounding (OpenAI fallback).",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [
+        "ai",
+        "ecommerce",
+        "express",
+        "gemini",
+        "google-search-grounding",
+        "market-research",
+        "openai",
+        "product-discovery",
+        "react",
+        "singapore",
+        "vite"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "竞品/市场分析，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 251.6,
+      "quality_score": 46,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有 AI 工具信号",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-15T01:10:01Z",
+      "pushed_at": "2026-05-20T15:59:35Z"
+    },
+    {
+      "id": "1226173854",
+      "full_name": "Y2631687411/dianshang",
+      "html_url": "https://github.com/Y2631687411/dianshang",
+      "description": "我构建了一个跨境电商 AI 运营 Agent，用于自动完成选品分析、竞品研究、用户痛点提炼、英文 Listing 生成和关键词优化。它解决的核心痛点是中小卖家在上架商品时需要花大量时间研究竞品、整理评论痛点、撰写英文标题和五点描述，效率低且文案容易同质化。  该系统采用多 Agent 协作流程：选品 Agent 负责判断商品潜力，竞品 Agent 分析价格、标题和卖点，评论 Agent 总结用户痛点，文案 Agent 生成英文标题、五点描述和详情页内容，关键词 Agent 负责搜索词优化，质检 Agent 检查语法、合规性和平台风格。整个流程包含“市场调研—竞品分析—痛点总结—卖点重构—文案生成—质量检查”的长链推理，最终输出完整的商品上架方案，可帮助运营人员明显减少重复劳动，提高上架效率。",
+      "stars": 1,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，Listing优化/文案，关键词/SEO，竞品/市场分析",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 191.6,
+      "quality_score": 46,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "listing",
+        "跨境",
+        "选品",
+        "关键词",
+        "竞品"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-01T03:59:23Z",
+      "pushed_at": "2026-05-01T04:04:28Z"
+    },
+    {
+      "id": "1224465853",
+      "full_name": "Rajar17/catalog-enrichment-agent",
+      "html_url": "https://github.com/Rajar17/catalog-enrichment-agent",
+      "description": "AI agentic POC to auto-enrich ecommerce product catalogs                   using vision + web research",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 190.0,
+      "quality_score": 46,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "AI Agent/Skill 信号明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-29T10:02:28Z",
+      "pushed_at": "2026-04-29T10:23:11Z"
+    },
+    {
+      "id": "1260723646",
+      "full_name": "tangruiyuanbhe123456/cross-border-negative-review-manager-skill",
+      "html_url": "https://github.com/tangruiyuanbhe123456/cross-border-negative-review-manager-skill",
+      "description": "跨境电商差评管理工具 - AI差评分析与回复",
+      "stars": 0,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI技能/提示词模板，订单/库存管理",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 177.0,
+      "quality_score": 46,
+      "strengths": [
+        "最近 30 天有更新",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "cross-border",
+        "跨境"
+      ],
+      "agent_hits": [
+        "skill"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-06-05T19:59:07Z",
+      "pushed_at": "2026-06-06T05:04:57Z"
+    },
+    {
+      "id": "1185350742",
+      "full_name": "boothzoo123/boothzoo-amazon-listing-optimizer",
+      "html_url": "https://github.com/boothzoo123/boothzoo-amazon-listing-optimizer",
+      "description": "AI-powered Amazon listing optimizer skill for ai",
+      "stars": 5,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，AI技能/提示词模板",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 101.0,
+      "quality_score": 46,
+      "strengths": [
+        "有少量早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [
+        "skill"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-18T13:49:22Z",
+      "pushed_at": "2026-03-18T13:58:04Z"
+    },
+    {
+      "id": "1043620333",
+      "full_name": "Linxiushen/OpenAEO",
+      "html_url": "https://github.com/Linxiushen/OpenAEO",
+      "description": "IndieAEO Optimizer 是一个针对中国跨境电商独立站（如 Shopify）的 AEO（答案引擎优化）工具，旨在帮助卖家优化站内内容，提升 AI 搜索（如 ChatGPT）中的可见度和逆向推荐。基于 Profound 的五步 playbook（分析-创建-分发-测量-迭代），使用开源 LLM（如 Llama 3）本地部署，开发成本低（$5k-20k），支持多语言，匹配中国卖家痛点。2025 年市场规模超 500 亿美元，ROI 潜力 20-30%，适合快速迭代和早期采用。",
+      "stars": 4,
+      "forks": 1,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "竞品/市场分析",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 52.4,
+      "quality_score": 46,
+      "strengths": [
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "近期维护信号弱"
+      ],
+      "platform_hits": [
+        "shopify",
+        "跨境"
+      ],
+      "agent_hits": [
+        "llm"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-08-24T08:57:14Z",
+      "pushed_at": "2025-08-24T09:07:14Z"
+    },
+    {
+      "id": "1027435259",
+      "full_name": "enginterzi/amazon-seller-mcp",
+      "html_url": "https://github.com/enginterzi/amazon-seller-mcp",
+      "description": "Transform Your Amazon Business with AI - The first Model Context Protocol (MCP) client that seamlessly connects Claude and other AI agents to Amazon's Selling Partner API, enabling intelligent automation of your entire seller workflow from inventory management to listing optimization.",
+      "stars": 18,
+      "forks": 7,
+      "language": "HTML",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，AI Agent自动化，AI技能/提示词模板，订单/库存管理",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 60.8,
+      "quality_score": 45,
+      "strengths": [
+        "有少量早期关注",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "AI Agent/Skill 信号明确",
+        "有可运行工具信号"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [
+        "agent",
+        "mcp",
+        "claude",
+        "automation",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-07-28T02:24:35Z",
+      "pushed_at": "2025-08-26T15:51:19Z"
+    },
+    {
+      "id": "1243700976",
+      "full_name": "alphaparkinc/canlah-ai-skill",
+      "html_url": "https://github.com/alphaparkinc/canlah-ai-skill",
+      "description": "GenPark skill: Integrate CANLAH AI's Style Genome and multi-agent business suite for marketing, sales, and service automation.",
+      "stars": 3,
+      "forks": 0,
+      "language": "",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "brand-memory",
+        "canlah-ai",
+        "canmarket",
+        "ecommerce",
+        "marketing-automation"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "AI Agent自动化，AI技能/提示词模板",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 257.8,
+      "quality_score": 44,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "skill",
+        "automation",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-19T15:25:26Z",
+      "pushed_at": "2026-05-25T08:47:18Z"
+    },
+    {
+      "id": "1228515057",
+      "full_name": "penghgit/AI-Ecommerce-Smart-Agent",
+      "html_url": "https://github.com/penghgit/AI-Ecommerce-Smart-Agent",
+      "description": "Free AI tool for cross-border ecommerce sellers. Generate Shopify listings, product copy, business emails, and market research. 3 free uses/day, premium $19.9/year for 18250 total uses. No sign-up required.",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [
+        "ai-copywriter",
+        "ai-tools",
+        "business-email",
+        "cross-border",
+        "dropshipping",
+        "ecommerce",
+        "listing-generator",
+        "shopify"
+      ],
+      "category": "选品/市场调研",
+      "cn_summary": "Listing优化/文案，竞品/市场分析，AI Agent自动化，订单/库存管理",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 234.0,
+      "quality_score": 44,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "可运行代码信号不足",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "shopify",
+        "listing",
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-04T05:11:35Z",
+      "pushed_at": "2026-05-04T06:04:13Z"
+    },
+    {
+      "id": "1210765297",
+      "full_name": "aws-samples/sample-amazon-bedrock-for-beginners",
+      "html_url": "https://github.com/aws-samples/sample-amazon-bedrock-for-beginners",
+      "description": "Code samples for building AI applications on AWS with Amazon Bedrock, including Converse API, tool use, RAG with Knowledge Bases, guardrails, and a full agent built with the Strands Agents SDK.",
+      "stars": 35,
+      "forks": 32,
+      "language": "Python",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "aws",
+        "bedrock",
+        "guardrails",
+        "inference",
+        "rag"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 236.0,
+      "quality_score": 43,
+      "strengths": [
+        "已有一定早期关注",
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-14T18:27:11Z",
+      "pushed_at": "2026-04-14T18:31:06Z"
+    },
+    {
+      "id": "1152044434",
+      "full_name": "jshorwitz/awesome-agentic-advertising",
+      "html_url": "https://github.com/jshorwitz/awesome-agentic-advertising",
+      "description": "A curated list of MCP servers, tools, protocols, and resources for AI-powered advertising campaign management. Covers Google Ads, Meta, LinkedIn, Reddit, TikTok, Amazon, and more.",
+      "stars": 26,
+      "forks": 8,
+      "language": "",
+      "topics": [
+        "adtech",
+        "advertising",
+        "agentic-advertising",
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "google-ads",
+        "mcp",
+        "mcp-servers",
+        "meta-ads",
+        "model-context-protocol",
+        "ppc"
+      ],
+      "category": "Skill/提示词模板",
+      "cn_summary": "广告投放，AI Agent自动化，AI技能/提示词模板，社媒/内容营销",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 209.6,
+      "quality_score": 43,
+      "strengths": [
+        "已有一定早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "amazon",
+        "tiktok",
+        "ppc"
+      ],
+      "agent_hits": [
+        "agent",
+        "mcp",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-02-07T09:21:56Z",
+      "pushed_at": "2026-03-24T14:28:37Z"
+    },
+    {
+      "id": "1224259304",
+      "full_name": "Venkikumbare-droid/AI-Powered-Amazon-Listing-Analyzer",
+      "html_url": "https://github.com/Venkikumbare-droid/AI-Powered-Amazon-Listing-Analyzer",
+      "description": "AI-powered Amazon listing analyzer built using Claude AI and Groq API to optimize product content, SEO visibility, and listing quality.",
+      "stars": 1,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，关键词/SEO",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 189.6,
+      "quality_score": 42,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号",
+        "有可运行工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [
+        "claude"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-29T05:34:21Z",
+      "pushed_at": "2026-04-29T08:03:28Z"
+    },
+    {
+      "id": "1199553152",
+      "full_name": "downplay456-droid/supersolo-ai",
+      "html_url": "https://github.com/downplay456-droid/supersolo-ai",
+      "description": "supersolo-ai “山海天”跨境电商选品全链路自动化平台",
+      "stars": 1,
+      "forks": 1,
+      "language": "TypeScript",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 168.6,
+      "quality_score": 42,
+      "strengths": [
+        "最近 90 天有更新",
+        "跨境业务场景明确",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-02T13:16:28Z",
+      "pushed_at": "2026-05-27T14:35:52Z"
+    },
+    {
+      "id": "1179042707",
+      "full_name": "yaswanth-e123/amazon-policy-rag-assistant",
+      "html_url": "https://github.com/yaswanth-e123/amazon-policy-rag-assistant",
+      "description": "RAG-based AI assistant that answers questions from Amazon seller and customer policy documents using LangChain, ChromaDB, HuggingFace LLM, FastAPI, and Streamlit.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 141.0,
+      "quality_score": 42,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "有 AI 工具信号",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [
+        "llm"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-11T16:20:38Z",
+      "pushed_at": "2026-03-11T16:22:48Z"
+    },
+    {
+      "id": "1180602791",
+      "full_name": "soragya/ai-amazon-listing-generator",
+      "html_url": "https://github.com/soragya/ai-amazon-listing-generator",
+      "description": "A simple AI tool that generates optimized Amazon product listings using structured prompts.",
+      "stars": 1,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "Skill/提示词模板",
+      "cn_summary": "Listing优化/文案，AI技能/提示词模板",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 142.6,
+      "quality_score": 41,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有 AI 工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [
+        "prompt"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-13T07:59:27Z",
+      "pushed_at": "2026-03-13T08:13:02Z"
+    },
+    {
+      "id": "1250803492",
+      "full_name": "cstechlearning/amazon-seller-rag-assistant",
+      "html_url": "https://github.com/cstechlearning/amazon-seller-rag-assistant",
+      "description": "Java/Spring Boot RAG for a small AI startup serving Amazon sellers.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Java",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 218.0,
+      "quality_score": 39,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "有主要代码语言：Java"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-27T01:34:55Z",
+      "pushed_at": "2026-05-27T21:10:59Z"
+    },
+    {
+      "id": "1169911362",
+      "full_name": "cooperemma0707-design/openclaw-use-cases",
+      "html_url": "https://github.com/cooperemma0707-design/openclaw-use-cases",
+      "description": "OpenClaw AI Agent real-world use cases - e-commerce, content creation, freelance automation, enterprise scenarios",
+      "stars": 2,
+      "forks": 0,
+      "language": "",
+      "topics": [
+        "ai-agent",
+        "automation",
+        "ecommerce",
+        "enterprise",
+        "freelance",
+        "openclaw",
+        "use-cases"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 173.2,
+      "quality_score": 39,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "跨境业务场景不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "openclaw",
+        "automation",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-01T12:18:56Z",
+      "pushed_at": "2026-03-02T14:37:24Z"
+    },
+    {
+      "id": "479726111",
+      "full_name": "ajay04323/cpanel_CPSP",
+      "html_url": "https://github.com/ajay04323/cpanel_CPSP",
+      "description": "Which of the following options best describes the role of Shared Hosting on a web server?    Providing hosting for a single website owned by different people on multiple servers.  Providing hosting for a single website owned by one person on one server.  Providing hosting for multiple websites owned by different people on one server.  Providing hosting for multiple websites owned by one person on one server.    3    Which of the following capabilities can a cPanel account user perform easily from within the cPanel account interface without the aid of a system administrator?    File and configuration management.  Relocating the physical server.  Upgrading server hardware and equipment.  Installing new database software.      1 File and configuration management.      Which of the following options best describes a core benefit to using cPanel & WHM, as a web hosting provider operating on a cPanel & WHM environment?    cPanel users are able to create new virtualization resources to help host their web applications.  cPanel users are able to set up network tunnels to establish secure communication between servers.  cPanel users are able to establish and self-manage their own network routing configurations.  cPanel users are able to self-manage configurations and software, reducing the support demand on the web host.    4 cPanel users are able to self-manage configurations and software, reducing the support demand on the web host    Which of the following options best describes one way that cPanel makes installation of cPanel & WHM an easy process?    cPanel provides a single command that can be copied and pasted onto the command line.  cPanel provides a single, 16-step procedure with comprehensive documentation to guide customers through each step.  cPanel provides a single executable that can be launched using a remotely delivered API request.  cPanel provides a single CD-ROM that can be mailed internationally, free of charge.    1 cPanel provides a single command that can be copied and pasted onto the command line.    Which of the following statistics does a cPanel account have access to from within the cPanel account interface?    Bandwidth usage  Server CPU temperature  Other accounts' disk usage  Server startup logs    1 Bandwidth usage    cPanel provides multiple database software options for server administrators to choose from. MySQL is one of these options.    Which of the following indicates one of the other options that are supported and provided by cPanel?      MariaDB  MSSQL  IBM DB2  MongoDB    1 MariaDB      Assuming \"domain.com\" is replaced with your actual domain on a cPanel & WHM server, which of the following website addresses would not bring you to a cPanel login page?    cpanel.domain.com  domain.com  www.domain.com/cpanel  www.domain.com:2083    2 domain.com    After logging into an email account's webmail interface, the account user can then perform which of the following tasks directly from within their email dashboard interface?      Configure FTP settings.  Configure spam filtering settings.  Configure SSL certificates.  Configure PHP version settings.    2 Configure spam filtering settings.    Which of the following options indicates a cPanel & WHM feature that can provide users with access to the server's command line interface (or, CLI) directly from within the cPanel or WHM interfaces?    Server Command  Shell  Server Control  Terminal    4 Terminal      Assuming that your server's IP address is '12.34.56.78', which of the following services could be reached by navigating to the following address in your browser?    https://12.34.56.78:2087      Webhost Manager (WHM)  cPanel Support Center (CPSC)  Server Status Display (SSD)  Systems Control Center (SCC)    4 Webhost Manager (WHM)      What does the acronym WHM stand for, in cPanel & WHM?    Wide Home Maker  Web Hero Master  Whole Host Manipulator  Web Host Manager    4  Web Host Manager      A user who has little-to-no experience in server management will be able to do what?    Run various command line commands  Use the product out-of-the-box  Manage several Windows programs.  Add RAM to the server    2 Use the product out-of-the-box      Of the following options, which of these are cPanel & WHM features that would be of interest to a programmer or web developer?    SSL  AFK  SMTP  API    API      About how long does it take to set up a mailing-list in cPanel?    5m  1m  1h  10m    2 1m      Which of the following choices describes the method that a customer would use to access their cPanel or WHM interfaces, once it's been installed on a server?    Using a web browser, like Chrome or Firefox.  Using a FTP application, like FileZilla or FireFTP.  Using a search engine, like Google or Yahoo.  Using a social media platform, like Facebook or LinkedIn.    1 Using a web browser, like Chrome or Firefox.      Of the following features found in a cPanel account interface, which would most likely be considered as important to a beginner-level customer seeking a cPanel & WHM web host?    Apache Handlers  Perl Modules  Email Forwarders  SSH Access    1 Apache Handlers    Of the following services, which of these can be managed by website owners using only their cPanel account interface?    Firewall Configuration  Database Server Upgrades  Scheduled Tasks  EasyApache 4 Configuration    3 Scheduled Tasks      Which of the following features available in the cPanel account interface allows new website files to easily be created, uploaded and edited by the user, directly from within the cPanel interface?    BoxTrapper  File Handler  File Manager  MultiPHP Manager    3 File Manager    Which of the following features found in the cPanel account interface will allow a cPanel account user to create subaccounts to give email, FTP, and webdisk access to additional users?    File Manager  Aliases  User Manager  Contact Information      3 User Manager    Which of the following feature categories within a cPanel account interface will allow users to view their Bandwidth usage statistics?    Email  Metrics  Advanced  Domains    2 Metrics    Which of the following online resources provided by cPanel is the ideal place for customers to submit cPanel & WHM feature ideas, improvements, and suggestions for our developers to consider?    The cPanel Documentations Site  cPanel University  The cPanel Store  The cPanel Feature Request Site    4 The cPanel Feature Request Site confirm     Which of the following services does cPanel provide for every customer with an active cPanel license?    Free technical support, support services, and customer assistance.  Free technical support with our automated AI chatbot, cPanel Pete. No human support is available.  Free server-build assessments and cost estimates.  Free quotes on the cost of getting technical support from cPanel.    1 Free technical support, support services, and customer assistance. confirm from website      Which of the following options indicates the office hours in which the cPanel Technical Support Analyst team is available?    24 hours a day, 365 days a year.  7 days a week, from 9AM to 5PM, Central Standard Time.  Weekdays from 6AM to 6PM, Central Standard Time.  12 hours a day, 182.5 days a year.    1 24 hours a day, 365 days a year.    Which of the following types of applications can be created and managed with the cPanel account interface's Application Manager feature?    'Amethyst on Tracks' Applications  Node.js Applications  YAML Applications  PHP Applications    2 Node.js Applications confirm      Which of the following services does our support team provide for customers coming from DirectAdmin, Plesk, and Ensim control panels?              Free estimates.  Free migration.  Free optimization.  Free coupons.    2 Free migration confirm from website      We offer free migration services for customers who use the following ... Plesk®. DirectAdmin. Ensim®.    Which of the following options indicates the frequency of major updates being released for the product each year?    Bi-annual releases. every two years  Quarterly releases. every 3 months  Weekly releases.  Centennial releases. hundread year        2 Quarterly releases confirm from website      Which of the following indicates cPanel's flagship product?    CoreProc & Litespeed  AppConfig & cPsrvd  EasyApache & cPHulk  cPanel & WHM    3 EasyApache & cPHulk    In 2017, cPanel celebrated its anniversary of how many years?    5 years  50 years  20 years  100 years    20 confirm    Which of the following categories found within the WHM interface provide a number of helpful features for administrators to secure their server with?    Policy Control  Severity Monitor  Security Center  Server Command    3  Security Center    Which of the following options indicates an actual interface within WHM that will allow administrators to specify which features are available to specific users or packages on the server?    Adjust Package  Option Selector  Feature Manager  Policy Manager    3 Feature Manager confirm from whm    Which of the following options best describes WHM's EasyApache feature?    An administrative feature that makes web server software changes fast and easy.  An administrative feature that makes processor overclocking calculation estimates fast and easy.  An administrative feature that makes printer calibration fast and easy.  An administrative feature that makes email queue management fast and easy.    1 An administrative feature that makes web server software changes fast and easy.    cPanel Support will provide which of the following services for customers that request it?    Performing cPanel & WHM installations.  Performing TSLC MicroPort adjustments.  Providing financial advice.  Providing IANA-approved routing.      1 Performing cPanel & WHM installations.      Which of the following options best describes an interface within WHM that allows administrators to easily create sets of limitations for different types of accounts, commonly based on some arrangement of web host pricing options?    Packages >> Add a Package  Limitations >> Create Limits  Types >> New Type  Features >> Set Restrictions      1    Which of the following options indicates an actual feature included with EasyApache 4 that allows accounts on the same server to use different versions of PHP simultaneously?    cPPHP  MyPHP  YourPHP  MultiPHP    4 MultiPHP    Which of the following options are important for a customer to have on their server, in order to allow their cPanel & WHM installation to be licensed properly?    A Google Mail address.  A home postal address.  A public IP address.  A domain name address.    3 A public IP address.      Which of the following options indicates an actual feature within WHM that can be used to migrate one or more accounts between servers?    Transfer Tool  Account Relocate  Server Profiler  Migration Assist      1    Which of the following options best describes a benefit of using SSL certificates to secure websites hosted on your server?    They ensure that communication between your server and the internet is safe and encrypted.  They ensure that communication between your server and the internet is officially approved by the OIBC (Official Internet Bureau of Communications).  They ensure that communication between your server and the internet is only visible by explicitly allowed individuals.  They ensure that communication between your server and the internet cannot occur.      1 They ensure that communication between your server and the internet is safe and encrypted.    Which of the following Content Management Systems (CMS) have a feature built into cPanel that allows customers to manage its installations and updates from within the cPanel account interface?      Joomla!  Drupal  WordPress  Typo3    3 WordPress    Which of the following options indicates an actual security feature of cPanel & WHM servers that acts as a safety net for website security by using rules created by security authorities to intercept malicious attempts at exploiting websites and web applications?    AuthMod  LockDown  ModSecurity  SecurityNet    3  ModSecurity      Which of the following operating systems can cPanel & WHM NOT be installed or used on?    Amazon Linux Servers  Windows Servers  CentOS Servers  Redhat Servers      2 Windows Servers      Which of the following features available in WHM can help customers migrate easily between servers?    Feature Manager  Transfer Tool  EasyApache 4  Security Advisor    Transfer Tool    Which of the following options best describes the role of a web hosting control panel?    Software on the operating system that provides a visual read-out of server specifications and statistics, such as temperature and fan speed.  Software on the operating system that provides a basic suite of office utilities, such as a word processor, spreadsheet manager, and a presentation designer.  Software on the operating system that provides a graphical interface designed to help automate server administration tasks.  Software on the operating system that provides a desktop environment similar to Microsoft Windows or Apple's MacOS.    Software on the operating system that provides a graphical interface designed to help automate server administration tasks.      Which of the following operating systems are supported by cPanel & WHM's official system requirements?    Windows Server 2018  CentOS Server  Debian Server  Ubuntu Server      CentOS Server",
+      "stars": 9,
+      "forks": 3,
+      "language": "",
+      "topics": [],
+      "category": "广告投放",
+      "cn_summary": "广告投放，订单/库存管理，社媒/内容营销",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 35.4,
+      "quality_score": 39,
+      "strengths": [
+        "有少量早期关注",
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有可运行工具信号"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "ppc"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2022-04-09T12:55:24Z",
+      "pushed_at": "2023-04-30T01:17:01Z"
+    },
+    {
+      "id": "1249232777",
+      "full_name": "hs1ks0w/crossborder-ai-ops-assistant",
+      "html_url": "https://github.com/hs1ks0w/crossborder-ai-ops-assistant",
+      "description": "AI-assisted operations workflow for Amazon and eMAG cross-border ecommerce sellers",
+      "stars": 0,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "订单/库存管理",
+      "cn_summary": "订单/库存管理",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 216.0,
+      "quality_score": 38,
+      "strengths": [
+        "最近 90 天有更新",
+        "描述信息较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "amazon",
+        "cross-border"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-25T13:40:23Z",
+      "pushed_at": "2026-05-25T13:44:09Z"
+    },
+    {
+      "id": "957883853",
+      "full_name": "aws-samples/sample-agentic-ai-web",
+      "html_url": "https://github.com/aws-samples/sample-agentic-ai-web",
+      "description": "This project demonstrates how to use AWS Bedrock with Anthropic Claude and Amazon Nova models to create a web automation assistant with tool use, human-in-the-loop interaction, and vision capabilities.",
+      "stars": 50,
+      "forks": 14,
+      "language": "Python",
+      "topics": [
+        "agentic-ai",
+        "ai",
+        "aws",
+        "checkbot",
+        "genai",
+        "mcp",
+        "model-context-protocol",
+        "paris",
+        "paris-summit",
+        "playwright",
+        "summit",
+        "web"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 193.0,
+      "quality_score": 38,
+      "strengths": [
+        "已有一定早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [
+        "agent",
+        "mcp",
+        "claude",
+        "automation"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-03-31T09:48:58Z",
+      "pushed_at": "2026-02-21T17:15:41Z"
+    },
+    {
+      "id": "1111628529",
+      "full_name": "vipinbailwal/amazon-listing-optimizer",
+      "html_url": "https://github.com/vipinbailwal/amazon-listing-optimizer",
+      "description": "AI-powered Amazon listing optimizer using scraping + OpenAI",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 50.6,
+      "quality_score": 38,
+      "strengths": [
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-12-07T10:35:27Z",
+      "pushed_at": "2025-12-07T12:03:14Z"
+    },
+    {
+      "id": "1077470612",
+      "full_name": "Sharathchandra345/product-listing-ai",
+      "html_url": "https://github.com/Sharathchandra345/product-listing-ai",
+      "description": "A full-stack Amazon Listing Optimizer using React, Node.js, and MySQL. The backend uses Puppeteer to scrape product data, featuring a custom solution to bypass Amazon's bot detection by restarting sessions. The extracted data is then sent to the Gemini AI to generate an optimized listing, which is saved to the database.",
+      "stars": 1,
+      "forks": 0,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 50.6,
+      "quality_score": 38,
+      "strengths": [
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-10-16T09:44:15Z",
+      "pushed_at": "2025-10-17T20:37:09Z"
+    },
+    {
+      "id": "1013922233",
+      "full_name": "Mannemu/pricepulse",
+      "html_url": "https://github.com/Mannemu/pricepulse",
+      "description": "This project is an AI-driven pricing assistant built to help online sellers across all major eCommerce platforms — including eBay, Amazon, Etsy, and independent stores — determine the optimal listing price for their products.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，定价/利润分析",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 50.6,
+      "quality_score": 38,
+      "strengths": [
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "etsy",
+        "ebay",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-07-04T17:41:27Z",
+      "pushed_at": "2025-10-10T13:24:40Z"
+    },
+    {
+      "id": "992012879",
+      "full_name": "IrhaTabbassum/Amazon-AI-Chatbot",
+      "html_url": "https://github.com/IrhaTabbassum/Amazon-AI-Chatbot",
+      "description": "This Flask-based Amazon AI Chatbot, powered by Google's Gemini 1.5 Flash, serves as a specialized assistant for Amazon sellers. It offers targeted support on sales, listings, FBA, and policies, politely declining off-topic questions. The app features a clean UI with dynamic input and chat clearing.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 50.0,
+      "quality_score": 38,
+      "strengths": [
+        "描述信息较完整",
+        "跨境业务场景明确",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-05-28T13:38:09Z",
+      "pushed_at": "2025-08-25T14:27:16Z"
+    },
+    {
+      "id": "871167804",
+      "full_name": "fansize/chrome-extension-nav-ai",
+      "html_url": "https://github.com/fansize/chrome-extension-nav-ai",
+      "description": "跨境电商助手：集成多平台商品搜索、多时区时钟、运营日历和AI经营工具于一体的Chrome扩展。",
+      "stars": 8,
+      "forks": 2,
+      "language": "TypeScript",
+      "topics": [
+        "chrome-extension"
+      ],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 24.8,
+      "quality_score": 38,
+      "strengths": [
+        "有少量早期关注",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2024-10-11T12:05:50Z",
+      "pushed_at": "2024-10-14T14:51:25Z"
+    },
+    {
+      "id": "1171434309",
+      "full_name": "alex179/pickai",
+      "html_url": "https://github.com/alex179/pickai",
+      "description": "AI 智能选品助手 - 跨境电商选品工具",
+      "stars": 0,
+      "forks": 1,
+      "language": "TypeScript",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 83.0,
+      "quality_score": 37,
+      "strengths": [
+        "半年内有更新",
+        "跨境业务场景明确",
+        "有主要代码语言：TypeScript"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-03T08:19:43Z",
+      "pushed_at": "2026-03-03T12:55:15Z"
+    },
+    {
+      "id": "1102410849",
+      "full_name": "Hardiksethia/Ecommerce-agent",
+      "html_url": "https://github.com/Hardiksethia/Ecommerce-agent",
+      "description": "a agentic ai application which helps in better product research",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，AI Agent自动化",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 50.0,
+      "quality_score": 37,
+      "strengths": [
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "有 AI 工具信号",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "近期维护信号弱"
+      ],
+      "platform_hits": [
+        "product research"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-11-23T12:17:00Z",
+      "pushed_at": "2025-12-09T16:30:08Z"
+    },
+    {
+      "id": "1088741634",
+      "full_name": "UnknowTT16/WeaveAI_UT",
+      "html_url": "https://github.com/UnknowTT16/WeaveAI_UT",
+      "description": "针对于跨境电商不同市场选品和数据分析的AI助理",
+      "stars": 7,
+      "forks": 1,
+      "language": "JavaScript",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，竞品/市场分析",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 4.2,
+      "quality_score": 37,
+      "strengths": [
+        "有少量早期关注",
+        "跨境业务场景明确",
+        "有主要代码语言：JavaScript"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "描述偏短",
+        "AI 工具属性不够明确"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-11-03T11:50:55Z",
+      "pushed_at": "2025-12-22T09:21:48Z"
+    },
+    {
+      "id": "1148729625",
+      "full_name": "ruen521/agent",
+      "html_url": "https://github.com/ruen521/agent",
+      "description": "这是一个跨境电商库存智能体平台",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 67.8,
+      "quality_score": 36,
+      "strengths": [
+        "半年内有更新",
+        "有跨境业务关键词",
+        "有 AI 工具信号",
+        "有主要代码语言：Python"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-02-03T09:50:28Z",
+      "pushed_at": "2026-02-14T15:43:03Z"
+    },
+    {
+      "id": "1187719777",
+      "full_name": "mguozhen/amazon-listing-writer",
+      "html_url": "https://github.com/mguozhen/amazon-listing-writer",
+      "description": "Amazon listing copywriter — AI-powered title, bullets, description, and A+ content optimized for both search ranking and conversion",
+      "stars": 2,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "Listing/文案优化",
+      "cn_summary": "Listing优化/文案，图片/视觉设计",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 151.2,
+      "quality_score": 33,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "amazon",
+        "listing"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-21T04:15:01Z",
+      "pushed_at": "2026-03-21T04:15:03Z"
+    },
+    {
+      "id": "1219314086",
+      "full_name": "xinpengdr/awesome-ai-ecommerce-tools",
+      "html_url": "https://github.com/xinpengdr/awesome-ai-ecommerce-tools",
+      "description": "A curated awesome list of AI tools, platforms, and resources for cross-border e-commerce — covering SEO/GEO, ad copy, email/CRM, agentic commerce, fulfillment, and marketplace tools.",
+      "stars": 4,
+      "forks": 3,
+      "language": "",
+      "topics": [
+        "agentic-commerce",
+        "ai",
+        "ai-search",
+        "awesome",
+        "awesome-list",
+        "cross-border-ecommerce",
+        "dtc",
+        "ecommerce",
+        "geo",
+        "seo"
+      ],
+      "category": "关键词/SEO",
+      "cn_summary": "关键词/SEO，广告投放，AI Agent自动化，订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 290.4,
+      "quality_score": 29,
+      "strengths": [
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "cross-border"
+      ],
+      "agent_hits": [
+        "agent",
+        "llm"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-04-23T18:47:22Z",
+      "pushed_at": "2026-06-27T01:49:15Z"
+    },
+    {
+      "id": "897958023",
+      "full_name": "affaan-m/agentofcommerce",
+      "html_url": "https://github.com/affaan-m/agentofcommerce",
+      "description": "AI-powered e-commerce automation agent",
+      "stars": 15,
+      "forks": 5,
+      "language": "",
+      "topics": [
+        "ai-agents",
+        "automation",
+        "ecommerce"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 49.0,
+      "quality_score": 29,
+      "strengths": [
+        "有少量早期关注",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "描述偏短",
+        "跨境业务场景不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [],
+      "agent_hits": [
+        "agent",
+        "automation",
+        "ai-agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2024-12-03T14:38:37Z",
+      "pushed_at": "2025-02-09T06:49:55Z"
+    },
+    {
+      "id": "1180542442",
+      "full_name": "nexscope-ai/awesome-amazon-seller-tools",
+      "html_url": "https://github.com/nexscope-ai/awesome-amazon-seller-tools",
+      "description": "A curated list of eCommerce tools, software, and AI agents for Amazon sellers. Updated for 2026.",
+      "stars": 26,
+      "forks": 6,
+      "language": "",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "amazon",
+        "amazon-seller-tools",
+        "amazon-tools",
+        "awesome",
+        "awesome-list",
+        "ecommerce",
+        "ecommerce-tools",
+        "fba"
+      ],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 197.6,
+      "quality_score": 28,
+      "strengths": [
+        "已有一定早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "topics 较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [
+        "agent",
+        "ai-agent",
+        "ai agent"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-13T06:29:12Z",
+      "pushed_at": "2026-03-13T06:30:59Z"
+    },
+    {
+      "id": "1170068115",
+      "full_name": "9619221/temu-selector",
+      "html_url": "https://github.com/9619221/temu-selector",
+      "description": "TEMU 选品工具 - AI 驱动跨境电商选品决策助手",
+      "stars": 0,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 81.0,
+      "quality_score": 27,
+      "strengths": [
+        "半年内有更新",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-01T16:49:22Z",
+      "pushed_at": "2026-03-01T16:49:22Z"
+    },
+    {
+      "id": "1128946945",
+      "full_name": "kuotaiming/PC-tizi",
+      "html_url": "https://github.com/kuotaiming/PC-tizi",
+      "description": "为国内用户精选的手机PC翻墙机场梯子，这些选项多为知名一线主流Clash机场，技术成熟、线路稳定、跑路风险低。它们不仅支持解锁Netflix、Disney+等热门流媒体，还能无缝访问ChatGPT、Gemini等AI工具，完美适应外贸从业者和跨境电商需求。相比传统梯子VPN，这些SSR/V2Ray/Clash节点机场采用先进的穿墙技术和规则分流模式，智能优化速度与稳定性，让你的PC上网体验更高效、更安全。",
+      "stars": 1,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 77.6,
+      "quality_score": 24,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-01-06T11:32:54Z",
+      "pushed_at": "2026-01-06T11:35:45Z"
+    },
+    {
+      "id": "1231373203",
+      "full_name": "jimeng999/crossborder",
+      "html_url": "https://github.com/jimeng999/crossborder",
+      "description": "跨境宝贝 - AI跨境电商选品神器",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研，订单/库存管理",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 147.0,
+      "quality_score": 22,
+      "strengths": [
+        "最近 90 天有更新",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-06T22:42:45Z",
+      "pushed_at": "2026-05-06T22:43:44Z"
+    },
+    {
+      "id": "798779209",
+      "full_name": "PennyJoly/linktre-tools",
+      "html_url": "https://github.com/PennyJoly/linktre-tools",
+      "description": "工具得心应手，出海说走就走！  本仓库为 节点导航站 站点仓库,主要围绕独立开发者技术工具、AI产品、跨境电商、自媒体人办公辅助工具进行收录，持续整理中......  欢迎提交 pr 和 issues 进行更新，每日持续关注。",
+      "stars": 602,
+      "forks": 53,
+      "language": "",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 544.2,
+      "quality_score": 21,
+      "strengths": [
+        "已有较高关注度",
+        "最近 30 天有更新",
+        "描述信息较完整",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2024-05-10T13:03:26Z",
+      "pushed_at": "2026-06-12T10:17:50Z"
+    },
+    {
+      "id": "1192890960",
+      "full_name": "PRIYANSHUYADAV1108/BharatLeader",
+      "html_url": "https://github.com/PRIYANSHUYADAV1108/BharatLeader",
+      "description": "BharatLedger is an AI-powered financial assistant delivered entirely through WhatsApp, designed specifically for Indian e-commerce sellers on Amazon, Flipkart, and Meesho.",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 156.0,
+      "quality_score": 20,
+      "strengths": [
+        "半年内有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "有可运行工具信号"
+      ],
+      "concerns": [
+        "关注度较低",
+        "AI 工具属性不够明确",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "amazon"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-26T17:00:04Z",
+      "pushed_at": "2026-03-26T17:13:10Z"
+    },
+    {
+      "id": "1193376462",
+      "full_name": "fanchao272-dev/openclaw-ecommerce-tutorial",
+      "html_url": "https://github.com/fanchao272-dev/openclaw-ecommerce-tutorial",
+      "description": "OpenClaw 跨境电商卖家专项教程 - 10 模块完整实操指南，6-Agent AI 运营团队",
+      "stars": 24,
+      "forks": 9,
+      "language": "HTML",
+      "topics": [],
+      "category": "AI Agent/自动化",
+      "cn_summary": "AI Agent自动化",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 120.4,
+      "quality_score": 20,
+      "strengths": [
+        "已有一定早期关注",
+        "半年内有更新",
+        "描述信息较完整",
+        "有跨境业务关键词",
+        "AI Agent/Skill 信号明确"
+      ],
+      "concerns": [
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [
+        "agent",
+        "openclaw"
+      ],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-27T06:42:58Z",
+      "pushed_at": "2026-03-27T06:43:01Z"
+    },
+    {
+      "id": "1122976838",
+      "full_name": "arsss6630/meli-picker",
+      "html_url": "https://github.com/arsss6630/meli-picker",
+      "description": "美客多AI选品助手 - AI驱动的跨境电商选品工具",
+      "stars": 14,
+      "forks": 3,
+      "language": "HTML",
+      "topics": [],
+      "category": "选品/市场调研",
+      "cn_summary": "选品调研",
+      "keyword_group": "选品/运营 AI",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 8.4,
+      "quality_score": 17,
+      "strengths": [
+        "有少量早期关注",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "近期维护信号弱",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "跨境",
+        "选品"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2025-12-26T00:30:03Z",
+      "pushed_at": "2025-12-26T00:58:35Z"
+    },
+    {
+      "id": "1188417219",
+      "full_name": "qiaoliang-debe/ai-trade-tool",
+      "html_url": "https://github.com/qiaoliang-debe/ai-trade-tool",
+      "description": "AI外贸全球素材工厂 - 一站式跨境电商AI素材生产工具",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 132.0,
+      "quality_score": 13,
+      "strengths": [
+        "最近 90 天有更新",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "低星 HTML 项目可能偏展示页"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-22T03:29:36Z",
+      "pushed_at": "2026-04-22T06:01:58Z"
+    },
+    {
+      "id": "1268396221",
+      "full_name": "zggggggz/awesome-ai-ecommerce-tools",
+      "html_url": "https://github.com/zggggggz/awesome-ai-ecommerce-tools",
+      "description": "Fork from xinpengdr: AI跨境电商工具大全",
+      "stars": 0,
+      "forks": 0,
+      "language": "",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 185.0,
+      "quality_score": 0,
+      "strengths": [
+        "最近 30 天有更新",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-06-13T13:35:55Z",
+      "pushed_at": "2026-06-13T13:35:56Z"
+    },
+    {
+      "id": "1230645385",
+      "full_name": "Sabin-He/ai-cross-border-ecommerce-course",
+      "html_url": "https://github.com/Sabin-He/ai-cross-border-ecommerce-course",
+      "description": "AI跨境电商效能提升实战课课程资料库",
+      "stars": 1,
+      "forks": 0,
+      "language": "HTML",
+      "topics": [],
+      "category": "订单/库存管理",
+      "cn_summary": "订单/库存管理",
+      "keyword_group": "跨境电商+AI Skill",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 182.6,
+      "quality_score": 0,
+      "strengths": [
+        "最近 30 天有更新",
+        "跨境业务场景明确"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "cross-border",
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-05-06T07:28:22Z",
+      "pushed_at": "2026-06-11T05:18:25Z"
+    },
+    {
+      "id": "1179986523",
+      "full_name": "taoma888/ai-nav-site",
+      "html_url": "https://github.com/taoma888/ai-nav-site",
+      "description": "AI 导航站 - 收录最新 AI 工具、网盘搜索资源、跨境电商平台",
+      "stars": 1,
+      "forks": 2,
+      "language": "HTML",
+      "topics": [],
+      "category": "综合电商AI工具",
+      "cn_summary": "跨境电商AI工具",
+      "keyword_group": "电商+Agent/MCP",
+      "layer": "Layer 3: 长期热门",
+      "repo_score": 116.6,
+      "quality_score": 0,
+      "strengths": [
+        "最近 90 天有更新",
+        "有跨境业务关键词"
+      ],
+      "concerns": [
+        "关注度较低",
+        "描述偏短",
+        "AI 工具属性不够明确",
+        "可运行代码信号不足",
+        "偏合集/教程/导航，落地价值需谨慎"
+      ],
+      "platform_hits": [
+        "跨境"
+      ],
+      "agent_hits": [],
+      "is_new_today": false,
+      "already_analyzed": false,
+      "is_deep_dive_candidate": false,
+      "created_at": "2026-03-12T15:27:59Z",
+      "pushed_at": "2026-04-06T04:30:24Z"
+    }
+  ]
+}
