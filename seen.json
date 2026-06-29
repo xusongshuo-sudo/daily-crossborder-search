@@ -286,7 +286,10 @@
   "1177556025": {
     "full_name": "nexscope-ai/Amazon-Skills",
     "stars": 319,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-06-29T07:29:41.443246+00:00",
+    "analysis_score": 470.2,
+    "analysis_source": "历史未分析补位"
   },
   "1195195021": {
     "full_name": "fengziliang43-cmyk/tiktok-ecommerce-suite",
