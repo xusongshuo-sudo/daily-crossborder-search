@@ -676,6 +676,17 @@ def readme_excerpt(readme: str) -> str:
     lines = []
     for line in readme.splitlines():
         line = line.strip(" #\t")
+        lower = line.lower()
+        if not line:
+            continue
+        if line.startswith("![") or "<img" in lower:
+            continue
+        if "shields.io" in lower or "badge" in lower:
+            continue
+        if re.fullmatch(r"\[?[^\]]+\]?\([^)]+\)", line):
+            continue
+        if line.startswith(("http://", "https://", "```", "|", "<p", "</p", "<div", "</div")):
+            continue
         if 20 <= len(line) <= 180 and not line.startswith(("http://", "https://", "```", "|")):
             lines.append(line)
         if len(lines) >= 2:
@@ -720,7 +731,7 @@ def generate_report(selected: dict | None, source: str, fresh_count: int, candid
         "",
         f"**主分类:** {selected.get('category', '未分类')}",
         "",
-        f"**为什么今天选它:** {why_watch(selected)}来源为「{source}」，且尚未做过深度分析。",
+        f"**选择原因:** {why_watch(selected)}来源为「{source}」，且尚未做过深度分析。",
         "",
         "## 基本信息",
         "",
