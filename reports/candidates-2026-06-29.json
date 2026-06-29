@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T08:30:10.873659+00:00",
+  "generated_at": "2026-06-29T09:07:27.492848+00:00",
   "total": 104,
   "fresh_count": 0,
   "deep_dive_candidate_count": 41,
@@ -109,7 +109,7 @@
         "ai-agent"
       ],
       "is_new_today": false,
-      "already_analyzed": false,
+      "already_analyzed": true,
       "is_deep_dive_candidate": true,
       "created_at": "2026-03-18T06:42:32Z",
       "pushed_at": "2026-06-10T07:57:04Z"
@@ -283,7 +283,7 @@
       "already_analyzed": false,
       "is_deep_dive_candidate": true,
       "created_at": "2026-05-15T06:23:30Z",
-      "pushed_at": "2026-06-29T08:25:06Z"
+      "pushed_at": "2026-06-29T08:42:38Z"
     },
     {
       "id": "1279940806",
@@ -653,7 +653,7 @@
       "cn_summary": "选品调研，Listing优化/文案，竞品/市场分析，广告投放",
       "keyword_group": "选品/运营 AI",
       "layer": "Layer 3: 长期热门",
-      "repo_score": 201.4,
+      "repo_score": 200.4,
       "quality_score": 72,
       "strengths": [
         "有少量早期关注",
@@ -1010,7 +1010,7 @@
       "cn_summary": "选品调研，AI Agent自动化，AI技能/提示词模板，社媒/内容营销",
       "keyword_group": "跨境电商+AI Skill",
       "layer": "Layer 3: 长期热门",
-      "repo_score": 223.2,
+      "repo_score": 222.2,
       "quality_score": 69,
       "strengths": [
         "有少量早期关注",
@@ -2602,7 +2602,7 @@
       "cn_summary": "Listing优化/文案，订单/库存管理",
       "keyword_group": "电商+Agent/MCP",
       "layer": "Layer 3: 长期热门",
-      "repo_score": 149.6,
+      "repo_score": 148.6,
       "quality_score": 48,
       "strengths": [
         "最近 90 天有更新",
@@ -3004,7 +3004,7 @@
       "cn_summary": "AI Agent自动化，AI技能/提示词模板",
       "keyword_group": "电商+Agent/MCP",
       "layer": "Layer 3: 长期热门",
-      "repo_score": 257.8,
+      "repo_score": 256.8,
       "quality_score": 44,
       "strengths": [
         "最近 90 天有更新",
