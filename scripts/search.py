@@ -376,8 +376,177 @@ def deduplicate(items: list[dict], seen: dict) -> list[dict]:
     return fresh
 
 
+REPORT_TZ = timezone(timedelta(hours=8))
+
+
+def report_date() -> str:
+    return datetime.now(REPORT_TZ).strftime("%Y-%m-%d")
+
+
+def short_desc(text: str, limit: int = 220) -> str:
+    text = re.sub(r"\s+", " ", text or "").strip()
+    if len(text) <= limit:
+        return text
+    return text[:limit].rstrip() + "..."
+
+
+def active_label(repo: dict) -> str:
+    pushed = repo.get("pushed_at", "")
+    if not pushed:
+        return "无更新时间"
+    try:
+        dt = datetime.fromisoformat(pushed.replace("Z", "+00:00"))
+    except ValueError:
+        return "更新时间未知"
+
+    age_days = (datetime.now(timezone.utc) - dt).days
+    if age_days <= 7:
+        return "7日内活跃"
+    if age_days <= 30:
+        return "30日内活跃"
+    if age_days <= 180:
+        return "半年内活跃"
+    return "长期未更新"
+
+
+def recommendation_level(repo: dict) -> str:
+    score = repo_score(repo)
+    stars = repo.get("stars", 0)
+    if score >= 260 or stars >= 100:
+        return "高优先级"
+    if score >= 120 or stars >= 20:
+        return "值得跟进"
+    return "观察"
+
+
+def action_hint(repo: dict) -> str:
+    category = repo.get("category", "")
+    if category == "选品/市场调研":
+        return "优先看数据源、评分逻辑和是否能迁移到现有选品流程。"
+    if category == "Listing/文案优化":
+        return "优先看输入字段、输出结构和是否支持 Amazon listing 场景。"
+    if category == "Skill/提示词模板":
+        return "优先看技能目录结构、提示词质量和是否能直接复用到 Codex/Claude Code。"
+    if category == "图片/视觉设计":
+        return "优先看示例图、提示词模板和批量生成能力。"
+    if category == "广告投放":
+        return "优先看投放指标、账户接入方式和是否只停留在 demo。"
+    if category == "供应链/采购":
+        return "优先看供应商数据来源、1688/Alibaba 接入和风控字段。"
+    if category == "订单/库存管理":
+        return "优先看平台接口、状态同步和自托管成本。"
+    return "先快速浏览 README、示例和最近提交，判断是否值得深入试用。"
+
+
+def why_watch(repo: dict) -> str:
+    reasons = []
+    stars = repo.get("stars", 0)
+    if stars >= 100:
+        reasons.append(f"{stars} stars，已有较强关注度")
+    elif stars >= 20:
+        reasons.append(f"{stars} stars，有一定早期关注")
+    else:
+        reasons.append(f"{stars} stars，偏早期项目")
+
+    label = active_label(repo)
+    if label != "无更新时间":
+        reasons.append(label)
+    if repo.get("language"):
+        reasons.append(f"主要语言 {repo['language']}")
+    if repo.get("keyword_group"):
+        reasons.append(f"来自「{repo['keyword_group']}」搜索组")
+
+    return "；".join(reasons) + "。"
+
+
+def category_counts(items: list[dict]) -> list[tuple[str, int]]:
+    counts = {}
+    for item in items:
+        category = item.get("category", "未分类")
+        counts[category] = counts.get(category, 0) + 1
+    return sorted(counts.items(), key=lambda x: (-x[1], x[0]))
+
+
+def generate_overview(top_items: list[dict], all_results: list[dict], seen: dict) -> list[str]:
+    lines = [
+        "## 今日速览",
+        "",
+        f"新增项目: {len(all_results)} | 累计追踪: {len(seen)} | 报告口径: 新增优先，按星标、活跃度、描述质量和标签完整度综合排序",
+        "",
+    ]
+
+    if not top_items:
+        lines.extend([
+            "今天没有新的候选项目，下面展示历史高星项目，适合作为长期参考清单。",
+            "",
+        ])
+        return lines
+
+    high_count = sum(1 for item in top_items if recommendation_level(item) == "高优先级")
+    categories = "，".join(f"{name} {count}" for name, count in category_counts(top_items)[:5])
+    top_repo = max(top_items, key=lambda x: x.get("stars", 0))
+    newest_repo = max(top_items, key=lambda x: x.get("created_at", ""))
+
+    lines.extend([
+        f"高优先级: {high_count} 个 | 覆盖分类: {categories}",
+        "",
+        f"最高星项目: [{top_repo['full_name']}]({top_repo['html_url']}) ({top_repo['stars']} stars)",
+        "",
+        f"最新创建项目: [{newest_repo['full_name']}]({newest_repo['html_url']}) (创建于 {newest_repo['created_at'][:10]})",
+        "",
+    ])
+    return lines
+
+
+def render_priority_pick(repo: dict, index: int) -> list[str]:
+    return [
+        f"### {index}. [{repo['full_name']}]({repo['html_url']}) | {recommendation_level(repo)}",
+        "",
+        f"{repo.get('category', '未分类')}。{why_watch(repo)}{action_hint(repo)}",
+        "",
+    ]
+
+
+def render_repo(repo: dict, index: int | None = None) -> list[str]:
+    prefix = f"{index}. " if index is not None else ""
+    desc = short_desc(repo.get("description", ""))
+    topics = ", ".join(repo.get("topics", [])[:5]) if repo.get("topics") else ""
+
+    lines = [
+        f"### {prefix}[{repo['full_name']}]({repo['html_url']}) | {repo.get('stars', 0)} stars",
+        "",
+        f"**推荐级别:** {recommendation_level(repo)}",
+        "",
+        f"**定位:** {repo.get('cn_summary', '未识别')}",
+        "",
+        f"**分类:** {repo.get('category', '未分类')}",
+        "",
+        f"**为什么看:** {why_watch(repo)}",
+        "",
+        f"**建议动作:** {action_hint(repo)}",
+        "",
+    ]
+
+    if desc:
+        lines.extend([f"> {desc}", ""])
+
+    meta = []
+    if repo.get("language"):
+        meta.append(f"语言: {repo['language']}")
+    if topics:
+        meta.append(f"标签: {topics}")
+    if repo.get("created_at"):
+        meta.append(f"创建: {repo['created_at'][:10]}")
+    if repo.get("pushed_at"):
+        meta.append(f"更新: {repo['pushed_at'][:10]}")
+    if repo.get("layer"):
+        meta.append(f"发现层: {repo['layer']}")
+    lines.extend([" | ".join(meta), "", "---", ""])
+    return lines
+
+
 def generate_report(all_results: list[dict], seen: dict) -> str:
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = report_date()
     lines = [
         f"# GitHub 跨境电商+AI 日报 - {today}",
         "",
@@ -405,32 +574,18 @@ def generate_report(all_results: list[dict], seen: dict) -> str:
             })
         top10 = sorted(top10, key=lambda x: x["stars"], reverse=True)[:10]
 
+    lines.extend(generate_overview(top10, all_results, seen))
+
+    if all_results and top10:
+        lines.extend(["## 优先看这 3 个", ""])
+        for i, r in enumerate(top10[:3], 1):
+            lines.extend(render_priority_pick(r, i))
+
     lines.append(label)
     lines.append("")
 
     for i, r in enumerate(top10, 1):
-        desc = (r["description"] or "").replace("\n", " ")[:200]
-        topics = ", ".join(r["topics"][:5]) if r["topics"] else ""
-
-        lines.append(f"### {i}. [{r['full_name']}]({r['html_url']})  ⭐ {r['stars']}")
-        lines.append("")
-        lines.append(f"**📌 {r['cn_summary']}**")
-        lines.append(f"**🏷️ {r['category']}**")
-        lines.append("")
-        if desc:
-            lines.append(f"> {desc}")
-            lines.append("")
-
-        meta = []
-        if r["language"]:
-            meta.append(f"语言: {r['language']}")
-        if topics:
-            meta.append(f"标签: {topics}")
-        meta.append(f"创建: {r['created_at'][:10]}")
-        lines.append(" | ".join(meta))
-        lines.append("")
-        lines.append("---")
-        lines.append("")
+        lines.extend(render_repo(r, i))
 
     return "\n".join(lines)
 
@@ -467,7 +622,7 @@ def main():
     save_seen(seen)
 
     report = generate_report(fresh, seen)
-    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today_str = report_date()
     report_path = REPORT_DIR / f"{today_str}.md"
     with open(report_path, "w", encoding="utf-8") as f:
         f.write(report)
