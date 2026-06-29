@@ -78,6 +78,8 @@ def md2html(text: str) -> str:
     lines = text.split("\n")
     out = []
     in_card = False
+    in_section = False
+    in_list = False
 
     def close_card():
         nonlocal in_card
@@ -85,23 +87,46 @@ def md2html(text: str) -> str:
             out.append("</div>")
             in_card = False
 
+    def close_list():
+        nonlocal in_list
+        if in_list:
+            out.append("</ul>")
+            in_list = False
+
+    def close_section():
+        nonlocal in_section
+        close_list()
+        close_card()
+        if in_section:
+            out.append("</div>")
+            in_section = False
+
     for line in lines:
         if line.startswith("# "):
-            close_card()
+            close_section()
             out.append(f'<div class="hero"><h1>{inline_md(line[2:])}</h1></div>')
         elif line.startswith("## "):
-            close_card()
-            out.append(f'<h2>{inline_md(line[3:])}</h2>')
+            close_section()
+            out.append(f'<div class="section-card"><h2>{inline_md(line[3:])}</h2>')
+            in_section = True
         elif line.startswith("### "):
+            close_list()
             close_card()
             raw = line[4:]
             out.append(f'<div class="repo-card"><h3>{inline_md(raw)}</h3>')
             in_card = True
         elif line.startswith("> "):
+            close_list()
             out.append(f'<blockquote>{inline_md(line[2:])}</blockquote>')
         elif line.startswith("---"):
-            close_card()
+            close_section()
+        elif line.startswith("- "):
+            if not in_list:
+                out.append('<ul class="bullet-list">')
+                in_list = True
+            out.append(f'<li>{inline_md(line[2:])}</li>')
         elif line.strip():
+            close_list()
             labeled = render_labeled_line(line)
             if labeled:
                 out.append(labeled)
@@ -111,7 +136,7 @@ def md2html(text: str) -> str:
                 out.append(f'<p class="card-text">{inline_md(line)}</p>')
             else:
                 out.append(render_summary_line(line))
-    close_card()
+    close_section()
     return "\n".join(out)
 
 
@@ -138,14 +163,17 @@ body{{
 h1{{ font-size: 20px; line-height: 1.35; font-weight: 700; margin: 0; }}
 h2{{
     font-size: 15px; font-weight: 700; color: #111827;
-    margin: 24px 0 10px; padding-left: 10px; border-left: 4px solid #2563eb;
+    margin: 0 0 12px; padding-left: 10px; border-left: 4px solid #2563eb;
+}}
+.section-card{{
+    background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+    padding: 14px 16px; margin: 12px 0;
 }}
 .summary-line{{
-    background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
-    padding: 10px 12px; margin: 8px 0; font-size: 13px; line-height: 1.65;
+    margin: 8px 0; font-size: 13px; line-height: 1.65; color: #334155;
 }}
 .metric-row{{
-    background: #fff; border: 1px solid #dbeafe; border-radius: 8px;
+    background: #f8fbff; border: 1px solid #dbeafe; border-radius: 8px;
     padding: 10px 10px 2px; margin: 8px 0;
 }}
 .metric{{
@@ -173,6 +201,10 @@ a{{ color: #2563eb; text-decoration: none; }}
 .badge-high{{ background: #fee2e2; color: #b91c1c; }}
 .badge-mid{{ background: #fef3c7; color: #92400e; }}
 .card-text{{ font-size: 13px; color: #334155; line-height: 1.65; margin: 8px 0; }}
+.bullet-list{{
+    margin: 8px 0 0 18px; padding: 0; color: #334155; font-size: 13px; line-height: 1.7;
+}}
+.bullet-list li{{ margin: 4px 0; }}
 blockquote{{
     font-size: 13px; color: #475569; margin: 10px 0; padding: 10px 12px;
     background: #f8fafc; border-left: 3px solid #cbd5e1; line-height: 1.65;
