@@ -18,11 +18,13 @@ from urllib.error import HTTPError
 # ── 配置 ──────────────────────────────────────────────────
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SEEN_FILE = REPO_ROOT / "seen.json"
+ANALYZED_FILE = REPO_ROOT / "analyzed.json"
 REPORT_DIR = REPO_ROOT / "reports"
 REPORT_DIR.mkdir(exist_ok=True)
 
 GITHUB_TOKEN = os.environ.get("GH_TOKEN", "")
 BASE_URL = "https://api.github.com/search/repositories"
+REPO_API_URL = "https://api.github.com/repos"
 HEADERS = {
     "Accept": "application/vnd.github.v3+json",
     "User-Agent": "daily-crossborder-search",
@@ -271,8 +273,34 @@ def load_seen() -> dict:
     return {}
 
 
+def load_analyzed() -> dict:
+    if ANALYZED_FILE.exists():
+        with open(ANALYZED_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def merge_analyzed_from_seen(analyzed: dict, seen: dict) -> dict:
+    merged = dict(analyzed)
+    for rid, info in seen.items():
+        if info.get("analyzed_at"):
+            merged.setdefault(rid, {
+                "full_name": info.get("full_name", ""),
+                "html_url": info.get("html_url", ""),
+                "analyzed_at": info.get("analyzed_at", ""),
+                "score": info.get("analysis_score", 0),
+                "source": info.get("analysis_source", "seen.json"),
+            })
+    return merged
+
+
 def save_seen(data: dict):
     with open(SEEN_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def save_analyzed(data: dict):
+    with open(ANALYZED_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
@@ -309,6 +337,28 @@ def api_call(query: str, retry: int = 3) -> dict:
             else:
                 return {"items": []}
     return {"items": []}
+
+
+def fetch_readme(full_name: str, retry: int = 2) -> str:
+    url = f"{REPO_API_URL}/{quote(full_name, safe='/')}/readme"
+    headers = dict(HEADERS)
+    headers["Accept"] = "application/vnd.github.raw"
+
+    for attempt in range(retry):
+        req = Request(url, headers=headers)
+        try:
+            with urlopen(req, timeout=30) as resp:
+                wait_for_rate_limit(dict(resp.headers))
+                return resp.read().decode("utf-8", errors="replace")[:12000]
+        except HTTPError as e:
+            if e.code == 404:
+                return ""
+            if e.code == 403 and attempt < retry - 1:
+                time.sleep(15)
+        except Exception:
+            if attempt < retry - 1:
+                time.sleep(5)
+    return ""
 
 
 def extract_fields(repo: dict, keyword_group: str, layer: str) -> dict:
@@ -371,9 +421,25 @@ def deduplicate(items: list[dict], seen: dict) -> list[dict]:
             seen[rid] = {
                 "full_name": item["full_name"],
                 "stars": item["stars"],
+                "category": item["category"],
+                "description": item["description"],
+                "html_url": item["html_url"],
+                "language": item["language"],
+                "topics": item["topics"],
+                "created_at": item["created_at"],
+                "pushed_at": item["pushed_at"],
                 "first_seen": datetime.now(timezone.utc).isoformat(),
             }
     return fresh
+
+
+def unique_by_repo(items: list[dict]) -> list[dict]:
+    unique = {}
+    for item in items:
+        rid = str(item["id"])
+        if rid not in unique or repo_score(item) > repo_score(unique[rid]):
+            unique[rid] = item
+    return list(unique.values())
 
 
 REPORT_TZ = timezone(timedelta(hours=8))
@@ -467,137 +533,250 @@ def category_counts(items: list[dict]) -> list[tuple[str, int]]:
     return sorted(counts.items(), key=lambda x: (-x[1], x[0]))
 
 
-def generate_overview(top_items: list[dict], all_results: list[dict], seen: dict) -> list[str]:
-    lines = [
-        "## 今日速览",
-        "",
-        f"新增项目: {len(all_results)} | 累计追踪: {len(seen)} | 报告口径: 新增优先，按星标、活跃度、描述质量和标签完整度综合排序",
-        "",
+def is_recently_active(repo: dict, max_days: int = 180) -> bool:
+    pushed = repo.get("pushed_at", "")
+    if not pushed:
+        return False
+    try:
+        dt = datetime.fromisoformat(pushed.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return (datetime.now(timezone.utc) - dt).days <= max_days
+
+
+def is_quality_candidate(repo: dict) -> bool:
+    return (
+        repo.get("stars", 0) >= 5
+        and bool(repo.get("description"))
+        and is_recently_active(repo)
+        and repo_score(repo) >= 120
+        and not is_directory_like_repo(repo)
+    )
+
+
+def is_directory_like_repo(repo: dict) -> bool:
+    text = " ".join([
+        repo.get("full_name", ""),
+        repo.get("description", ""),
+        " ".join(repo.get("topics", [])),
+    ]).lower()
+    directory_terms = [
+        "awesome", "curated list", "collection of", "directory", "navigation",
+        "导航", "收录", "资源合集", "工具合集", "站点仓库", "网址",
     ]
-
-    if not top_items:
-        lines.extend([
-            "今天没有新的候选项目，下面展示历史高星项目，适合作为长期参考清单。",
-            "",
-        ])
-        return lines
-
-    high_count = sum(1 for item in top_items if recommendation_level(item) == "高优先级")
-    categories = "，".join(f"{name} {count}" for name, count in category_counts(top_items)[:5])
-    top_repo = max(top_items, key=lambda x: x.get("stars", 0))
-    newest_repo = max(top_items, key=lambda x: x.get("created_at", ""))
-
-    lines.extend([
-        f"高优先级: {high_count} 个 | 覆盖分类: {categories}",
-        "",
-        f"最高星项目: [{top_repo['full_name']}]({top_repo['html_url']}) ({top_repo['stars']} stars)",
-        "",
-        f"最新创建项目: [{newest_repo['full_name']}]({newest_repo['html_url']}) (创建于 {newest_repo['created_at'][:10]})",
-        "",
-    ])
-    return lines
+    return any(term in text for term in directory_terms)
 
 
-def render_priority_pick(repo: dict, index: int) -> list[str]:
-    return [
-        f"### {index}. [{repo['full_name']}]({repo['html_url']}) | {recommendation_level(repo)}",
-        "",
-        f"{repo.get('category', '未分类')}。{why_watch(repo)}{action_hint(repo)}",
-        "",
+def select_daily_project(fresh: list[dict], all_candidates: list[dict], analyzed: dict) -> tuple[dict | None, str]:
+    analyzed_ids = set(analyzed.keys())
+    fresh_pool = [
+        item for item in unique_by_repo(fresh)
+        if str(item["id"]) not in analyzed_ids and is_quality_candidate(item)
     ]
+    if fresh_pool:
+        return sorted(fresh_pool, key=repo_score, reverse=True)[0], "今日新增"
 
-
-def render_repo(repo: dict, index: int | None = None) -> list[str]:
-    prefix = f"{index}. " if index is not None else ""
-    desc = short_desc(repo.get("description", ""))
-    topics = ", ".join(repo.get("topics", [])[:5]) if repo.get("topics") else ""
-
-    lines = [
-        f"### {prefix}[{repo['full_name']}]({repo['html_url']}) | {repo.get('stars', 0)} stars",
-        "",
-        f"**推荐级别:** {recommendation_level(repo)}",
-        "",
-        f"**定位:** {repo.get('cn_summary', '未识别')}",
-        "",
-        f"**分类:** {repo.get('category', '未分类')}",
-        "",
-        f"**为什么看:** {why_watch(repo)}",
-        "",
-        f"**建议动作:** {action_hint(repo)}",
-        "",
+    history_pool = [
+        item for item in unique_by_repo(all_candidates)
+        if str(item["id"]) not in analyzed_ids and is_quality_candidate(item)
     ]
+    if history_pool:
+        return sorted(history_pool, key=repo_score, reverse=True)[0], "历史未分析补位"
 
-    if desc:
-        lines.extend([f"> {desc}", ""])
+    fallback_pool = [
+        item for item in unique_by_repo(all_candidates)
+        if str(item["id"]) not in analyzed_ids and item.get("stars", 0) > 0
+    ]
+    if fallback_pool:
+        return sorted(fallback_pool, key=repo_score, reverse=True)[0], "低门槛补位"
 
-    meta = []
-    if repo.get("language"):
-        meta.append(f"语言: {repo['language']}")
-    if topics:
-        meta.append(f"标签: {topics}")
-    if repo.get("created_at"):
-        meta.append(f"创建: {repo['created_at'][:10]}")
-    if repo.get("pushed_at"):
-        meta.append(f"更新: {repo['pushed_at'][:10]}")
-    if repo.get("layer"):
-        meta.append(f"发现层: {repo['layer']}")
-    lines.extend([" | ".join(meta), "", "---", ""])
-    return lines
+    return None, "无候选"
 
 
-def generate_report(all_results: list[dict], seen: dict) -> str:
+def readme_flags(readme: str) -> dict[str, bool]:
+    text = readme.lower()
+    return {
+        "has_install": any(w in text for w in ["install", "installation", "pip install", "npm install", "安装"]),
+        "has_usage": any(w in text for w in ["usage", "quick start", "example", "demo", "使用", "示例"]),
+        "has_api": any(w in text for w in ["api", "token", "credential", "oauth", "apikey", "接口"]),
+        "has_license": "license" in text or "mit" in text or "apache" in text,
+        "has_skill": any(w in text for w in ["skill", "prompt", "agent", "mcp", "claude", "codex"]),
+    }
+
+
+def maturity_judgement(repo: dict, readme: str) -> str:
+    flags = readme_flags(readme)
+    points = 0
+    points += 1 if repo.get("stars", 0) >= 20 else 0
+    points += 1 if is_recently_active(repo, 30) else 0
+    points += 1 if repo.get("topics") else 0
+    points += 1 if flags["has_install"] else 0
+    points += 1 if flags["has_usage"] else 0
+
+    if points >= 4:
+        return "成熟度较高：项目关注度、活跃度和 README 信息都比较完整，值得优先打开验证。"
+    if points >= 2:
+        return "成熟度中等：有明确方向，但仍需要检查 README、示例和实际代码完整度。"
+    return "成熟度偏早期：适合先收藏观察，不建议直接投入生产流程。"
+
+
+def problem_statement(repo: dict, readme: str) -> str:
+    category = repo.get("category", "")
+    features = repo.get("cn_summary", "")
+    if "图片/视觉设计" in features:
+        return "它主要面向商品主图、详情页图、社媒推广图等跨境视觉素材，适合提升电商图片生产和转化导向设计效率。"
+    if "Listing优化/文案" in features:
+        return "它主要面向商品标题、五点描述、关键词或 A+ 内容，适合辅助提升 Listing 产出效率。"
+    if "选品调研" in features or "竞品/市场分析" in features or category == "选品/市场调研":
+        return "它主要面向选品、竞品或市场判断，适合用来缩短跨境卖家在产品机会筛选上的信息整理时间。"
+    if "供应链/采购" in features or category == "供应链/采购":
+        return "它主要面向供应商、采购或 1688/Alibaba 场景，适合做上游货源筛选和询盘辅助。"
+    if "订单/库存管理" in features or category == "订单/库存管理":
+        return "它主要面向刊登、订单、库存或运营工作流，适合评估是否能接入现有店铺后台。"
+    if readme_flags(readme)["has_skill"]:
+        return "它更像 AI Agent / Skill / Prompt 资产，适合拆解为可复用的跨境运营能力模块。"
+    return "它覆盖跨境电商与 AI 工具交叉场景，适合先判断是否能服务具体运营环节。"
+
+
+def landing_scenarios(repo: dict) -> list[str]:
+    category = repo.get("category", "")
+    features = repo.get("cn_summary", "")
+    if "图片/视觉设计" in features:
+        return ["主图/详情页图提示词复用", "社媒推广图批量生成", "视觉素材生产流程标准化"]
+    if "Listing优化/文案" in features:
+        return ["Amazon 标题和五点描述初稿", "关键词覆盖检查", "批量 Listing 改写和本地化"]
+    if "选品调研" in features or "竞品/市场分析" in features or category == "选品/市场调研":
+        return ["新品调研前的候选池筛选", "竞品卖点和市场信息整理", "把人工调研步骤沉淀为 Agent 工作流"]
+    if "供应链/采购" in features or category == "供应链/采购":
+        return ["供应商初筛", "采购询盘前的信息整理", "1688/Alibaba 货源判断"]
+    if "订单/库存管理" in features or category == "订单/库存管理":
+        return ["订单状态和库存数据整合", "运营后台自动化", "自托管工具链评估"]
+    return ["拆解 README 和示例", "收藏为跨境 AI 工具池", "参考其 Agent / Skill 结构"]
+
+
+def risk_notes(repo: dict, readme: str) -> list[str]:
+    risks = []
+    flags = readme_flags(readme)
+    if not readme:
+        risks.append("未读取到 README，无法确认安装方式和真实能力边界。")
+    if not flags["has_install"]:
+        risks.append("README 中安装说明不明显，落地前需要确认能否快速跑起来。")
+    if not flags["has_usage"]:
+        risks.append("示例或使用说明不明显，需要防止只是概念仓库。")
+    if not is_recently_active(repo, 30):
+        risks.append("最近 30 天活跃度一般，建议检查 issue 和 commit 维护情况。")
+    if repo.get("stars", 0) < 10:
+        risks.append("关注度仍低，适合小范围验证，不宜直接依赖。")
+    return risks or ["暂无明显结构性风险，主要风险在于实际接入成本和数据源可用性。"]
+
+
+def readme_excerpt(readme: str) -> str:
+    if not readme:
+        return "未读取到 README 内容。"
+    lines = []
+    for line in readme.splitlines():
+        line = line.strip(" #\t")
+        if 20 <= len(line) <= 180 and not line.startswith(("http://", "https://", "```", "|")):
+            lines.append(line)
+        if len(lines) >= 2:
+            break
+    return " / ".join(lines) if lines else short_desc(readme, 240)
+
+
+def generate_report(selected: dict | None, source: str, fresh_count: int, candidate_count: int, seen: dict, analyzed: dict, readme: str) -> str:
     today = report_date()
     lines = [
-        f"# GitHub 跨境电商+AI 日报 - {today}",
+        f"# GitHub 跨境项目分析日报 - {today}",
+        "",
+        "## 今日结论",
+        "",
+        f"候选项目: {candidate_count} | 今日新增: {fresh_count} | 累计追踪: {len(seen)} | 已深挖: {len(analyzed)}",
         "",
     ]
 
-    # 取 Top 10（新增优先，无新增时取历史高星）
-    if all_results:
-        top10 = sorted(all_results, key=repo_score, reverse=True)[:10]
-        label = "## 今日精选 Top 10"
-    else:
-        label = "## 今日无新增 · 历史 Top 10"
-        top10 = []
-        for rid, info in seen.items():
-            top10.append({
-                "full_name": info.get("full_name", ""),
-                "html_url": f"https://github.com/{info.get('full_name', '')}",
-                "stars": info.get("stars", 0),
-                "cn_summary": "已追踪项目",
-                "category": "历史记录",
-                "description": "",
-                "language": "",
-                "topics": [],
-                "created_at": info.get("first_seen", "")[:10],
-                "pushed_at": "",
-            })
-        top10 = sorted(top10, key=lambda x: x["stars"], reverse=True)[:10]
+    if not selected:
+        lines.extend([
+            "今天没有找到未分析过的合格跨境项目。建议明天继续搜索，或降低最低质量门槛。",
+            "",
+        ])
+        return "\n".join(lines)
 
-    lines.extend(generate_overview(top10, all_results, seen))
+    topics = ", ".join(selected.get("topics", [])[:6]) if selected.get("topics") else "无"
+    scenarios = landing_scenarios(selected)
+    risks = risk_notes(selected, readme)
 
-    if all_results and top10:
-        lines.extend(["## 优先看这 3 个", ""])
-        for i, r in enumerate(top10[:3], 1):
-            lines.extend(render_priority_pick(r, i))
+    lines.extend([
+        f"今天选择 **{source}** 项目：[{selected['full_name']}]({selected['html_url']})。",
+        "",
+        f"一句话判断：{problem_statement(selected, readme)}",
+        "",
+        f"## 今日深挖项目：[{selected['full_name']}]({selected['html_url']})",
+        "",
+        f"**推荐级别:** {recommendation_level(selected)}",
+        "",
+        f"**综合评分:** {repo_score(selected):.1f}",
+        "",
+        f"**项目定位:** {selected.get('cn_summary', '未识别')}",
+        "",
+        f"**主分类:** {selected.get('category', '未分类')}",
+        "",
+        f"**为什么今天选它:** {why_watch(selected)}来源为「{source}」，且尚未做过深度分析。",
+        "",
+        "## 基本信息",
+        "",
+        f"stars: {selected.get('stars', 0)} | forks: {selected.get('forks', 0)} | language: {selected.get('language') or '未知'} | topics: {topics}",
+        "",
+        f"created: {selected.get('created_at', '')[:10]} | pushed: {selected.get('pushed_at', '')[:10]} | found: {selected.get('layer', '未知层级')}",
+        "",
+        "## 它解决什么跨境问题",
+        "",
+        problem_statement(selected, readme),
+        "",
+        "## README 观察",
+        "",
+        readme_excerpt(readme),
+        "",
+        "## 可落地场景",
+        "",
+    ])
+    for item in scenarios:
+        lines.append(f"- {item}")
 
-    lines.append(label)
-    lines.append("")
+    lines.extend([
+        "",
+        "## 成熟度判断",
+        "",
+        maturity_judgement(selected, readme),
+        "",
+        "## 风险和不足",
+        "",
+    ])
+    for item in risks:
+        lines.append(f"- {item}")
 
-    for i, r in enumerate(top10, 1):
-        lines.extend(render_repo(r, i))
+    lines.extend([
+        "",
+        "## 建议动作",
+        "",
+        action_hint(selected),
+        "",
+        "建议今天只做一件事：打开 README 和示例目录，判断它是否能被拆成你自己的跨境运营 Agent / Skill 模块。",
+        "",
+    ])
 
     return "\n".join(lines)
 
 
 def main():
     print("=" * 50)
-    print(f"GitHub 跨境电商+AI 每日搜索 - {datetime.now(timezone.utc).isoformat()}")
+    print(f"GitHub 跨境项目分析日报 - {datetime.now(timezone.utc).isoformat()}")
     print(f"Token: {'已设置' if GITHUB_TOKEN else '未设置'}")
     print("=" * 50)
 
     seen = load_seen()
+    analyzed = merge_analyzed_from_seen(load_analyzed(), seen)
     print(f"已追踪: {len(seen)} 个")
+    print(f"已深挖: {len(analyzed)} 个")
 
     for label, days, days_end in [
         ("Layer 1: 近2日新创", 2, None),
@@ -614,14 +793,42 @@ def main():
         else:
             layer2 = layer_results
 
-    all_raw = layer3 + layer2 + layer1
+    all_raw = unique_by_repo(layer3 + layer2 + layer1)
     print(f"\n去重前: {len(all_raw)}")
     fresh = deduplicate(all_raw, seen)
     print(f"新增: {len(fresh)}")
 
-    save_seen(seen)
+    selected, source = select_daily_project(fresh, all_raw, analyzed)
+    readme = ""
+    if selected:
+        print(f"今日深挖: {selected['full_name']} ({source})")
+        readme = fetch_readme(selected["full_name"])
+        analyzed_at = datetime.now(timezone.utc).isoformat()
+        score = round(repo_score(selected), 2)
+        analyzed[str(selected["id"])] = {
+            "full_name": selected["full_name"],
+            "html_url": selected["html_url"],
+            "analyzed_at": analyzed_at,
+            "score": score,
+            "source": source,
+        }
+        seen.setdefault(str(selected["id"]), {
+            "full_name": selected["full_name"],
+            "stars": selected["stars"],
+            "first_seen": datetime.now(timezone.utc).isoformat(),
+        })
+        seen[str(selected["id"])].update({
+            "analyzed_at": analyzed_at,
+            "analysis_score": score,
+            "analysis_source": source,
+        })
+    else:
+        print("今日无合格深挖项目")
 
-    report = generate_report(fresh, seen)
+    save_seen(seen)
+    save_analyzed(analyzed)
+
+    report = generate_report(selected, source, len(fresh), len(all_raw), seen, analyzed, readme)
     today_str = report_date()
     report_path = REPORT_DIR / f"{today_str}.md"
     with open(report_path, "w", encoding="utf-8") as f:
@@ -634,13 +841,10 @@ def main():
     print(f"报告: {report_path}")
 
     print("\n" + "=" * 50)
-    for layer in ["Layer 1: 近2日新创", "Layer 2: 3-14日前", "Layer 3: 长期热门"]:
-        items = [r for r in fresh if r["layer"] == layer]
-        top3 = sorted(items, key=lambda x: x["stars"], reverse=True)[:3]
-        print(f"\n{layer}: {len(items)} 个新增")
-        for r in top3:
-            print(f"  {r['stars']}s {r['full_name']}")
-            print(f"    {r['cn_summary']}")
+    if selected:
+        print(f"{source}: {selected['stars']}s {selected['full_name']}")
+        print(f"分类: {selected['category']}")
+        print(f"README: {'已读取' if readme else '未读取到'}")
 
 
 if __name__ == "__main__":

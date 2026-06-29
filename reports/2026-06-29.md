@@ -1,173 +1,57 @@
-# GitHub 跨境电商+AI 日报 - 2026-06-29
+# GitHub 跨境项目分析日报 - 2026-06-29
 
-## 今日速览
+## 今日结论
 
-新增项目: 0 | 累计追踪: 83 | 报告口径: 新增优先，按星标、活跃度、描述质量和标签完整度综合排序
+候选项目: 105 | 今日新增: 0 | 累计追踪: 83 | 已深挖: 1
 
-高优先级: 5 个 | 覆盖分类: 历史记录 10
+今天选择 **历史未分析补位** 项目：[liangdabiao/ecom-details-image](https://github.com/liangdabiao/ecom-details-image)。
 
-最高星项目: [PennyJoly/linktre-tools](https://github.com/PennyJoly/linktre-tools) (602 stars)
+一句话判断：它主要面向商品主图、详情页图、社媒推广图等跨境视觉素材，适合提升电商图片生产和转化导向设计效率。
 
-最新创建项目: [PennyJoly/linktre-tools](https://github.com/PennyJoly/linktre-tools) (创建于 2026-06-29)
-
-## 今日无新增 · 历史 Top 10
-
-### 1. [PennyJoly/linktre-tools](https://github.com/PennyJoly/linktre-tools) | 602 stars
+## 今日深挖项目：[liangdabiao/ecom-details-image](https://github.com/liangdabiao/ecom-details-image)
 
 **推荐级别:** 高优先级
 
-**定位:** 已追踪项目
+**综合评分:** 506.8
 
-**分类:** 历史记录
+**项目定位:** 图片/视觉设计，AI技能/提示词模板，社媒/内容营销
 
-**为什么看:** 602 stars，已有较强关注度。
+**主分类:** Skill/提示词模板
 
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
+**为什么今天选它:** 518 stars，已有较强关注度；半年内活跃；主要语言 Python；来自「跨境电商+AI Skill」搜索组。来源为「历史未分析补位」，且尚未做过深度分析。
 
-创建: 2026-06-29
+## 基本信息
 
----
+stars: 518 | forks: 105 | language: Python | topics: 无
 
-### 2. [liangdabiao/ecom-details-image](https://github.com/liangdabiao/ecom-details-image) | 518 stars
+created: 2026-05-06 | pushed: 2026-05-15 | found: Layer 3: 长期热门
 
-**推荐级别:** 高优先级
+## 它解决什么跨境问题
 
-**定位:** 已追踪项目
+它主要面向商品主图、详情页图、社媒推广图等跨境视觉素材，适合提升电商图片生产和转化导向设计效率。
 
-**分类:** 历史记录
+## README 观察
 
-**为什么看:** 518 stars，已有较强关注度。
+ECommerce Details Image Generator. 与众不同之处是：Campaign Style Lock 机制，强推广，重视转化效果。
 
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
+## 可落地场景
 
-创建: 2026-06-29
+- 主图/详情页图提示词复用
+- 社媒推广图批量生成
+- 视觉素材生产流程标准化
 
----
+## 成熟度判断
 
-### 3. [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | 319 stars
+成熟度偏早期：适合先收藏观察，不建议直接投入生产流程。
 
-**推荐级别:** 高优先级
+## 风险和不足
 
-**定位:** 已追踪项目
+- README 中安装说明不明显，落地前需要确认能否快速跑起来。
+- 示例或使用说明不明显，需要防止只是概念仓库。
+- 最近 30 天活跃度一般，建议检查 issue 和 commit 维护情况。
 
-**分类:** 历史记录
+## 建议动作
 
-**为什么看:** 319 stars，已有较强关注度。
+优先看技能目录结构、提示词质量和是否能直接复用到 Codex/Claude Code。
 
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 4. [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills) | 295 stars
-
-**推荐级别:** 高优先级
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 295 stars，已有较强关注度。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 5. [coolqoo/1click-ecom-detailpage](https://github.com/coolqoo/1click-ecom-detailpage) | 140 stars
-
-**推荐级别:** 高优先级
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 140 stars，已有较强关注度。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 6. [aws-samples/sample-getting-started-with-strands-agents-course](https://github.com/aws-samples/sample-getting-started-with-strands-agents-course) | 93 stars
-
-**推荐级别:** 值得跟进
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 93 stars，有一定早期关注。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 7. [SerendipityOneInc/ZooData-Skills](https://github.com/SerendipityOneInc/ZooData-Skills) | 55 stars
-
-**推荐级别:** 值得跟进
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 55 stars，有一定早期关注。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 8. [awslabs/generative-ai-toolkit](https://github.com/awslabs/generative-ai-toolkit) | 50 stars
-
-**推荐级别:** 值得跟进
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 50 stars，有一定早期关注。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 9. [aws-samples/sample-agentic-ai-web](https://github.com/aws-samples/sample-agentic-ai-web) | 50 stars
-
-**推荐级别:** 值得跟进
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 50 stars，有一定早期关注。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
-
-### 10. [aws-samples/sample-amazon-bedrock-for-beginners](https://github.com/aws-samples/sample-amazon-bedrock-for-beginners) | 35 stars
-
-**推荐级别:** 值得跟进
-
-**定位:** 已追踪项目
-
-**分类:** 历史记录
-
-**为什么看:** 35 stars，有一定早期关注。
-
-**建议动作:** 先快速浏览 README、示例和最近提交，判断是否值得深入试用。
-
-创建: 2026-06-29
-
----
+建议今天只做一件事：打开 README 和示例目录，判断它是否能被拆成你自己的跨境运营 Agent / Skill 模块。
