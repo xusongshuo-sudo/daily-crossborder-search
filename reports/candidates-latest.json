@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-03T10:54:59.142978+00:00",
+  "generated_at": "2026-07-03T10:59:37.528967+00:00",
   "total": 102,
-  "fresh_count": 4,
+  "fresh_count": 0,
   "deep_dive_candidate_count": 40,
   "items": [
     {
@@ -784,8 +784,8 @@
         "codex",
         "openclaw"
       ],
-      "is_new_today": true,
-      "already_analyzed": false,
+      "is_new_today": false,
+      "already_analyzed": true,
       "is_deep_dive_candidate": true,
       "created_at": "2026-06-26T07:20:12Z",
       "pushed_at": "2026-07-03T08:41:11Z"
@@ -1600,7 +1600,7 @@
         "automation",
         "prompt"
       ],
-      "is_new_today": true,
+      "is_new_today": false,
       "already_analyzed": false,
       "is_deep_dive_candidate": true,
       "created_at": "2026-07-02T08:59:34Z",
@@ -2780,7 +2780,7 @@
         "agent",
         "automation"
       ],
-      "is_new_today": true,
+      "is_new_today": false,
       "already_analyzed": false,
       "is_deep_dive_candidate": false,
       "created_at": "2026-04-25T06:56:56Z",
@@ -4027,7 +4027,7 @@
         "选品"
       ],
       "agent_hits": [],
-      "is_new_today": true,
+      "is_new_today": false,
       "already_analyzed": false,
       "is_deep_dive_candidate": false,
       "created_at": "2026-06-27T17:53:42Z",
