@@ -423,5 +423,63 @@
     "full_name": "Mannemu/pricepulse",
     "stars": 1,
     "first_seen": "2026-06-29T02:56:44.021769+00:00"
+  },
+  "1282390993": {
+    "full_name": "TommySun630/awesome-kuajing-ai-tools",
+    "stars": 2,
+    "category": "选品/市场调研",
+    "description": "跨境电商 AI 工具大全：选品、内容生成、智能客服、广告优化、独立站、视频带货（中文整理）",
+    "html_url": "https://github.com/TommySun630/awesome-kuajing-ai-tools",
+    "language": "",
+    "topics": [
+      "ai",
+      "ai-tools",
+      "awesome-list",
+      "cross-border",
+      "dtc",
+      "ecommerce"
+    ],
+    "created_at": "2026-06-27T17:53:42Z",
+    "pushed_at": "2026-06-27T17:53:46Z",
+    "first_seen": "2026-07-03T10:54:59.139737+00:00"
+  },
+  "1281049365": {
+    "full_name": "markwaveio/cross-border-selection-kit",
+    "stars": 2,
+    "category": "选品/市场调研",
+    "description": "跨境电商选品自动化 skill 套件:Amazon 信号 → Ad Library/Trends/1688 三源交叉验证(自带关键词污染自检)→ 六维打分 → 可视化报告。支持 Claude Code / Codex / OpenCLAW,内置安装引导。",
+    "html_url": "https://github.com/markwaveio/cross-border-selection-kit",
+    "language": "Python",
+    "topics": [],
+    "created_at": "2026-06-26T07:20:12Z",
+    "pushed_at": "2026-07-03T08:41:11Z",
+    "first_seen": "2026-07-03T10:54:59.139757+00:00",
+    "analyzed_at": "2026-07-03T10:54:59.291530+00:00",
+    "analysis_score": 70,
+    "analysis_source": "今日新增"
+  },
+  "1220662383": {
+    "full_name": "vyshnavdas/ecommerce-agent",
+    "stars": 1,
+    "category": "AI Agent/自动化",
+    "description": "AI-driven system that enables management of operations through natural language interactions, combining automation and contextual understanding to streamline workflows and improve efficiency, flexibility, and overall usability.",
+    "html_url": "https://github.com/vyshnavdas/ecommerce-agent",
+    "language": "Python",
+    "topics": [],
+    "created_at": "2026-04-25T06:56:56Z",
+    "pushed_at": "2026-04-25T08:01:28Z",
+    "first_seen": "2026-07-03T10:54:59.139776+00:00"
+  },
+  "1286969573": {
+    "full_name": "briefness/kling-ad-automation",
+    "stars": 1,
+    "category": "Skill/提示词模板",
+    "description": "Kling-Ad-Automation 是一个基于快手「可灵 AI」(Kling AI) 视频生成大模型开发的自动化广告视频/素材生成工具。本项目旨在帮助跨境电商、数字营销人员和内容创作者，通过结构化的文本提示词（Prompts）或图片素材，批量、高效地生产高质量的视频广告。",
+    "html_url": "https://github.com/briefness/kling-ad-automation",
+    "language": "Python",
+    "topics": [],
+    "created_at": "2026-07-02T08:59:34Z",
+    "pushed_at": "2026-07-02T11:22:39Z",
+    "first_seen": "2026-07-03T10:54:59.139781+00:00"
   }
 }
