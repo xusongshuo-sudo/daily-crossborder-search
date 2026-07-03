@@ -5,6 +5,7 @@ import html
 import os
 import re
 import smtplib
+import sys
 from email.mime.text import MIMEText
 from pathlib import Path
 
@@ -141,6 +142,12 @@ def md2html(text: str) -> str:
 
 
 def main():
+    required_env = ["MAIL_USERNAME", "MAIL_PASSWORD", "MAIL_TO"]
+    missing = [name for name in required_env if not os.environ.get(name)]
+    if missing:
+        print(f"Warning: skip email because missing env vars: {', '.join(missing)}")
+        return
+
     report_path = Path(__file__).resolve().parent.parent / "reports" / "latest.md"
     md = report_path.read_text(encoding="utf-8")
     title = md.split("\n")[0].replace("# ", "")
@@ -228,9 +235,13 @@ strong{{ color: #111827; font-weight: 700; }}
     msg["From"] = os.environ["MAIL_USERNAME"]
     msg["To"] = os.environ["MAIL_TO"]
 
-    with smtplib.SMTP_SSL("smtp.qq.com", 465) as smtp:
-        smtp.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
-        smtp.send_message(msg)
+    try:
+        with smtplib.SMTP_SSL("smtp.qq.com", 465, timeout=30) as smtp:
+            smtp.login(os.environ["MAIL_USERNAME"], os.environ["MAIL_PASSWORD"])
+            smtp.send_message(msg)
+    except (OSError, TimeoutError, smtplib.SMTPException) as exc:
+        print(f"Warning: failed to send email: {exc}", file=sys.stderr)
+        return
 
     print(f"Email sent: {title}")
 
