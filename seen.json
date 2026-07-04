@@ -212,7 +212,10 @@
   "1236911090": {
     "full_name": "superjack2050/1688-cli",
     "stars": 26,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-04T02:46:41.599741+00:00",
+    "analysis_score": 88,
+    "analysis_source": "历史未分析补位"
   },
   "1191741986": {
     "full_name": "yoligehude14753/ecom-agent",
