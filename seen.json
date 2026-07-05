@@ -487,5 +487,22 @@
     "created_at": "2026-07-02T08:59:34Z",
     "pushed_at": "2026-07-02T11:22:39Z",
     "first_seen": "2026-07-03T10:54:59.139781+00:00"
+  },
+  "1170833156": {
+    "full_name": "liangdabiao/amazon-sorftime-research-MCP-skill",
+    "stars": 405,
+    "category": "选品/市场调研",
+    "description": "亚马逊选品 之 Listing全维度穿透分析报告  加上 全品类分析 ，关键词分析，差评分析 ，市场调研 等等。codex/claude code agent skill, amazon sorftime  MCP/西柚mcp/sif mcp 智能体skill.   亚马逊跨境电商skill工具集。",
+    "html_url": "https://github.com/liangdabiao/amazon-sorftime-research-MCP-skill",
+    "language": "Python",
+    "topics": [
+      "agent"
+    ],
+    "created_at": "2026-03-02T15:17:23Z",
+    "pushed_at": "2026-07-05T01:27:16Z",
+    "first_seen": "2026-07-05T02:57:15.401471+00:00",
+    "analyzed_at": "2026-07-05T02:57:15.666451+00:00",
+    "analysis_score": 90,
+    "analysis_source": "今日新增"
   }
 }
