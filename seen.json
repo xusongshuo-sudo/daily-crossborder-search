@@ -228,7 +228,10 @@
   "1279940806": {
     "full_name": "nexscope-ai/nexscope-ecommerce-skills",
     "stars": 7,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-07T02:57:35.526521+00:00",
+    "analysis_score": 83,
+    "analysis_source": "历史未分析补位"
   },
   "1198425457": {
     "full_name": "logeshkannan19/DropShipping-AI-Agent",
