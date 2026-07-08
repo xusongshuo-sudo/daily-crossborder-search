@@ -45,7 +45,10 @@
   "1271377276": {
     "full_name": "xiaoyaotsyx-dotcom/aliexpress-auto-listing-skill",
     "stars": 4,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-08T02:34:05.660331+00:00",
+    "analysis_score": 83,
+    "analysis_source": "历史未分析补位"
   },
   "1230645385": {
     "full_name": "Sabin-He/ai-cross-border-ecommerce-course",
@@ -510,5 +513,32 @@
     "analyzed_at": "2026-07-05T02:57:15.666451+00:00",
     "analysis_score": 90,
     "analysis_source": "今日新增"
+  },
+  "1233641348": {
+    "full_name": "awesome-oversea/cross-border-erp",
+    "stars": 1,
+    "category": "选品/市场调研",
+    "description": "Enterprise-grade AI product selection decision hub for cross-border e-commerce",
+    "html_url": "https://github.com/awesome-oversea/cross-border-erp",
+    "language": "Java",
+    "topics": [
+      "cross-border-ecommerce",
+      "ddd",
+      "domain-driven-design",
+      "ecommerce",
+      "erp",
+      "event-driven-architecture",
+      "java",
+      "modular-monolith",
+      "multi-tenant",
+      "nextjs",
+      "postgresql",
+      "saas",
+      "spring-boot",
+      "spring-cloud"
+    ],
+    "created_at": "2026-05-09T07:15:01Z",
+    "pushed_at": "2026-05-09T07:52:02Z",
+    "first_seen": "2026-07-08T02:34:05.327921+00:00"
   }
 }
