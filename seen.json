@@ -552,5 +552,13 @@
     "created_at": "2026-05-09T07:15:01Z",
     "pushed_at": "2026-05-09T07:52:02Z",
     "first_seen": "2026-07-08T02:34:05.327921+00:00"
+  },
+  "1297909052": {
+    "full_name": "yosef-malul/Etsy_AI_Agent",
+    "stars": 0,
+    "first_seen": "2026-07-13T02:38:54.116146+00:00",
+    "analyzed_at": "2026-07-13T02:38:54.116106+00:00",
+    "analysis_score": 78,
+    "analysis_source": "历史未分析补位"
   }
 }
