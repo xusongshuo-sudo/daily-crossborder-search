@@ -209,7 +209,10 @@
   "1256750836": {
     "full_name": "SugarEgg902/amazon_data_analysis_agent",
     "stars": 3,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-17T02:31:52.460024+00:00",
+    "analysis_score": 70,
+    "analysis_source": "历史未分析补位"
   },
   "1185016972": {
     "full_name": "nexscope-ai/eCommerce-Skills",
@@ -614,5 +617,17 @@
     "created_at": "2025-05-12T14:16:47Z",
     "pushed_at": "2026-04-06T11:53:38Z",
     "first_seen": "2026-07-16T02:28:52.948202+00:00"
+  },
+  "1295371578": {
+    "full_name": "WangM-A3/silicon-army-mcp",
+    "stars": 1,
+    "category": "Skill/提示词模板",
+    "description": "向跨境电商和外贸企业的AI Agent工具集MCP",
+    "html_url": "https://github.com/WangM-A3/silicon-army-mcp",
+    "language": "Python",
+    "topics": [],
+    "created_at": "2026-07-09T14:28:24Z",
+    "pushed_at": "2026-07-11T08:32:49Z",
+    "first_seen": "2026-07-17T02:31:52.157754+00:00"
   }
 }
