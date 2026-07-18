@@ -77,7 +77,10 @@
   "1280175809": {
     "full_name": "alphaparkinc/ecommerce-copilot-skill",
     "stars": 1,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-18T02:18:29.422676+00:00",
+    "analysis_score": 70,
+    "analysis_source": "历史未分析补位"
   },
   "1177019470": {
     "full_name": "victorjzq/global-arbitrage-api",
@@ -629,5 +632,38 @@
     "created_at": "2026-07-09T14:28:24Z",
     "pushed_at": "2026-07-11T08:32:49Z",
     "first_seen": "2026-07-17T02:31:52.157754+00:00"
+  },
+  "1052758769": {
+    "full_name": "kangise/ecommerce-ai-roadmap",
+    "stars": 23,
+    "category": "Skill/提示词模板",
+    "description": "跨境电商 AI 实战知识库:56 篇从选品到增长的指南,每篇都有可直接复制的 Prompt,全部 CC0 免费 · 56 hands-on AI playbooks with copy-paste prompts for Amazon / Shopify / TikTok cross-border sellers",
+    "html_url": "https://github.com/kangise/ecommerce-ai-roadmap",
+    "language": "Jupyter Notebook",
+    "topics": [
+      "ai",
+      "ai-ecommerce",
+      "ai-prompts",
+      "ai-tools",
+      "amazon-fba",
+      "amazon-listing-optimizer",
+      "amazon-rufus",
+      "amazon-seller",
+      "amazon-seller-assistant",
+      "awesome-list",
+      "chatgpt-prompts",
+      "cross-border-ecommerce",
+      "ecommerce-ai",
+      "ecommerce-application",
+      "geo-optimization",
+      "knowledge-base",
+      "prompt-engineering",
+      "seo",
+      "shopify-ai",
+      "tiktok-ai"
+    ],
+    "created_at": "2025-09-08T14:04:32Z",
+    "pushed_at": "2026-07-17T14:14:57Z",
+    "first_seen": "2026-07-18T02:18:29.210985+00:00"
   }
 }
