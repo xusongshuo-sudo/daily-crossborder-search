@@ -665,5 +665,13 @@
     "created_at": "2025-09-08T14:04:32Z",
     "pushed_at": "2026-07-17T14:14:57Z",
     "first_seen": "2026-07-18T02:18:29.210985+00:00"
+  },
+  "1123494613": {
+    "full_name": "takashilouis/sift-ai-agent-be",
+    "stars": 0,
+    "first_seen": "2026-07-19T02:34:32.966187+00:00",
+    "analyzed_at": "2026-07-19T02:34:32.966137+00:00",
+    "analysis_score": 70,
+    "analysis_source": "历史未分析补位"
   }
 }
