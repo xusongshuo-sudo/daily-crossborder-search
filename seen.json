@@ -673,5 +673,25 @@
     "analyzed_at": "2026-07-19T02:34:32.966137+00:00",
     "analysis_score": 70,
     "analysis_source": "历史未分析补位"
+  },
+  "1170068115": {
+    "full_name": "9619221/temu-selector",
+    "stars": 1,
+    "category": "选品/市场调研",
+    "description": "TEMU 选品工具 - AI 驱动跨境电商选品决策助手",
+    "html_url": "https://github.com/9619221/temu-selector",
+    "language": "",
+    "topics": [],
+    "created_at": "2026-03-01T16:49:22Z",
+    "pushed_at": "2026-03-01T16:49:22Z",
+    "first_seen": "2026-07-20T02:49:11.450434+00:00"
+  },
+  "1122558391": {
+    "full_name": "takashilouis/sift-ai-agent-fe",
+    "stars": 0,
+    "first_seen": "2026-07-20T02:49:11.730526+00:00",
+    "analyzed_at": "2026-07-20T02:49:11.730429+00:00",
+    "analysis_score": 70,
+    "analysis_source": "历史未分析补位"
   }
 }
