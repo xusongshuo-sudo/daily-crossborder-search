@@ -99,7 +99,10 @@
   "1248930600": {
     "full_name": "clawEC/clawec-agents",
     "stars": 12,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-21T02:32:55.193900+00:00",
+    "analysis_score": 69,
+    "analysis_source": "历史未分析补位"
   },
   "1230537073": {
     "full_name": "zhupeixu/reddit-scout",
