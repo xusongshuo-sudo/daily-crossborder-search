@@ -107,7 +107,10 @@
   "1230537073": {
     "full_name": "zhupeixu/reddit-scout",
     "stars": 8,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-22T02:31:28.136216+00:00",
+    "analysis_score": 69,
+    "analysis_source": "历史未分析补位"
   },
   "1263837404": {
     "full_name": "banjunjun2/market-research-report",
@@ -696,5 +699,17 @@
     "analyzed_at": "2026-07-20T02:49:11.730429+00:00",
     "analysis_score": 70,
     "analysis_source": "历史未分析补位"
+  },
+  "1254415233": {
+    "full_name": "njustxxy/supersolo-ai",
+    "stars": 1,
+    "category": "选品/市场调研",
+    "description": "supersolo-ai “山海天”跨境电商选品全链路自动化平台",
+    "html_url": "https://github.com/njustxxy/supersolo-ai",
+    "language": "",
+    "topics": [],
+    "created_at": "2026-05-30T14:35:54Z",
+    "pushed_at": "2026-05-27T14:35:52Z",
+    "first_seen": "2026-07-22T02:31:27.930467+00:00"
   }
 }
