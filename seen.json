@@ -711,5 +711,36 @@
     "created_at": "2026-05-30T14:35:54Z",
     "pushed_at": "2026-05-27T14:35:52Z",
     "first_seen": "2026-07-22T02:31:27.930467+00:00"
+  },
+  "1286378360": {
+    "full_name": "andy1993/shopify-cn-dashboard",
+    "stars": 5,
+    "category": "选品/市场调研",
+    "description": "Shopify CN Pro —— 面向国内独立站卖家的开源、纯本地、零服务端数据智能座舱：多市场 GMV、订单、库存、SEO、AI 诊断一站式分析（48 面板 · Next.js）",
+    "html_url": "https://github.com/andy1993/shopify-cn-dashboard",
+    "language": "TypeScript",
+    "topics": [
+      "analytics",
+      "cross-border",
+      "dashboard",
+      "data-visualization",
+      "ecommerce",
+      "graphql",
+      "local-first",
+      "nextjs",
+      "react",
+      "self-hosted",
+      "shadcn-ui",
+      "shopify",
+      "shopify-api",
+      "tailwindcss",
+      "typescript"
+    ],
+    "created_at": "2026-07-01T18:08:27Z",
+    "pushed_at": "2026-07-22T14:50:10Z",
+    "first_seen": "2026-07-23T02:36:24.798276+00:00",
+    "analyzed_at": "2026-07-23T02:36:25.081741+00:00",
+    "analysis_score": 67,
+    "analysis_source": "今日新增"
   }
 }
