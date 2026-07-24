@@ -160,7 +160,10 @@
   "1187460717": {
     "full_name": "xiaolu7586/ecommerce-product-scout-agent",
     "stars": 31,
-    "first_seen": "2026-06-29T02:56:44.021769+00:00"
+    "first_seen": "2026-06-29T02:56:44.021769+00:00",
+    "analyzed_at": "2026-07-24T02:33:31.887604+00:00",
+    "analysis_score": 69,
+    "analysis_source": "历史未分析补位"
   },
   "1242060029": {
     "full_name": "hikari0511/awesome-amazon-ec-skills",
